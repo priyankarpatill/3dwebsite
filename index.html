@@ -42,9 +42,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/logo.webp" alt="" >
-                                        <img class="logo-scroll" src="images/logo.webp" alt="" >
-                                        <img class="logo-mobile" src="images/logo.webp" alt="" >
+                                        <img class="logo-main" src="images/logo__1_-removebg-preview.png" alt="" style="height: 120px; width: 190px; ">
+                                        <img class="logo-scroll" src="images/logo.png" alt=""  style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;" >
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -140,8 +140,32 @@
                 </div>
             </div>
         </header>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
 
-        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:images/istockphoto-1346944453-640_adpp_is (online-video-cutter.com).mp4">
+<script>
+  jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.5,               // Positive value for zoom-in, negative for zoom-out
+    videoVolume: 0,           // Mute video
+    videoPlayOnlyVisible: true, // Play only when in viewport
+    onScroll: function(calculations) {
+      // Adjust speed based on scroll direction
+      if (calculations.direction === 'down') {
+        this.options.speed = 0.5;  // Zoom in while scrolling down
+      } else {
+        this.options.speed = -0.3; // Zoom out while scrolling up
+      }
+    }
+  });
+</script>
+
+<section
+  id="section-hero"
+  class="section-dark no-top no-bottom text-light jarallax relative mh-800"
+  data-video-src="mp4:images/549b48baac3b452ff53b52ad97ade243.mp4">
+  <!-- Your content here -->
+
+
             <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
@@ -150,7 +174,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="subtitle">The Future of Intelligence</div>
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">AI Summit 2025</h1>
+                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Crystal Wings</h1>
 
                             <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
@@ -205,14 +229,16 @@
                     <div class="col-lg-6">
                           <div class="me-lg-5 pe-lg-5 py-5 my-5">
                               <div class="subtitle wow fadeInUp" data-wow-delay=".2s">About the Event</div>
-                              <h2 class="wow fadeInUp" data-wow-delay=".4s">A Global Gathering of AI Innovators</h2>
-                              <p class="wow fadeInUp" data-wow-delay=".6s">Join thought leaders, developers, researchers, and founders as we explore how artificial intelligence is reshaping industries, creativity, and the future
+                              <h2 class="wow fadeInUp" data-wow-delay=".4s">Elevating Your Travel Experience</h2>
+                              <p class="wow fadeInUp" data-wow-delay=".6s">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.
                               of work.</p>
 
                               <ul class="ul-check">
-                                  <li class="wow fadeInUp" data-wow-delay=".8s">5 days of keynotes, workshops, and networking</li>
-                                  <li class="wow fadeInUp" data-wow-delay=".9s">50 world-class speakers</li>
-                                  <li class="wow fadeInUp" data-wow-delay="1s">Startup showcase and live demos</li>
+                                  <li class="wow fadeInUp" data-wow-delay=".8s">24/7 on-demand private jet charter services</li>
+                                  <li class="wow fadeInUp" data-wow-delay=".9s">Global network of premium destinations
+</li>
+                                  <li class="wow fadeInUp" data-wow-delay="1s">Curated fleet of luxury aircraft
+</li>
                               </ul>
 
                           </div>
@@ -268,9 +294,9 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-6 offset-lg-3 text-center">
-                        <div class="subtitle wow fadeInUp mb-3">Why Attend</div>
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s">What You’ll Gain</h2>
-                        <p class="lead mb-0 wow fadeInUp">Hear from global AI pioneers, industry disruptors, and bold thinkers shaping the future across every domain.</p>
+                        <div class="subtitle wow fadeInUp mb-3">Why Choose Us</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">The Crystal Wings Advantage</h2>
+                        <p class="lead mb-0 wow fadeInUp">Experience unmatched luxury, flexibility, and personalized service with our premium private jet charter solutions.</p>
                     </div>
                 </div>
 
@@ -282,12 +308,12 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>Cutting-Edge Knowledge</h4>
-                                        <p class="mb-0">Stay ahead of the curve with insights from AI leaders shaping tomorrow’s technology.</p>
+                                        <h4>Luxury Fleet Selection</h4>
+                                        <p class="mb-0">Choose from our meticulously maintained fleet of premium aircraft tailored to your specific needs.</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s3.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/luxury.jpg" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -298,12 +324,15 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>Hands-On Learning</h4>
-                                        <p class="mb-0">Join live workshops and labs to build practical skills in AI and machine learning.</p>
+                                        <h4>Global Destinations
+</h4>
+                                        <p class="mb-0">Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve.
+
+</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s4.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/global.jpg" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -314,12 +343,15 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>Global Networking</h4>
-                                        <p class="mb-0">Meet developers, founders, and researchers from around the world to collaborate and grow.</p>
+                                        <h4>Time Efficiency
+</h4>
+                                        <p class="mb-0">Skip long security lines and boarding procedures, with the ability to depart within as little as 3 hours' notice.
+
+</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s5.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/time.jpg" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -330,12 +362,15 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>Startup Showcase</h4>
-                                        <p class="mb-0">Explore the latest AI tools and ideas from promising startups and research labs.</p>
+                                        <h4>Personalized Service
+</h4>
+                                        <p class="mb-0">Experience bespoke travel with customized catering, ground transportation, and in-flight amenities tailored to your preferences.
+
+</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s6.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/personalized.jpg" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -346,12 +381,15 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>AI Career Boost</h4>
-                                        <p class="mb-0">Access exclusive job fairs, mentorship sessions, and recruiting events to grow your career.</p>
+                                        <h4>Safety Excellence
+</h4>
+                                        <p class="mb-0">Fly with confidence knowing our aircraft meet the highest safety standards with experienced pilots and regular maintenance.
+
+</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s7.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/safety.webp" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -362,12 +400,15 @@
                             <div class="bg-dark-2 relative rounded-1 overflow-hidden hover-bg-color hover-text-light wow scale-in-mask">
                                 <div class="abs p-40 bottom-0 z-2">
                                     <div class="relative wow fadeInUp">
-                                        <h4>Ethics & Future</h4>
-                                        <p class="mb-0">Engage in vital conversations around AI ethics, policy, and the future of intelligence.</p>
+                                        <h4>Flexible Booking
+</h4>
+                                        <p class="mb-0">Choose from on-demand charter, membership programs, or empty leg flights to match your travel needs and budget.
+
+</p>
                                     </div>
                                 </div>
                                 <div class="gradient-edge-bottom h-100"></div>
-                                <img src="images/misc/s8.webp" class="w-100 hover-scale-1-1" alt="">
+                                <img src="images/flexible.jpg" class="w-100 hover-scale-1-1" alt="">
                                 <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             </div>
                         </div>
@@ -389,7 +430,7 @@
                             <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
                                 <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
                             </div>
-                            <img src="images/misc/s9.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                            <img src="images/ai.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
                         </div>
                     </div>
 
@@ -417,7 +458,7 @@
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/1.webp" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/1.webp" class="w-100 hover-scale-1-1" alt="">
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
@@ -431,7 +472,7 @@
 
                     <div class="col-lg-4">
                         <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/2.webp" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/2.webp" class="w-100 hover-scale-1-1" alt="">
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
@@ -445,7 +486,7 @@
 
                     <div class="col-lg-4">
                         <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/3.webp" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/3.webp" class="w-100 hover-scale-1-1" alt="">
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
@@ -1253,24 +1294,24 @@
                         <div class="accordion s2 wow fadeInUp">
                             <div class="accordion-section">
                                 <div class="accordion-section-title" data-tab="#accordion-a1">
-                                    What is the AI Summit 2025?
+                                    What is the Crystal Wings?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a1">
-                                    The AI Summit 2025 is a premier event gathering leading AI experts, thought leaders, and innovators. It features keynotes, workshops, panels, and networking opportunities focusing on the latest advancements in artificial intelligence.
+                                    The Crystal Wings is a premier event gathering leading AI experts, thought leaders, and innovators. It features keynotes, workshops, panels, and networking opportunities focusing on the latest advancements in artificial intelligence.
                                 </div>
 
                                 <div class="accordion-section-title" data-tab="#accordion-a2">
                                     When and where will the event be held?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a2">
-                                    The AI Summit 2025 will take place from **[Event Dates]** at **[Event Location]**. More details about the venue and directions will be provided closer to the event.
+                                    The Crystal Wings will take place from **[Event Dates]** at **[Event Location]**. More details about the venue and directions will be provided closer to the event.
                                 </div>
 
                                 <div class="accordion-section-title" data-tab="#accordion-a3">
                                     How can I register for the event?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a3">
-                                    You can register for the AI Summit 2025 through our official website. Simply choose your ticket type and fill out the registration form.
+                                    You can register for the Crystal Wings through our official website. Simply choose your ticket type and fill out the registration form.
                                 </div>
 
                                 <div class="accordion-section-title" data-tab="#accordion-a4">
@@ -1353,7 +1394,7 @@
                             BCA 94107
                         </div>
                         <div>
-                            <img src="images/logo.webp" class="w-150px" alt=""><br>
+                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
