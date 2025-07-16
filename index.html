@@ -144,27 +144,43 @@
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
 
 <script>
-  jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.5,               // Positive value for zoom-in, negative for zoom-out
-    videoVolume: 0,           // Mute video
-    videoPlayOnlyVisible: true, // Play only when in viewport
-    onScroll: function(calculations) {
-      // Adjust speed based on scroll direction
-      if (calculations.direction === 'down') {
-        this.options.speed = 0.5;  // Zoom in while scrolling down
-      } else {
-        this.options.speed = -0.3; // Zoom out while scrolling up
+  document.addEventListener("DOMContentLoaded", function () {
+    const jarallaxElements = document.querySelectorAll('.jarallax');
+
+    jarallax(jarallaxElements, {
+      speed: 0.5,
+      videoVolume: 0,
+      videoPlayOnlyVisible: true,
+      onScroll: function (calcs) {
+        // Detect scroll direction
+        if (calcs.direction === 'down') {
+          this.options.speed = 0.5;  // Zoom in
+        } else {
+          this.options.speed = -0.3; // Zoom out
+        }
       }
-    }
+    });
   });
 </script>
 
 <section
   id="section-hero"
-  class="section-dark no-top no-bottom text-light jarallax relative mh-800"
-  data-video-src="mp4:images/549b48baac3b452ff53b52ad97ade243.mp4">
+  class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-jarallax
+  data-video-src="mp4:images/12342012_3840_2160_60fps.mp4"  data-speed="0.5">
   <!-- Your content here -->
+  <style>
+    /* Brighten video background */
+    .jarallax > video {
+      filter: brightness(1.4) contrast(1.1);
+    }
 
+    /* Remove dark overlays */
+    /* .gradient-edge-top, */
+    /* .gradient-edge-bottom, */
+    .sw-overlay {
+      display: none !important;
+    }
+  </style>
 
             <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
@@ -222,6 +238,7 @@
                 </div>
             </div>
         </section>
+        
 
         <section id="section-about" class="bg-dark section-dark text-light">
             <div class="container">
