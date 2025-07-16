@@ -33,7 +33,7 @@
         <div id="de-loader"></div>
         <!-- page preloader close -->
 
-        <header class="transparent">
+        <header class="transparent" style="background-color: black;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -42,7 +42,7 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/logo__1_-removebg-preview.png" alt="" style="height: 120px; width: 190px; ">
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="" style="height: 130px; width: 250px; ">
                                         <img class="logo-scroll" src="images/logo.png" alt=""  style="height: 150px; width: 250px;">
                                         <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;" >
                                     </a>
@@ -144,24 +144,31 @@
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const jarallaxElements = document.querySelectorAll('.jarallax');
-
-    jarallax(jarallaxElements, {
-      speed: 0.5,
-      videoVolume: 0,
-      videoPlayOnlyVisible: true,
-      onScroll: function (calcs) {
-        // Detect scroll direction
-        if (calcs.direction === 'down') {
-          this.options.speed = 0.5;  // Zoom in
-        } else {
-          this.options.speed = -0.3; // Zoom out
+document.addEventListener("DOMContentLoaded", function () {
+    jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.5,
+        videoVolume: 0,
+        videoPlayOnlyVisible: true,
+        onScroll: function (calcs) {
+            // Stronger zoom effect based on scroll
+            if (calcs.direction === 'down') {
+                this.options.speed = 0.8;  // Stronger zoom in when scrolling down
+                this.$item.querySelector('.jarallax-video').style.transform = 'scale(1.1)';
+            } else {
+                this.options.speed = -0.5; // Stronger zoom out when scrolling up
+                this.$item.querySelector('.jarallax-video').style.transform = 'scale(0.9)';
+            }
         }
-      }
     });
-  });
+});
 </script>
+<style>
+/* Smooth transition for zoom effects */
+.jarallax-video {
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+}
+</style>
 
 <section
   id="section-hero"
