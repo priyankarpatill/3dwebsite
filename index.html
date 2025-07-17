@@ -18,24 +18,11 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
 
 </head>
 <style>
-.logo{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* aligns logo to the left */
-}
 
-.logo-main {
-  height: 150px;
-  width: 350px; /* or 100% if you want it to fully stretch */
-  object-fit: contain;
-  display: block;
-  margin: 0;
-}
 
 </style>
 <body class="dark-scheme">
@@ -149,7 +136,7 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 200%; height: 100px; display: block;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
                                         <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
                                     </a>
@@ -167,7 +154,7 @@
                                     <!-- Main desktop menu -->
                                     <ul id="mainmenu">
                                         <li><a class="menu-item active" href="./index.html">Who we are</a></li>
-                                        <li><a class="menu-item" href="#section-why-attend">Services</a></li>
+                                        <li><a class="menu-item" href="./services.html">Services</a></li>
                                         <li><a class="menu-item" href="">Fleet</a></li>
                                         <li><a class="menu-item" href="./investment.html">Investment</a></li>
                                         <li><a class="menu-item" href="#section-tickets">Booking</a></li>
@@ -194,7 +181,7 @@
                     
                     <ul class="mobile-menu">
                         <li><a class="menu-item active" href="./index.html">Who we are</a></li>
-                        <li><a class="menu-item" href="#section-why-attend">Services</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
                         <li><a class="menu-item" href="">Fleet</a></li>
                         <li><a class="menu-item" href="./investment.html">Investment</a></li>
                         <li><a class="menu-item" href="#section-tickets">Booking</a></li>
@@ -931,6 +918,60 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
     </footer>
+    
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/7715841612" target="_blank" class="whatsapp-tab">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <style>
+   .whatsapp-tab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: float 2s ease-in-out infinite; /* Floating animation */
+}
+
+.whatsapp-tab img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Floating keyframe animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .whatsapp-tab {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-tab img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+    
+  </style>
     <!-- footer end -->
     <!-- <div id="buy-now" class="show-on-scroll">
         <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>

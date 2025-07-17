@@ -17,6 +17,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <style>
@@ -50,6 +51,95 @@
         <div id="de-loader"></div>
         <!-- page preloader close -->
 
+
+    <!-- Add Font Awesome for icons -->
+    
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 80px !important;
+                width: 200px !important;
+            }
+        }
+    </style>
+
+
+<body class="dark-scheme">
+    <div id="wrapper">
         <header class="transparent" style="background-color: black;">
             <div class="container">
                 <div class="row">
@@ -59,11 +149,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                
-  <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
-
-                                        <img class="logo-scroll" src="images/logo.png" alt=""  style="height: 150px; width: 250px;">
-                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;" >
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -71,95 +159,854 @@
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="./index.html">Who we are</a>
-                                            <ul class="mega">
-                                                <!-- <li> -->
-                                                    <!-- <div class="container"> -->
-                                                        <!-- <div class="sb-menu p-4">
-                                                            <div class="row g-3">
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index.html">
-                                                                            <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 1</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider.html">
-                                                                            <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 2</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-static-background.html">
-                                                                            <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 3</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider-text.html">
-                                                                            <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 4</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-countdown.html">
-                                                                            <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 5</h6>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-                                                    <!-- </div> -->
-                                                <!-- </li> -->
-                                            </ul>
-                                        </li>
-                                        <!-- <li><a class="menu-item" href="#section-about">About</a></li> -->
-                                        <li><a class="menu-item" href="#section-why-attend">Services</a></li>
+                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html">Services</a></li>
                                         <li><a class="menu-item" href="">Fleet</a></li>
                                         <li><a class="menu-item" href="./investment.html">Investment</a></li>
                                         <li><a class="menu-item" href="#section-tickets">Booking</a></li>
                                         <li><a class="menu-item" href="#section-venue">Contact</a></li>
-                                        <!-- <li><a class="menu-item" href="#section-faq">FAQ</a></li>
-                                        <li><a class="menu-item" href="news.html">Pages</a> -->
-                                            <!-- <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a>
-                                            </ul> -->
-                                        <!-- </li> -->
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                        <li><a class="menu-item" href="">Fleet</a></li>
+                        <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                        <li><a class="menu-item" href="#section-tickets">Booking</a></li>
+                        <li><a class="menu-item" href="#section-venue">Contact</a></li>
+                    </ul>
+                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                </div>
+            </div>
         </header>
 
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+    </div>
+<section class="blusky-intro">
+    <!-- Animated Background Elements -->
+    <div class="floating-islands">
+        <div class="island island-1"></div>
+        <div class="island island-2"></div>
+    </div>
+    
+    <div class="particle-network"></div>
+    
+    <!-- Main Content -->
+    <div class="intro-container">
+        <div class="intro-content">
+            <!-- 3D Animated Title -->
+            <div class="intro-title-wrapper">
+                <h1 class="intro-title">
+                    <span class="title-layer title-front">CRYSTAL WINGS</span>
+                    <span class="title-layer title-back">CRYSTAL WINGS</span>
+                    <span class="title-layer title-accent">CRYSTAL WINGS</span>
+                </h1>
+                <div class="title-underline"></div>
+            </div>
+            
+            <!-- 3D Floating Text Blocks -->
+            <div class="text-block text-1" data-depth="0.2">
+                <div class="text-card">
+                    <p>Blusky Jets is a global investment & business innovation leader with an in-house team of professionals with decades of experience in aviation finance, structured deals, aircraft operations, and tax strategy—ensuring a disciplined, data-driven approach to every investment.</p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+            
+            <div class="text-block text-2" data-depth="0.4">
+                <div class="text-card">
+                    <p>Founded on the principle where luxury and smart investing are meant to ascend together, we bridge the gap between high-performance aircraft ownership and financial growth.</p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+            
+            <div class="text-block text-3" data-depth="0.3">
+                <div class="text-card">
+                    <p>We specialize in transforming emerging opportunities into sustainable, high yield investments, ensuring long term growth and impact by executing precision driven investment strategies that drive value & innovation for our global clientele.</p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+            
+            <!-- Floating Jet Animation -->
+            <div class="floating-jet">
+                <img src="https://www.freeiconspng.com/uploads/airplane-png-16.png" alt="Blusky Jet" class="jet-img">
+                <div class="jet-trail"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle particle-1">✈️</div>
+        <div class="particle particle-2">💰</div>
+        <div class="particle particle-3">📈</div>
+        <div class="particle particle-4">🌐</div>
+    </div>
+</section>
+<style>
+    .blusky-intro {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0e23 0%, #1a2a4a 100%);
+    overflow: hidden;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.floating-islands {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.island {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(0,100,255,0.05) 0%, transparent 70%);
+    filter: blur(30px);
+}
+
+.island-1 {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    left: -100px;
+    animation: floatIsland1 15s infinite alternate;
+}
+
+.island-2 {
+    width: 800px;
+    height: 800px;
+    bottom: -200px;
+    right: -200px;
+    animation: floatIsland2 20s infinite alternate;
+}
+
+@keyframes floatIsland1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes floatIsland2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+.intro-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.intro-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.intro-title-wrapper {
+    position: relative;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.intro-title {
+    position: relative;
+    font-size: 5rem;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    margin: 0;
+    animation: titleFloat 8s infinite ease-in-out;
+}
+
+.title-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.title-front {
+    color: white;
+    -webkit-text-stroke: 2px #00a1ff;
+    text-stroke: 2px #00a1ff;
+    transform: translateZ(20px);
+}
+
+.title-back {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0,161,255,0.3);
+    text-stroke: 2px rgba(0,161,255,0.3);
+    transform: translateZ(-10px);
+}
+
+.title-accent {
+    color: transparent;
+    background: linear-gradient(90deg, #00a1ff, #00ffaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translateZ(5px);
+    animation: titleShine 3s infinite alternate;
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: rotateX(5deg) rotateY(0deg); }
+    50% { transform: rotateX(5deg) rotateY(5deg); }
+}
+
+@keyframes titleShine {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.title-underline {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #00a1ff, transparent);
+    margin-top: 20px;
+    animation: underlineGrow 3s infinite alternate;
+}
+
+@keyframes underlineGrow {
+    0% { width: 200px; }
+    100% { width: 300px; }
+}
+
+.text-block {
+    position: relative;
+    max-width: 800px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.text-card {
+    position: relative;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(0,161,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.text-block:hover {
+    transform: translateY(-10px) translateZ(20px);
+}
+
+.text-card p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    animation: shine 5s infinite;
+}
+
+@keyframes shine {
+    100% { left: 150%; }
+}
+
+.text-1 { transform: translateZ(20px); }
+.text-2 { transform: translateZ(40px) translateX(100px); }
+.text-3 { transform: translateZ(30px) translateX(-100px); }
+
+.floating-jet {
+    position: absolute;
+    right: -200px;
+    top: 50%;
+    width: 400px;
+    animation: jetFloat 15s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.jet-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0,161,255,0.5));
+    transform: rotateY(180deg);
+}
+
+.jet-trail {
+    position: absolute;
+    width: 300px;
+    height: 10px;
+    background: linear-gradient(90deg, #00a1ff, transparent);
+    filter: blur(5px);
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+@keyframes jetFloat {
+    0% { transform: translateX(0) translateY(-50%) rotateY(180deg); }
+    100% { transform: translateX(-100vw) translateY(-50%) rotateY(180deg); }
+}
+
+.floating-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(0,161,255,0.7));
+}
+
+.particle-1 {
+    top: 20%;
+    left: 10%;
+    animation: floatParticle1 10s infinite linear;
+}
+
+.particle-2 {
+    top: 70%;
+    left: 15%;
+    animation: floatParticle2 12s infinite linear;
+}
+
+.particle-3 {
+    top: 40%;
+    left: 85%;
+    animation: floatParticle3 15s infinite linear;
+}
+
+.particle-4 {
+    top: 80%;
+    left: 90%;
+    animation: floatParticle4 8s infinite linear;
+}
+
+@keyframes floatParticle1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, 30px) rotate(90deg); }
+    50% { transform: translate(100px, 0) rotate(180deg); }
+    75% { transform: translate(50px, -30px) rotate(270deg); }
+}
+
+@keyframes floatParticle2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -40px) scale(1.2); }
+}
+
+@keyframes floatParticle3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-100px, 50px) rotate(360deg); }
+}
+
+@keyframes floatParticle4 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-50px, -30px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .intro-title {
+        font-size: 4rem;
+    }
+    
+    .text-2 { transform: translateZ(40px) translateX(50px); }
+    .text-3 { transform: translateZ(30px) translateX(-50px); }
+    
+    .floating-jet {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 3rem;
+    }
+    
+    .text-block {
+        max-width: 100%;
+    }
+    
+    .text-1, .text-2, .text-3 {
+        transform: none !important;
+    }
+    
+    .floating-jet {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 2.5rem;
+    }
+    
+    .text-card p {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<section class="holo-services">
+  <!-- Floating Orb Background -->
+  <div class="orb-bg"></div>
+  
+  <!-- Interactive Title -->
+  <div class="holo-header">
+    <h2 class="holo-title">
+      <span class="title-char">S</span>
+      <span class="title-char">E</span>
+      <span class="title-char">R</span>
+      <span class="title-char">V</span>
+      <span class="title-char">I</span>
+      <span class="title-char">C</span>
+      <span class="title-char">E</span>
+      <span class="title-char">S</span>
+    </h2>
+    <div class="title-beam"></div>
+  </div>
+
+  <!-- Holographic Pod System -->
+  <div class="pod-system">
+    <!-- Pod 1 -->
+    <div class="service-pod" data-service="management">
+      <div class="pod-core">
+        <div class="pod-icon">🛩️</div>
+        <h3>AIRCRAFT MANAGEMENT</h3>
+      </div>
+      <div class="pod-details">
+        <ul>
+          <li><span class="detail-icon">⏱️</span> Flight Ops</li>
+          <li><span class="detail-icon">🛠️</span> Maintenance</li>
+          <li><span class="detail-icon">📜</span> Regulations</li>
+          <li><span class="detail-icon">💰</span> Finance</li>
+          <li><span class="detail-icon">🛡️</span> Insurance</li>
+          <li><span class="detail-icon">👨‍✈️</span> Crew</li>
+        </ul>
+        <div class="pod-connector"></div>
+      </div>
+      <div class="pod-glow"></div>
+    </div>
+
+    <!-- Pod 2 -->
+    <div class="service-pod" data-service="investment">
+      <div class="pod-core">
+        <div class="pod-icon">📈</div>
+        <h3>AIRCRAFT INVESTMENT</h3>
+      </div>
+      <div class="pod-details">
+        <ul>
+          <li><span class="detail-icon">⏳</span> Lease Terms</li>
+          <li><span class="detail-icon">🔄</span> ACMI Lease</li>
+          <li><span class="detail-icon">✈️✈️</span> Fleet Solutions</li>
+          <li><span class="detail-icon">💦</span> Dry/Wet Lease</li>
+        </ul>
+        <div class="pod-connector"></div>
+      </div>
+      <div class="pod-glow"></div>
+    </div>
+
+    <!-- Pod 3 -->
+    <div class="service-pod" data-service="crew">
+      <div class="pod-core">
+        <div class="pod-icon">👨‍✈️</div>
+        <h3>CREW MANAGEMENT</h3>
+      </div>
+      <div class="pod-details">
+        <ul>
+          <li><span class="detail-icon">🔍</span> Recruitment</li>
+          <li><span class="detail-icon">⚙️</span> Operational Support</li>
+          <li><span class="detail-icon">📝</span> Compliance</li>
+        </ul>
+        <div class="pod-connector"></div>
+      </div>
+      <div class="pod-glow"></div>
+    </div>
+
+    <!-- Pod 4 -->
+    <div class="service-pod" data-service="leasing">
+      <div class="pod-core">
+        <div class="pod-icon">💼</div>
+        <h3>AIRCRAFT LEASING</h3>
+      </div>
+      <div class="pod-details">
+        <ul>
+          <li><span class="detail-icon">🧩</span> Fractional Ownership</li>
+          <li><span class="detail-icon">💸</span> Purchase Advisory</li>
+          <li><span class="detail-icon">📉</span> Risk Management</li>
+          <li><span class="detail-icon">🔎</span> Market Analysis</li>
+          <li><span class="detail-icon">⚖️</span> Legal Structuring</li>
+        </ul>
+        <div class="pod-connector"></div>
+      </div>
+      <div class="pod-glow"></div>
+    </div>
+  </div>
+
+  <!-- Floating Data Nodes -->
+  <div class="data-nodes">
+    <div class="node" style="--delay:0"></div>
+    <div class="node" style="--delay:1"></div>
+    <div class="node" style="--delay:2"></div>
+    <div class="node" style="--delay:3"></div>
+  </div>
+</section>
+<style>
+    .holo-services {
+  position: relative;
+  padding: 120px 20px;
+  background: radial-gradient(ellipse at center, #0a1120 0%, #000000 100%);
+  overflow: hidden;
+}
+
+.orb-bg {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle at center, 
+    rgba(0, 150, 255, 0.1) 0%, 
+    transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbPulse 15s infinite alternate;
+}
+
+.holo-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+  z-index: 2;
+}
+
+.holo-title {
+  display: inline-flex;
+  gap: 8px;
+  margin: 0;
+  perspective: 1000px;
+}
+
+.title-char {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(180deg, #00f2ff, #0066ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+  transform-style: preserve-3d;
+  animation: charFloat 4s infinite ease-in-out;
+  animation-delay: calc(var(--char-index) * 0.1s);
+}
+
+.title-beam {
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #00f2ff, 
+    transparent);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(1px);
+  animation: beamScan 3s infinite linear;
+}
+
+.pod-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.service-pod {
+  position: relative;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.pod-core {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background: rgba(20, 40, 80, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.service-pod:hover .pod-core {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 200, 255, 0.4);
+}
+
+.pod-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7));
+}
+
+.pod-core h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.pod-details {
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  background: rgba(10, 30, 60, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-pod:hover .pod-details {
+  transform: scaleY(1);
+}
+
+.pod-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pod-details li {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 8px 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.detail-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.pod-connector {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, 
+    rgba(0, 200, 255, 0.8), 
+    transparent);
+  transform: translateX(-50%);
+}
+
+.pod-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 150, 255, 0.1) 0%, 
+    transparent 70%);
+  border-radius: 60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.service-pod:hover .pod-glow {
+  opacity: 1;
+}
+
+.data-nodes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 200, 255, 0.7);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: nodeFloat 15s infinite linear;
+  animation-delay: calc(var(--delay) * 3s);
+}
+
+.node:nth-child(1) { top: 20%; left: 10%; }
+.node:nth-child(2) { top: 70%; left: 15%; }
+.node:nth-child(3) { top: 40%; left: 85%; }
+.node:nth-child(4) { top: 80%; left: 90%; }
+
+/* Animations */
+@keyframes orbPulse {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
+}
+
+@keyframes charFloat {
+  0%, 100% { transform: translateY(0) rotateX(0deg); }
+  50% { transform: translateY(-10px) rotateX(10deg); }
+}
+
+@keyframes beamScan {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes nodeFloat {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  25% { transform: translate(50px, -30px) scale(1.3); opacity: 1; }
+  50% { transform: translate(100px, 0) scale(1); opacity: 0.7; }
+  75% { transform: translate(50px, 30px) scale(0.7); opacity: 0.4; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .holo-title {
+    gap: 5px;
+  }
+  
+  .title-char {
+    font-size: 2.5rem;
+  }
+  
+  .pod-system {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .holo-services {
+    padding: 80px 20px;
+  }
+  
+  .title-char {
+    font-size: 2rem;
+  }
+  
+  .service-pod {
+    height: 380px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pod-system {
+    grid-template-columns: 1fr;
+  }
+  
+  .holo-title {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .title-char {
+    font-size: 1.8rem;
+  }
+}
+</style>
   
     <!-- footer begin -->
     <footer class="text-light section-dark">
