@@ -17,9 +17,27 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
+<style>
+.logo{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* aligns logo to the left */
+}
 
+.logo-main {
+  height: 150px;
+  width: 350px; /* or 100% if you want it to fully stretch */
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+</style>
 <body class="dark-scheme">
 
     <div id="wrapper">
@@ -33,6 +51,95 @@
         <div id="de-loader"></div>
         <!-- page preloader close -->
 
+
+    <!-- Add Font Awesome for icons -->
+    
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 80px !important;
+                width: 200px !important;
+            }
+        }
+    </style>
+
+
+<body class="dark-scheme">
+    <div id="wrapper">
         <header class="transparent" style="background-color: black;">
             <div class="container">
                 <div class="row">
@@ -42,9 +149,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="" style="height: 130px; width: 300px; ">
-                                        <img class="logo-scroll" src="images/logo.png" alt=""  style="height: 150px; width: 250px;">
-                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;" >
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -52,94 +159,87 @@
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="./index.html">How we are</a>
-                                            <ul class="mega">
-                                                <!-- <li> -->
-                                                    <!-- <div class="container"> -->
-                                                        <!-- <div class="sb-menu p-4">
-                                                            <div class="row g-3">
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index.html">
-                                                                            <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 1</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider.html">
-                                                                            <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 2</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-static-background.html">
-                                                                            <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 3</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider-text.html">
-                                                                            <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 4</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-countdown.html">
-                                                                            <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 5</h6>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-                                                    <!-- </div> -->
-                                                <!-- </li> -->
-                                            </ul>
-                                        </li>
-                                        <li><a class="menu-item" href="#section-about">About</a></li>
+                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
                                         <li><a class="menu-item" href="#section-why-attend">Services</a></li>
                                         <li><a class="menu-item" href="">Fleet</a></li>
                                         <li><a class="menu-item" href="./investment.html">Investment</a></li>
                                         <li><a class="menu-item" href="#section-tickets">Booking</a></li>
                                         <li><a class="menu-item" href="#section-venue">Contact</a></li>
-                                        <!-- <li><a class="menu-item" href="#section-faq">FAQ</a></li>
-                                        <li><a class="menu-item" href="news.html">Pages</a> -->
-                                            <!-- <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a>
-                                            </ul> -->
-                                        <!-- </li> -->
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="#section-why-attend">Services</a></li>
+                        <li><a class="menu-item" href="">Fleet</a></li>
+                        <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                        <li><a class="menu-item" href="#section-tickets">Booking</a></li>
+                        <li><a class="menu-item" href="#section-venue">Contact</a></li>
+                    </ul>
+                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                </div>
+            </div>
         </header>
+
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+    </div>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
@@ -395,7 +495,9 @@
         <div class="content-container">
             <div class="text-content">
                 <h1 class="fade-in">WHERE LUXURY AND SMART INVESTING <span class="delay-1">ASCEND TOGETHER</span></h1>
-                <p class="fade-in delay-2">Blusky Jets is a global investment & business innovation leader with an in-house team of professionals with decades of experience in aviation finance, structured deals, aircraft operations, and tax strategy—ensuring a disciplined, data-driven approach to every investment.</p>
+                <p class="fade-in delay-2">We are a global leader in investment and business innovation, backed by an in-house team with decades of experience in aviation finance, structured deals, and aircraft operations—delivering a disciplined, data-driven approach to every investment.
+
+</p>
                 
                 <div class="divider fade-in delay-2"></div>
                 
@@ -710,7 +812,7 @@
             <div class="investment-card card-3">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div class="card-icon">✈️</div>
+                        <div class="card-icon">💰</div>
                         <h3>Asset-Backed Investments</h3>
                     </div>
                     <div class="card-back">

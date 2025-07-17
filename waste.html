@@ -1,344 +1,287 @@
-<section class="join-section">
-    <div class="holographic-bg"></div>
+<section class="blusky-intro">
+    <!-- Animated Background Elements -->
+    <div class="floating-islands">
+        <div class="island island-1"></div>
+        <div class="island island-2"></div>
+    </div>
     
-    <div class="join-container">
-        <h2 class="join-title">
-            <span class="title-char">J</span>
-            <span class="title-char">O</span>
-            <span class="title-char">I</span>
-            <span class="title-char">N</span>
-            <span class="title-space">&nbsp;</span>
-            <span class="title-char">U</span>
-            <span class="title-char">S</span>
-        </h2>
-        
-        <div class="floating-benefits">
-            <!-- Benefit 1 -->
-            <div class="benefit-card" style="--i:1">
-                <div class="card-3d">
-                    <div class="card-main">
-                        <div class="holographic-strip"></div>
-                        <h3>Pioneering Hybrid<br>Investment Opportunity</h3>
-                        <div class="card-sparkle"></div>
-                    </div>
-                    <div class="card-reflection"></div>
-                </div>
-                <div class="particle-ring"></div>
+    <div class="particle-network"></div>
+    
+    <!-- Main Content -->
+    <div class="intro-container">
+        <div class="intro-content">
+            <!-- 3D Animated Title -->
+            <div class="intro-title-wrapper">
+                <h1 class="intro-title">
+                    <span class="title-layer title-front">BLUSKY JETS</span>
+                    <span class="title-layer title-back">BLUSKY JETS</span>
+                    <span class="title-layer title-accent">BLUSKY JETS</span>
+                </h1>
+                <div class="title-underline"></div>
             </div>
             
-            <!-- Benefit 2 -->
-            <div class="benefit-card" style="--i:2">
-                <div class="card-3d">
-                    <div class="card-main">
-                        <div class="holographic-strip"></div>
-                        <h3>Discounted Annual<br>Free Flight Hours</h3>
-                        <div class="card-sparkle"></div>
-                    </div>
-                    <div class="card-reflection"></div>
+            <!-- 3D Floating Text Blocks -->
+            <div class="text-block text-1" data-depth="0.2">
+                <div class="text-card">
+                    <p>Blusky Jets is a global investment & business innovation leader with an in-house team of professionals with decades of experience in aviation finance, structured deals, aircraft operations, and tax strategy—ensuring a disciplined, data-driven approach to every investment.</p>
+                    <div class="card-shine"></div>
                 </div>
-                <div class="particle-ring"></div>
             </div>
             
-            <!-- Benefit 3 -->
-            <div class="benefit-card" style="--i:3">
-                <div class="card-3d">
-                    <div class="card-main">
-                        <div class="holographic-strip"></div>
-                        <h3>Quarterly Payouts of<br>Secured Annual Returns</h3>
-                        <div class="card-sparkle"></div>
-                    </div>
-                    <div class="card-reflection"></div>
+            <div class="text-block text-2" data-depth="0.4">
+                <div class="text-card">
+                    <p>Founded on the principle where luxury and smart investing are meant to ascend together, we bridge the gap between high-performance aircraft ownership and financial growth.</p>
+                    <div class="card-shine"></div>
                 </div>
-                <div class="particle-ring"></div>
             </div>
             
-            <!-- Benefit 4 -->
-            <div class="benefit-card" style="--i:4">
-                <div class="card-3d">
-                    <div class="card-main">
-                        <div class="holographic-strip"></div>
-                        <h3>Competitive Pricing On<br>Hourly Rates</h3>
-                        <div class="card-sparkle"></div>
-                    </div>
-                    <div class="card-reflection"></div>
+            <div class="text-block text-3" data-depth="0.3">
+                <div class="text-card">
+                    <p>We specialize in transforming emerging opportunities into sustainable, high yield investments, ensuring long term growth and impact by executing precision driven investment strategies that drive value & innovation for our global clientele.</p>
+                    <div class="card-shine"></div>
                 </div>
-                <div class="particle-ring"></div>
             </div>
-        </div>
-        
-        <div class="cta-hologram">
-            <div class="hologram-content">
-                <p>Ready for Takeoff?</p>
-                <a href="#" class="hologram-button">INVEST NOW</a>
+            
+            <!-- Floating Jet Animation -->
+            <div class="floating-jet">
+                <img src="https://www.freeiconspng.com/uploads/private-jet-png-2.png" alt="Blusky Jet" class="jet-img">
+                <div class="jet-trail"></div>
             </div>
-            <div class="hologram-light"></div>
         </div>
     </div>
     
-    <div class="floating-jets">
-        <div class="jet">✈️</div>
-        <div class="jet">✈️</div>
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle particle-1">✈️</div>
+        <div class="particle particle-2">💰</div>
+        <div class="particle particle-3">📈</div>
+        <div class="particle particle-4">🌐</div>
     </div>
 </section>
 <style>
-    .join-section {
+    .blusky-intro {
     position: relative;
-    padding: 150px 0;
-    background: #000;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0e23 0%, #1a2a4a 100%);
     overflow: hidden;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
 }
 
-.holographic-bg {
+.floating-islands {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 30% 40%, rgba(0, 200, 255, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 70% 60%, rgba(255, 0, 200, 0.05) 0%, transparent 40%);
-    animation: bgPulse 12s infinite alternate;
+    top: 0;
+    left: 0;
 }
 
-@keyframes bgPulse {
-    0% { opacity: 0.3; }
-    100% { opacity: 0.7; }
+.island {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(0,100,255,0.05) 0%, transparent 70%);
+    filter: blur(30px);
 }
 
-.join-container {
+.island-1 {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    left: -100px;
+    animation: floatIsland1 15s infinite alternate;
+}
+
+.island-2 {
+    width: 800px;
+    height: 800px;
+    bottom: -200px;
+    right: -200px;
+    animation: floatIsland2 20s infinite alternate;
+}
+
+@keyframes floatIsland1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes floatIsland2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+.intro-container {
+    position: relative;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
     z-index: 2;
 }
 
-.join-title {
-    text-align: center;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.title-char {
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: transparent;
-    background: linear-gradient(135deg, #00f2fe, #4facfe);
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+.intro-content {
     position: relative;
-    animation: charFloat 3s ease-in-out infinite;
-    transform-style: preserve-3d;
-}
-
-.title-space {
-    width: 20px;
-}
-
-.title-char:nth-child(1) { animation-delay: 0s; }
-.title-char:nth-child(2) { animation-delay: 0.1s; }
-.title-char:nth-child(3) { animation-delay: 0.2s; }
-.title-char:nth-child(4) { animation-delay: 0.3s; }
-.title-char:nth-child(6) { animation-delay: 0.4s; }
-.title-char:nth-child(7) { animation-delay: 0.5s; }
-
-@keyframes charFloat {
-    0%, 100% { transform: translateY(0) rotateX(0deg); }
-    50% { transform: translateY(-20px) rotateX(20deg); }
-}
-
-.floating-benefits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.benefit-card {
-    position: relative;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.card-3d {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.benefit-card:hover .card-3d {
-    transform: rotateY(15deg) rotateX(10deg) translateZ(30px);
-}
-
-.card-main {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 30, 50, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(0, 200, 255, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    text-align: center;
-    transform: translateZ(20px);
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    gap: 50px;
 }
 
-.holographic-strip {
+.intro-title-wrapper {
+    position: relative;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.intro-title {
+    position: relative;
+    font-size: 5rem;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    margin: 0;
+    animation: titleFloat 8s infinite ease-in-out;
+}
+
+.title-layer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, transparent, #00f2fe, #4facfe, transparent);
-    animation: stripMove 3s linear infinite;
 }
 
-@keyframes stripMove {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
-.card-main h3 {
+.title-front {
     color: white;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin-top: 30px;
-    position: relative;
-    z-index: 2;
+    -webkit-text-stroke: 2px #00a1ff;
+    text-stroke: 2px #00a1ff;
+    transform: translateZ(20px);
 }
 
-.card-sparkle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 30% 40%, rgba(0, 200, 255, 0.1) 0%, transparent 30%),
-        radial-gradient(circle at 70% 60%, rgba(255, 0, 200, 0.1) 0%, transparent 30%);
-    animation: sparklePulse 4s infinite alternate;
-}
-
-.card-reflection {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-    border-radius: 20px;
+.title-back {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0,161,255,0.3);
+    text-stroke: 2px rgba(0,161,255,0.3);
     transform: translateZ(-10px);
 }
 
-.particle-ring {
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    top: -5%;
-    left: -5%;
-    border: 2px dashed rgba(0, 200, 255, 0.3);
-    border-radius: 50%;
-    animation: rotateRing calc(15s * var(--i)) linear infinite;
-    z-index: -1;
+.title-accent {
+    color: transparent;
+    background: linear-gradient(90deg, #00a1ff, #00ffaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translateZ(5px);
+    animation: titleShine 3s infinite alternate;
 }
 
-@keyframes rotateRing {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.05); }
-    100% { transform: rotate(360deg) scale(1); }
+@keyframes titleFloat {
+    0%, 100% { transform: rotateX(5deg) rotateY(0deg); }
+    50% { transform: rotateX(5deg) rotateY(5deg); }
 }
 
-.cta-hologram {
+@keyframes titleShine {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.title-underline {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #00a1ff, transparent);
+    margin-top: 20px;
+    animation: underlineGrow 3s infinite alternate;
+}
+
+@keyframes underlineGrow {
+    0% { width: 200px; }
+    100% { width: 300px; }
+}
+
+.text-block {
     position: relative;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px;
-    background: rgba(0, 50, 80, 0.3);
+    max-width: 800px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.text-card {
+    position: relative;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    border: 1px solid rgba(0, 200, 255, 0.3);
-    text-align: center;
-    box-shadow: 0 0 30px rgba(0, 200, 255, 0.2);
-    animation: hologramFloat 6s ease-in-out infinite;
+    border: 1px solid rgba(0,161,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform-style: preserve-3d;
     overflow: hidden;
 }
 
-.hologram-content {
+.text-block:hover {
+    transform: translateY(-10px) translateZ(20px);
+}
+
+.text-card p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
     position: relative;
     z-index: 2;
 }
 
-.hologram-content p {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.hologram-button {
-    display: inline-block;
-    padding: 15px 40px;
-    background: linear-gradient(135deg, #00f2fe, #4facfe);
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0, 200, 255, 0.4);
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.hologram-button::before {
-    content: '';
+.card-shine {
     position: absolute;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: all 0.5s;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    animation: shine 5s infinite;
 }
 
-.hologram-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 200, 255, 0.6);
+@keyframes shine {
+    100% { left: 150%; }
 }
 
-.hologram-button:hover::before {
-    left: 100%;
-}
+.text-1 { transform: translateZ(20px); }
+.text-2 { transform: translateZ(40px) translateX(100px); }
+.text-3 { transform: translateZ(30px) translateX(-100px); }
 
-.hologram-light {
+.floating-jet {
     position: absolute;
+    right: -200px;
+    top: 50%;
+    width: 400px;
+    animation: jetFloat 15s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.jet-img {
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: radial-gradient(circle at center, rgba(0, 200, 255, 0.1) 0%, transparent 70%);
-    animation: lightPulse 4s infinite alternate;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0,161,255,0.5));
+    transform: rotateY(180deg);
 }
 
-@keyframes hologramFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+.jet-trail {
+    position: absolute;
+    width: 300px;
+    height: 10px;
+    background: linear-gradient(90deg, #00a1ff, transparent);
+    filter: blur(5px);
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
+    opacity: 0.7;
 }
 
-@keyframes lightPulse {
-    0% { opacity: 0.3; }
-    100% { opacity: 0.7; }
+@keyframes jetFloat {
+    0% { transform: translateX(0) translateY(-50%) rotateY(180deg); }
+    100% { transform: translateX(-100vw) translateY(-50%) rotateY(180deg); }
 }
 
-.floating-jets {
+.floating-particles {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -347,71 +290,98 @@
     pointer-events: none;
 }
 
-.jet {
+.particle {
     position: absolute;
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 0.7;
-    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7));
-    animation: jetFloat 15s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(0,161,255,0.7));
 }
 
-.jet:nth-child(1) {
+.particle-1 {
     top: 20%;
-    left: -50px;
-    animation-delay: 0s;
+    left: 10%;
+    animation: floatParticle1 10s infinite linear;
 }
 
-.jet:nth-child(2) {
+.particle-2 {
     top: 70%;
-    left: -50px;
-    animation-delay: 5s;
+    left: 15%;
+    animation: floatParticle2 12s infinite linear;
 }
 
-@keyframes jetFloat {
-    0% { transform: translateX(-100px) rotate(0deg); }
-    100% { transform: translateX(calc(100vw + 100px)) rotate(5deg); }
+.particle-3 {
+    top: 40%;
+    left: 85%;
+    animation: floatParticle3 15s infinite linear;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .join-title {
-        margin-bottom: 60px;
+.particle-4 {
+    top: 80%;
+    left: 90%;
+    animation: floatParticle4 8s infinite linear;
+}
+
+@keyframes floatParticle1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, 30px) rotate(90deg); }
+    50% { transform: translate(100px, 0) rotate(180deg); }
+    75% { transform: translate(50px, -30px) rotate(270deg); }
+}
+
+@keyframes floatParticle2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -40px) scale(1.2); }
+}
+
+@keyframes floatParticle3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-100px, 50px) rotate(360deg); }
+}
+
+@keyframes floatParticle4 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-50px, -30px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .intro-title {
+        font-size: 4rem;
     }
     
-    .title-char {
-        font-size: 3.5rem;
-    }
+    .text-2 { transform: translateZ(40px) translateX(50px); }
+    .text-3 { transform: translateZ(30px) translateX(-50px); }
     
-    .floating-benefits {
-        grid-template-columns: 1fr 1fr;
+    .floating-jet {
+        width: 300px;
     }
 }
 
 @media (max-width: 768px) {
-    .join-section {
-        padding: 100px 0;
+    .intro-title {
+        font-size: 3rem;
     }
     
-    .title-char {
-        font-size: 2.5rem;
+    .text-block {
+        max-width: 100%;
     }
     
-    .benefit-card {
-        height: 250px;
+    .text-1, .text-2, .text-3 {
+        transform: none !important;
     }
     
-    .card-main h3 {
-        font-size: 1.3rem;
+    .floating-jet {
+        display: none;
     }
 }
 
-@media (max-width: 576px) {
-    .floating-benefits {
-        grid-template-columns: 1fr;
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 2.5rem;
     }
     
-    .title-char {
-        font-size: 2rem;
+    .text-card p {
+        font-size: 1rem;
     }
 }
 </style>
