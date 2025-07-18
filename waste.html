@@ -1,352 +1,792 @@
-<section class="holo-services">
-  <!-- Floating Orb Background -->
-  <div class="orb-bg"></div>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="AIvent" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
-  <!-- Interactive Title -->
-  <div class="holo-header">
-    <h2 class="holo-title">
-      <span class="title-char">S</span>
-      <span class="title-char">E</span>
-      <span class="title-char">R</span>
-      <span class="title-char">V</span>
-      <span class="title-char">I</span>
-      <span class="title-char">C</span>
-      <span class="title-char">E</span>
-      <span class="title-char">S</span>
-    </h2>
-    <div class="title-beam"></div>
-  </div>
 
-  <!-- Holographic Pod System -->
-  <div class="pod-system">
-    <!-- Pod 1 -->
-    <div class="service-pod" data-service="management">
-      <div class="pod-core">
-        <div class="pod-icon">🛩️</div>
-        <h3>AIRCRAFT MANAGEMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">⏱️</span> Flight Ops</li>
-          <li><span class="detail-icon">🛠️</span> Maintenance</li>
-          <li><span class="detail-icon">📜</span> Regulations</li>
-          <li><span class="detail-icon">💰</span> Finance</li>
-          <li><span class="detail-icon">🛡️</span> Insurance</li>
-          <li><span class="detail-icon">👨‍✈️</span> Crew</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-
-    <!-- Pod 2 -->
-    <div class="service-pod" data-service="investment">
-      <div class="pod-core">
-        <div class="pod-icon">📈</div>
-        <h3>AIRCRAFT INVESTMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">⏳</span> Lease Terms</li>
-          <li><span class="detail-icon">🔄</span> ACMI Lease</li>
-          <li><span class="detail-icon">✈️✈️</span> Fleet Solutions</li>
-          <li><span class="detail-icon">💦</span> Dry/Wet Lease</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-
-    <!-- Pod 3 -->
-    <div class="service-pod" data-service="crew">
-      <div class="pod-core">
-        <div class="pod-icon">👨‍✈️</div>
-        <h3>CREW MANAGEMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">🔍</span> Recruitment</li>
-          <li><span class="detail-icon">⚙️</span> Operational Support</li>
-          <li><span class="detail-icon">📝</span> Compliance</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-
-    <!-- Pod 4 -->
-    <div class="service-pod" data-service="leasing">
-      <div class="pod-core">
-        <div class="pod-icon">💼</div>
-        <h3>AIRCRAFT LEASING</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">🧩</span> Fractional Ownership</li>
-          <li><span class="detail-icon">💸</span> Purchase Advisory</li>
-          <li><span class="detail-icon">📉</span> Risk Management</li>
-          <li><span class="detail-icon">🔎</span> Market Analysis</li>
-          <li><span class="detail-icon">⚖️</span> Legal Structuring</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-  </div>
-
-  <!-- Floating Data Nodes -->
-  <div class="data-nodes">
-    <div class="node" style="--delay:0"></div>
-    <div class="node" style="--delay:1"></div>
-    <div class="node" style="--delay:2"></div>
-    <div class="node" style="--delay:3"></div>
-  </div>
-</section>
+</head>
 <style>
-    .holo-services {
-  position: relative;
-  padding: 80px 20px; /* Reduced padding for all screens */
-  background: radial-gradient(ellipse at center, #0a1120 0%, #000000 100%);
-  overflow: hidden;
-}
-
-.orb-bg {
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle at center, 
-    rgba(0, 150, 255, 0.1) 0%, 
-    transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: orbPulse 15s infinite alternate;
-}
-
-.holo-header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 60px; /* Consistent margin */
-  z-index: 2;
-}
-
-.holo-title {
-  display: inline-flex;
-  gap: 8px;
-  margin: 0;
-  perspective: 1000px;
-}
-
-.title-char {
-  font-size: 2.5rem; /* Smaller base font size */
-  font-weight: 700;
-  color: transparent;
-  background: linear-gradient(180deg, #00f2ff, #0066ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
-  transform-style: preserve-3d;
-  animation: charFloat 4s infinite ease-in-out;
-  animation-delay: calc(var(--char-index) * 0.1s);
-}
-
-.title-beam {
-  position: absolute;
-  width: 300px;
-  height: 3px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    #00f2ff, 
-    transparent);
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(1px);
-  animation: beamScan 3s infinite linear;
-}
-
-.pod-system {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px; /* Consistent gap */
-  max-width: 1200px; /* Slightly reduced max-width */
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  padding: 0 20px; /* Added padding for better mobile spacing */
-}
-
-.service-pod {
-  position: relative;
-  height: 380px; /* Slightly reduced height */
-  perspective: 1000px;
-}
-
-.pod-core {
-  position: absolute;
-  width: 100%;
-  height: 120px;
-  background: rgba(20, 40, 80, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 60px;
-  border: 1px solid rgba(0, 200, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 2;
-}
-
-.service-pod:hover .pod-core {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 40px rgba(0, 200, 255, 0.4);
-}
-
-.pod-icon {
-  font-size: 2rem; /* Slightly smaller icon */
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7));
-}
-
-.pod-core h3 {
-  color: white;
-  font-size: 1rem; /* Smaller heading */
-  margin: 0;
-  text-align: center;
-  padding: 0 15px; /* Added padding for text wrapping */
-}
-
-.pod-details {
-  position: absolute;
-  width: 100%;
-  top: 140px;
-  background: rgba(10, 30, 60, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 20px 15px; /* Reduced padding */
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 200, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.service-pod:hover .pod-details {
-  transform: scaleY(1);
-}
-
-.pod-details ul {
-  list-style: none;
+.logo{
   padding: 0;
   margin: 0;
-}
-
-.pod-details li {
-  color: rgba(255, 255, 255, 0.9);
-  padding: 6px 0; /* Reduced padding */
-  font-size: 0.85rem; /* Smaller font */
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* aligns logo to the left */
 }
 
-.detail-icon {
-  margin-right: 8px; /* Reduced margin */
-  font-size: 1rem; /* Smaller icon */
+.logo-main {
+  height: 150px;
+  width: 350px; /* or 100% if you want it to fully stretch */
+  object-fit: contain;
+  display: block;
+  margin: 0;
 }
 
-.pod-connector {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: linear-gradient(to bottom, 
-    rgba(0, 200, 255, 0.8), 
-    transparent);
-  transform: translateX(-50%);
+</style>
+<body class="dark-scheme">
+
+    <div id="wrapper">
+
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+
+    <!-- Add Font Awesome for icons -->
+    
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 80px !important;
+                width: 200px !important;
+            }
+        }
+    </style>
+
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <header class="transparent" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                                        <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                        <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                    </ul>
+                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+    </div>
+
+ <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .contact-hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .floating-island {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            animation: float 8s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .contact-title {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #fff, #3a86ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(58, 134, 255, 0.3);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent,
+                transparent,
+                transparent,
+                rgba(58, 134, 255, 0.1)
+            );
+            transform: rotate(30deg);
+            z-index: -1;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            grid-column: span 2;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Floating elements in background */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            animation: floatElement 15s infinite ease-in-out;
+        }
+        
+        @keyframes floatElement {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(20px, 20px); }
+            50% { transform: translate(0, 40px); }
+            75% { transform: translate(-20px, 20px); }
+        }
+        
+        .element-1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 5%;
+            animation-duration: 20s;
+        }
+        
+        .element-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            right: 10%;
+            animation-duration: 25s;
+            animation-delay: 2s;
+        }
+        
+        .element-3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 20%;
+            animation-duration: 18s;
+            animation-delay: 1s;
+        }
+        
+        /* 3D Map Container */
+        .map-container {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(50%) contrast(120%) brightness(90%);
+            transition: var(--transition);
+        }
+        
+        .map-container:hover iframe {
+            transform: scale(1.05);
+            filter: grayscale(0%) contrast(100%) brightness(100%);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                grid-column: span 1;
+            }
+            
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .floating-island {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .floating-island {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .contact-card {
+                padding: 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="contact-hero">
+        <!-- Floating background elements -->
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+        
+        <!-- Main floating island (without mouse-move effect) -->
+        <div class="floating-island">
+            <h1 class="contact-title">Get In Touch With Us</h1>
+            
+            <div class="contact-grid">
+                <!-- Contact Info Card 1 -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>121 AI Boulevard<br>San Francisco, CA 94107<br>United States</p>
+                </div>
+                
+                <!-- Contact Info Card 2 -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <p>+1 (123) 456-7890<br>+1 (987) 654-3210</p>
+                </div>
+                
+                <!-- Contact Info Card 3 -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Addresses</h3>
+                    <p>info@crystalwings.com<br>support@crystalwings.com</p>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-card contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map Container -->
+            <!-- <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.538962143603!2d-122.4194155846821!3d37.77492997975946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        // Animate elements when scrolling into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Observe all cards and the map
+        const cards = document.querySelectorAll('.contact-card');
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+        
+        const mapContainer = document.querySelector('.map-container');
+        mapContainer.style.opacity = '0';
+        mapContainer.style.transform = 'translateY(50px)';
+        mapContainer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(mapContainer);
+    </script>
+
+
+    <!-- footer begin -->
+    <footer class="text-light section-dark">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            121 AI Blvd, San Francisco<br>
+                            BCA 94107
+                        </div>
+                        <div>
+                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
+                            <div class="social-icons mb-sm-30 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                            T. +1 123 456 789<br>
+                            M. contact@aivent.com
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright 2025 - AIvent by Designesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+     <!-- <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>
+    </div> -->
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/custom-marquee.js"></script>
+
+</body>
+
+</html>
+
+
+<style>
+    header {
+    position: relative; /* or fixed if you want it to stay at top */
+    z-index: 1000; /* ensures it stays above other content */
+}
+    /* Add this to your existing styles */
+    .contact-hero {
+        padding-top: 100px; /* Creates space below the header */
+        position: relative;
+        min-height: 100vh; /* Ensures it takes at least full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .contact-hero {
+            padding-top: 80px; /* Smaller gap on mobile */
+        }
+    }
+</style>
+<style>
+    .contact-hero {
+        padding-top: 100px; /* Very large gap */
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .floating-island {
+        margin-top: 100px; /* Additional large spacing */
+    }
+
+    @media (max-width: 991px) {
+        .contact-hero {
+            padding-top: 150px;
+        }
+        
+        .floating-island {
+            margin-top: 50px;
+        }
+    }
+</style>
+<style>
+    /* Add this to your existing styles */
+    .contact-hero {
+        padding-top: 400px; /* Space below header */
+        padding-bottom: 100px; /* Space above footer */
+        position: relative;
+        min-height: calc(100vh - 200px); /* Adjust height to account for padding */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible; /* Changed from hidden to visible */
+    }
+
+    .floating-island {
+        margin: 50px 0; /* Vertical spacing */
+    }
+
+    /* Ensure footer has proper spacing */
+    footer {
+        position: relative;
+        z-index: 10;
+        padding: 100px 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .contact-hero {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            min-height: calc(100vh - 160px);
+        }
+        
+        .floating-island {
+            margin: 30px 0;
+        }
+    }
+
+    /* Update the contact grid styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
 }
 
-.pod-glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, 
-    rgba(0, 150, 255, 0.1) 0%, 
-    transparent 70%);
-  border-radius: 60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+/* Make the form span two columns on larger screens */
+@media (min-width: 992px) {
+    .contact-form {
+        grid-column: span 2;
+    }
 }
 
-.service-pod:hover .pod-glow {
-  opacity: 1;
+/* Ensure form elements take full width */
+.form-group {
+    width: 100%;
 }
 
-.data-nodes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.node {
-  position: absolute;
-  width: 8px; /* Smaller nodes */
-  height: 8px;
-  background: rgba(0, 200, 255, 0.7);
-  border-radius: 50%;
-  filter: blur(1px);
-  animation: nodeFloat 15s infinite linear;
-  animation-delay: calc(var(--delay) * 3s);
-}
-
-.node:nth-child(1) { top: 20%; left: 10%; }
-.node:nth-child(2) { top: 70%; left: 15%; }
-.node:nth-child(3) { top: 40%; left: 85%; }
-.node:nth-child(4) { top: 80%; left: 90%; }
-
-/* Animations */
-@keyframes orbPulse {
-  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.3; }
-  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
-}
-
-@keyframes charFloat {
-  0%, 100% { transform: translateY(0) rotateX(0deg); }
-  50% { transform: translateY(-8px) rotateX(10deg); }
-}
-
-@keyframes beamScan {
-  0% { background-position: -100% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes nodeFloat {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
-  25% { transform: translate(40px, -25px) scale(1.2); opacity: 1; }
-  50% { transform: translate(80px, 0) scale(1); opacity: 0.7; }
-  75% { transform: translate(40px, 25px) scale(0.8); opacity: 0.4; }
-  100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
-}
-
-/* Simplified Responsive Design - No special mobile treatment */
-@media (max-width: 768px) {
-  .holo-title {
-    gap: 5px;
-  }
-  
-  .title-char {
-    font-size: 2rem;
-  }
-  
-  .pod-system {
-    grid-template-columns: 1fr;
-  }
+/* Fix the floating island width */
+.floating-island {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
 }
 </style>

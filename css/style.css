@@ -6529,7 +6529,8 @@ p.lead.big{
 }
 
 .dark-scheme strong{
-  color:#ffffff;
+  /* color:#ffffff; */
+  color: black;
 }
 
 .panel-group {
