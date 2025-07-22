@@ -20,36 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-<style>
-.logo{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* aligns logo to the left */
-}
 
-.logo-main {
-  height: 150px;
-  width: 350px; /* or 100% if you want it to fully stretch */
-  object-fit: contain;
-  display: block;
-  margin: 0;
-}
-
-</style>
-<body class="dark-scheme">
-
-    <div id="wrapper">
-
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
-        <div class="scrollbar-v show-on-scroll"></div>
-
-        <!-- page preloader begin -->
-        <div id="de-loader"></div>
-        <!-- page preloader close -->
 
 
     <!-- Add Font Awesome for icons -->
@@ -131,20 +102,224 @@
             .logo-main, 
             .logo-scroll, 
             .logo-mobile {
-                height: 80px !important;
-                width: 200px !important;
+                height: 100px !important;
+                width: 150px !important;
             }
         }
+        
+    </style>
+ <style>
+/* Logo styles for all screens */
+.logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-        .logo-main {
-  height: 400px;  /* Increased height */
-  width: 500px;   /* Increased width */
-  object-fit: contain; /* Ensures the logo scales properly */
+.logo-main {
+  height: 150px;
+  width: 350px;
+  object-fit: contain;
   display: block;
   margin: 0;
 }
-    </style>
 
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Adjust header height and padding */
+  header.transparent {
+    min-height: 120px;
+    padding: 10px 15px; /* Added left/right padding */
+  }
+  
+  /* Make logo container flexible with padding */
+  #logo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px; /* Added left padding */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    margin-left: 0; /* Ensure no negative margin */
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Adjust menu button position */
+  .mobile-menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto; /* Push to the right */
+    padding-right: 15px; /* Add right padding */
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Reset header padding and alignment */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 0 !important; /* Remove side padding */
+  }
+  
+  /* Make logo container stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Logo image adjustments - stick to left edge */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 120px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start (left) */
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Push menu button to right */
+  .mobile-menu-btn {
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove row margins */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Header adjustments */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 15px !important; /* Added side padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container - stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Header layout - space between logo and menu */
+  .de-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Menu button - stick to right edge */
+  .mobile-menu-btn {
+    position: relative;
+    right: 0;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Adjust the menu icon alignment */
+  .mobile-menu-btn i {
+    margin-left: auto; /* Push icon to the right */
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure row takes full width */
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+</style>
 
 <body class="dark-scheme">
     <div id="wrapper">
@@ -157,9 +332,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                       <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
-                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 200px; width: 400px;">
-                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
+                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -492,6 +667,73 @@
         }
         
     </style>
+<style>
+.blusky-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px; /* Added padding to prevent header overlap */
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.delay-1 {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .blusky-section {
+        padding-top: 120px; /* Adjusted for mobile header */
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 40px;
+    }
+    
+    .text-content p {
+        font-size: 24px !important;
+        margin-top: 20px !important;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .blusky-section {
+        padding-top: 100px; /* Smaller padding for very small devices */
+    }
+    
+    .text-content p {
+        font-size: 20px !important;
+        margin-top: 10px !important;
+    }
+}
+</style>
 
 <body>
    <section class="blusky-section">
@@ -533,6 +775,56 @@
             </div>
         </div>
     </section>
+    <style>
+    /* Jet Image Container Styles */
+    .jet-image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        animation: fadeIn 1.5s ease-in forwards;
+        opacity: 0;
+        animation-delay: 0.5s;
+    }
+
+    .jet-image {
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        animation: float 6s ease-in-out infinite;
+        filter: drop-shadow(0 0 20px rgba(0, 161, 255, 0.5));
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 992px) {
+        .jet-image-container {
+            width: 100%;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .jet-image {
+            max-height: 350px; /* Larger size for mobile */
+            width: 100%;
+            max-width: 400px; /* Maximum width to prevent distortion */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .jet-image {
+            max-height: 300px; /* Slightly smaller for very small devices */
+            max-width: 350px;
+        }
+    }
+</style>
     <style>
 /* Existing styles... */
 
@@ -916,13 +1208,14 @@
 
 .section-title {
     text-align: center;
-    color: white;
+    color: #000000; /* Changed from white to pure black */
     font-size: 2.5rem;
     margin-bottom: 70px;
     position: relative;
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    text-shadow: 0 0 10px rgba(0, 161, 255, 0.5); /* Optional: Adds subtle glow to keep visibility */
 }
 
 .section-title::after {
