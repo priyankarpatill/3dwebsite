@@ -118,12 +118,224 @@
             .logo-main, 
             .logo-scroll, 
             .logo-mobile {
-                height: 80px !important;
-                width: 200px !important;
+                height: 100px !important;
+                width: 150px !important;
             }
         }
+        
     </style>
+ <style>
+/* Logo styles for all screens */
+.logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.logo-main {
+  height: 150px;
+  width: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Adjust header height and padding */
+  header.transparent {
+    min-height: 120px;
+    padding: 10px 15px; /* Added left/right padding */
+  }
+  
+  /* Make logo container flexible with padding */
+  #logo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px; /* Added left padding */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    margin-left: 0; /* Ensure no negative margin */
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Adjust menu button position */
+  .mobile-menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto; /* Push to the right */
+    padding-right: 15px; /* Add right padding */
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Reset header padding and alignment */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 0 !important; /* Remove side padding */
+  }
+  
+  /* Make logo container stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Logo image adjustments - stick to left edge */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 120px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start (left) */
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Push menu button to right */
+  .mobile-menu-btn {
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove row margins */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Header adjustments */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 15px !important; /* Added side padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container - stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Header layout - space between logo and menu */
+  .de-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Menu button - stick to right edge */
+  .mobile-menu-btn {
+    position: relative;
+    right: 0;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Adjust the menu icon alignment */
+  .mobile-menu-btn i {
+    margin-left: auto; /* Push icon to the right */
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure row takes full width */
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+</style>
 
 <body class="dark-scheme">
     <div id="wrapper">
@@ -138,7 +350,7 @@
                                     <a href="index.html">
                                       <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
+                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -354,20 +566,82 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="wow scaleIn" style="padding-top: 56.25%; position: relative;">
-                    <!-- Clean video element with no controls or indicators -->
-                    <video class="w-100 h-100" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; object-fit: cover;">
-                        <source src="./1992-153555258_small.mp4" type="video/mp4">
-                           <!-- <source src="./images/84588-585553857_small.mp4" type="video/mp4"> -->
-                        Your browser does not support the video tag.
-                    </video>
+           <div class="col-lg-6">
+                <div class="wow scaleIn" style="position: relative; width: 100%;">
+                    <!-- Circular/Oval Video Container -->
+                    <div class="video-mask" style="
+                        width: 100%;
+                        max-width: 500px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 0 auto;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                    ">
+                        <video class="w-100 h-100" autoplay muted loop playsinline style="
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                            height: 100%;
+                        ">
+                            <source src="./1992-153555258_small.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<style>
+    /* Circular/Oval Video Styling */
+    .video-mask {
+        border-radius: 50%; /* Perfect circle */
+        /* OR for oval shape: */
+        /* border-radius: 50% / 60%; */
+        overflow: hidden;
+        position: relative;
+    }
+    
+    /* Ensure video fills the circular container */
+    .video-mask video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .video-mask {
+            max-width: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #section-about .col-lg-6 {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    
+    /* Remove default video controls */
+    video::-webkit-media-controls {
+        display: none !important;
+    }
+    
+    /* White background for section */
+    #section-about {
+        background-color: white !important;
+    }
+    
+    /* Black text for content */
+    #section-about p,
+    #section-about li {
+        color: black !important;
+    }
+</style>
 <style>
   /* Remove any fixed height constraints */
 .wow.scaleIn {
