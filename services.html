@@ -149,9 +149,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                       <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
+                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -161,7 +161,8 @@
                                 <div class="de-flex-col header-col-mid">
                                     <!-- Mobile menu button -->
                                     <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars"></i>
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
                                     </div>
                                     
                                     <!-- Main desktop menu -->
@@ -176,9 +177,9 @@
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                             <!-- <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -240,504 +241,758 @@
         });
         </script>
     </div>
-<section class="blusky-intro">
-    <!-- Animated Background Elements -->
-    <div class="floating-islands">
-        <div class="island island-1"></div>
-        <div class="island island-2"></div>
+    
+    
+   <section class="blusky-jets">
+    <!-- 3D Particle Background -->
+    <div class="blusky-jets__particles"></div>
+    
+    <!-- Floating 3D Elements -->
+    <div class="blusky-jets__floating-elements">
+        <div class="blusky-jets__shape blusky-jets__shape--1"></div>
+        <div class="blusky-jets__shape blusky-jets__shape--2"></div>
+        <div class="blusky-jets__shape blusky-jets__shape--3"></div>
     </div>
     
-    <div class="particle-network"></div>
-    
     <!-- Main Content -->
-    <div class="intro-container">
-        <div class="intro-content">
-            <!-- 3D Animated Title -->
-            <div class="intro-title-wrapper">
-                <h1 class="intro-title">
-                    <span class="title-layer title-front">CRYSTAL WINGS</span>
-                    <span class="title-layer title-back">CRYSTAL WINGS</span>
-                    <span class="title-layer title-accent">CRYSTAL WINGS</span>
-                </h1>
-                <div class="title-underline"></div>
-            </div>
-            
-            <!-- 3D Floating Text Blocks -->
-            <div class="text-block text-1" data-depth="0.2">
-                <div class="text-card">
-                    <p>It is a global investment & business innovation leader with an in-house team of professionals with decades of experience in aviation finance, structured deals, aircraft operations, and tax strategy—ensuring a disciplined, data-driven approach to every investment.</p>
-                    <div class="card-shine"></div>
+    <div class="blusky-jets__container">
+        <!-- 3D Animated Title -->
+        <div class="blusky-jets__title-wrapper">
+            <!-- <h1 class="blusky-jets__title">
+                <span class="blusky-jets__title-text">BLUSKY</span>
+                <span class="blusky-jets__title-highlight">JETS</span>
+            </h1> -->
+            <div class="blusky-jets__subtitle" style="color: black;">Where Luxury and Smart Investing Ascend Together</div>
+        </div>
+        
+        <!-- Content Blocks -->
+        <div class="blusky-jets__content-grid" >
+            <!-- 3D Card 1 -->
+            <div class="blusky-jets__card blusky-jets__card--1">
+                <div class="blusky-jets__card-inner">
+                    <div class="blusky-jets__card-icon">✈</div>
+                    <div class="blusky-jets__card-content">
+                        <!-- <h3 >Global Aviation Investment Leader</h3> -->
+                         <p style=" color: #00c6ff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); font-size: 25px;">Global Aviation Investment Leader</p>
+                        <p>It is a global investment & business innovation leader with an in-house team of professionals with decades of experience in aviation finance, structured deals, aircraft operations, and tax strategy—ensuring a disciplined, data-driven approach to every investment.</p>
+                    </div>
+                    <div class="blusky-jets__card-glow"></div>
                 </div>
             </div>
             
-            <div class="text-block text-2" data-depth="0.4">
-                <div class="text-card">
-                    <p>Founded on the principle where luxury and smart investing are meant to ascend together, we bridge the gap between high-performance aircraft ownership and financial growth.</p>
-                    <div class="card-shine"></div>
+            <!-- 3D Card 2 -->
+            <div class="blusky-jets__card blusky-jets__card--2">
+                <div class="blusky-jets__card-inner">
+                    <div class="blusky-jets__card-icon">📈</div>
+                    <div class="blusky-jets__card-content">
+                        <p style=" color: #00c6ff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); font-size: 25px;">Luxury Meets Smart Investing</p>
+                        <p>Founded on the principle where luxury and smart investing are meant to ascend together, we bridge the gap between high-performance aircraft ownership and financial growth.</p>
+                    </div>
+                    <div class="blusky-jets__card-glow"></div>
                 </div>
             </div>
             
-            <div class="text-block text-3" data-depth="0.3">
-                <div class="text-card">
-                    <p>We specialize in transforming emerging opportunities into sustainable, high yield investments, ensuring long term growth and impact by executing precision driven investment strategies that drive value & innovation for our global clientele.</p>
-                    <div class="card-shine"></div>
+            <!-- 3D Card 3 -->
+            <div class="blusky-jets__card blusky-jets__card--3">
+                <div class="blusky-jets__card-inner">
+                    <div class="blusky-jets__card-icon">🌐</div>
+                    <div class="blusky-jets__card-content">
+                        <p style=" color: #00c6ff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); font-size: 25px;">Global Innovation</p>
+                        <p>We specialize in transforming emerging opportunities into sustainable, high yield investments, ensuring long term growth and impact by executing precision driven investment strategies that drive value & innovation for our global clientele.</p>
+                    </div>
+                    <div class="blusky-jets__card-glow"></div>
                 </div>
-            </div>
-            
-            <!-- Floating Jet Animation -->
-            <div class="floating-jet">
-                <img src="https://www.freeiconspng.com/uploads/airplane-png-16.png" alt="Blusky Jet" class="jet-img">
-                <div class="jet-trail"></div>
             </div>
         </div>
     </div>
     
-    <!-- Floating Particles -->
-    <div class="floating-particles">
-        <div class="particle particle-1">✈️</div>
-        <div class="particle particle-2">💰</div>
-        <div class="particle particle-3">📈</div>
-        <div class="particle particle-4">🌐</div>
-    </div>
+    <!-- Floating CTA -->
+    <!-- <div class="blusky-jets__cta">
+        <div class="blusky-jets__cta-core">
+            <span>Explore Aviation Investments</span>
+            <div class="blusky-jets__cta-arrow">→</div>
+        </div>
+        <div class="blusky-jets__cta-halo"></div>
+    </div> -->
 </section>
+
 <style>
-    .blusky-intro {
+.blusky-jets {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0e23 0%, #1a2a4a 100%);
+    background: radial-gradient(ellipse at bottom, #0a0e23 0%, #000000 100%);
     overflow: hidden;
-    padding: 100px 0;
     display: flex;
     align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
-.floating-islands {
+/* Particle Background */
+.blusky-jets__particles {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
-.island {
+/* Floating 3D Elements */
+.blusky-jets__floating-elements {
     position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(0,100,255,0.05) 0%, transparent 70%);
-    filter: blur(30px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
 }
 
-.island-1 {
-    width: 500px;
-    height: 500px;
-    top: -100px;
-    left: -100px;
-    animation: floatIsland1 15s infinite alternate;
+.blusky-jets__shape {
+    position: absolute;
+    background: rgba(100, 200, 255, 0.05);
+    border: 1px solid rgba(100, 200, 255, 0.1);
+    backdrop-filter: blur(2px);
+    transform-style: preserve-3d;
 }
 
-.island-2 {
-    width: 800px;
-    height: 800px;
-    bottom: -200px;
-    right: -200px;
-    animation: floatIsland2 20s infinite alternate;
+.blusky-jets__shape--1 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 10%;
+    transform: rotateX(45deg) rotateZ(30deg);
+    animation: floatShape1 18s infinite ease-in-out;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-@keyframes floatIsland1 {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+.blusky-jets__shape--2 {
+    width: 400px;
+    height: 400px;
+    bottom: 15%;
+    right: 8%;
+    transform: rotateX(60deg) rotateZ(-20deg);
+    animation: floatShape2 20s infinite ease-in-out;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
-@keyframes floatIsland2 {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-50px, -50px); }
+.blusky-jets__shape--3 {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    left: 80%;
+    transform: rotateX(30deg) rotateZ(45deg);
+    animation: floatShape3 15s infinite ease-in-out;
+    clip-path: circle(50% at 50% 50%);
 }
 
-.intro-container {
+@keyframes floatShape1 {
+    0%, 100% { transform: rotateX(45deg) rotateZ(30deg) translateY(0) translateZ(0); }
+    50% { transform: rotateX(45deg) rotateZ(30deg) translateY(-60px) translateZ(50px); }
+}
+
+@keyframes floatShape2 {
+    0%, 100% { transform: rotateX(60deg) rotateZ(-20deg) translateY(0) translateZ(0); }
+    50% { transform: rotateX(60deg) rotateZ(-20deg) translateY(70px) translateZ(-50px); }
+}
+
+@keyframes floatShape3 {
+    0%, 100% { transform: rotateX(30deg) rotateZ(45deg) translateY(0) translateZ(0); }
+    50% { transform: rotateX(30deg) rotateZ(45deg) translateY(-40px) translateZ(30px); }
+}
+
+/* Main Container */
+.blusky-jets__container {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 80px 20px;
     z-index: 2;
-}
-
-.intro-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.intro-title-wrapper {
-    position: relative;
-    perspective: 1000px;
-    margin-bottom: 30px;
-}
-
-.intro-title {
-    position: relative;
-    font-size: 5rem;
-    font-weight: 700;
-    color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 5px;
     transform-style: preserve-3d;
-    display: inline-block;
+}
+
+/* Modern Title */
+.blusky-jets__title-wrapper {
+    position: relative;
+    margin-bottom: 80px;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.blusky-jets__title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    transform-style: preserve-3d;
     animation: titleFloat 8s infinite ease-in-out;
 }
 
-.title-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
+.blusky-jets__title-text {
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    transform: translateZ(0);
+    transition: all 0.5s ease;
 }
 
-.title-front {
-    color: white;
-    -webkit-text-stroke: 2px #00a1ff;
-    text-stroke: 2px #00a1ff;
+.blusky-jets__title-highlight {
+    color: #00c6ff;
+    text-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+    position: relative;
     transform: translateZ(20px);
+    transition: all 0.5s ease;
 }
 
-.title-back {
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(0,161,255,0.3);
-    text-stroke: 2px rgba(0,161,255,0.3);
-    transform: translateZ(-10px);
-}
-
-.title-accent {
-    color: transparent;
-    background: linear-gradient(90deg, #00a1ff, #00ffaa);
-    -webkit-background-clip: text;
-    background-clip: text;
-    transform: translateZ(5px);
-    animation: titleShine 3s infinite alternate;
+.blusky-jets__subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    animation: floatSubtitle 6s infinite ease-in-out;
 }
 
 @keyframes titleFloat {
-    0%, 100% { transform: rotateX(5deg) rotateY(0deg); }
-    50% { transform: rotateX(5deg) rotateY(5deg); }
+    0%, 100% { transform: translateY(0) rotateX(3deg); }
+    50% { transform: translateY(-10px) rotateX(5deg); }
 }
 
-@keyframes titleShine {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
+@keyframes floatSubtitle {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-8px); opacity: 1; }
 }
 
-.title-underline {
-    width: 200px;
-    height: 3px;
-    background: linear-gradient(90deg, #00a1ff, transparent);
-    margin-top: 20px;
-    animation: underlineGrow 3s infinite alternate;
-}
-
-@keyframes underlineGrow {
-    0% { width: 200px; }
-    100% { width: 300px; }
-}
-
-.text-block {
+/* Content Grid */
+.blusky-jets__content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     position: relative;
-    max-width: 800px;
+    transform-style: preserve-3d;
+}
+
+/* Modern 3D Cards */
+.blusky-jets__card {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.blusky-jets__card-inner {
+    position: relative;
+    padding: 40px;
+    background: rgba(5, 15, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 198, 255, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.blusky-jets__card:hover .blusky-jets__card-inner {
+    transform: translateY(-15px) translateZ(30px) rotateX(5deg);
+    box-shadow: 0 35px 60px rgba(0, 114, 255, 0.25);
+    border-color: rgba(0, 198, 255, 0.3);
+}
+
+.blusky-jets__card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #00c6ff;
+    transform: translateZ(20px);
+    transition: all 0.5s ease;
+}
+
+.blusky-jets__card:hover .blusky-jets__card-icon {
+    transform: translateZ(30px) scale(1.1);
+    text-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+}
+
+.blusky-jets__card-content h3 {
+    color: #00c6ff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    transform: translateZ(15px);
+}
+
+.blusky-jets__card-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transform: translateZ(10px);
+}
+
+.blusky-jets__card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 198, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blusky-jets__card:hover .blusky-jets__card-glow {
+    opacity: 1;
+}
+
+/* Individual Card Animations */
+.blusky-jets__card--1 {
+    animation: floatCard1 8s infinite ease-in-out;
+}
+
+.blusky-jets__card--2 {
+    animation: floatCard2 9s infinite ease-in-out;
+}
+
+.blusky-jets__card--3 {
+    animation: floatCard3 7s infinite ease-in-out;
+}
+
+@keyframes floatCard1 {
+    0%, 100% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(-20px) translateZ(15px); }
+}
+
+@keyframes floatCard2 {
+    0%, 100% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(15px) translateZ(10px); }
+}
+
+@keyframes floatCard3 {
+    0%, 100% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(-15px) translateZ(20px); }
+}
+
+/* Modern CTA */
+.blusky-jets__cta {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
     perspective: 1000px;
     transform-style: preserve-3d;
-    transition: transform 0.5s;
 }
 
-.text-card {
-    position: relative;
-    padding: 30px;
-    background: rgba(255,255,255,0.05);
+.blusky-jets__cta-core {
+    padding: 18px 36px;
+    background: linear-gradient(135deg, rgba(0, 198, 255, 0.2), rgba(0, 114, 255, 0.1));
+    border: 1px solid rgba(0, 198, 255, 0.3);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
-    border: 1px solid rgba(0,161,255,0.2);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     transform-style: preserve-3d;
-    overflow: hidden;
-}
-
-.text-block:hover {
-    transform: translateY(-10px) translateZ(20px);
-}
-
-.text-card p {
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     z-index: 2;
 }
 
-.card-shine {
+.blusky-jets__cta-core:hover {
+    background: linear-gradient(135deg, rgba(0, 198, 255, 0.3), rgba(0, 114, 255, 0.2));
+    transform: translateY(-8px) translateZ(15px);
+    box-shadow: 0 15px 30px rgba(0, 114, 255, 0.2);
+}
+
+.blusky-jets__cta-core span {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.blusky-jets__cta-arrow {
+    color: #00c6ff;
+    font-size: 1.5rem;
+    transform: translateZ(5px);
+    transition: all 0.3s ease;
+}
+
+.blusky-jets__cta-core:hover .blusky-jets__cta-arrow {
+    transform: translateZ(10px) translateX(5px);
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
+}
+
+.blusky-jets__cta-halo {
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
-    transform: skewX(-25deg);
-    animation: shine 5s infinite;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(0, 198, 255, 0.1), transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: haloPulse 3s infinite ease-in-out;
 }
 
-@keyframes shine {
-    100% { left: 150%; }
-}
-
-.text-1 { transform: translateZ(20px); }
-.text-2 { transform: translateZ(40px) translateX(100px); }
-.text-3 { transform: translateZ(30px) translateX(-100px); }
-
-.floating-jet {
-    position: absolute;
-    right: -200px;
-    top: 50%;
-    width: 400px;
-    animation: jetFloat 15s infinite linear;
-    transform-style: preserve-3d;
-}
-
-.jet-img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 20px rgba(0,161,255,0.5));
-    transform: rotateY(180deg);
-}
-
-.jet-trail {
-    position: absolute;
-    width: 300px;
-    height: 10px;
-    background: linear-gradient(90deg, #00a1ff, transparent);
-    filter: blur(5px);
-    top: 50%;
-    left: -150px;
-    transform: translateY(-50%);
-    opacity: 0.7;
-}
-
-@keyframes jetFloat {
-    0% { transform: translateX(0) translateY(-50%) rotateY(180deg); }
-    100% { transform: translateX(-100vw) translateY(-50%) rotateY(180deg); }
-}
-
-.floating-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-.particle {
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.7;
-    filter: drop-shadow(0 0 5px rgba(0,161,255,0.7));
-}
-
-.particle-1 {
-    top: 20%;
-    left: 10%;
-    animation: floatParticle1 10s infinite linear;
-}
-
-.particle-2 {
-    top: 70%;
-    left: 15%;
-    animation: floatParticle2 12s infinite linear;
-}
-
-.particle-3 {
-    top: 40%;
-    left: 85%;
-    animation: floatParticle3 15s infinite linear;
-}
-
-.particle-4 {
-    top: 80%;
-    left: 90%;
-    animation: floatParticle4 8s infinite linear;
-}
-
-@keyframes floatParticle1 {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(50px, 30px) rotate(90deg); }
-    50% { transform: translate(100px, 0) rotate(180deg); }
-    75% { transform: translate(50px, -30px) rotate(270deg); }
-}
-
-@keyframes floatParticle2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(50px, -40px) scale(1.2); }
-}
-
-@keyframes floatParticle3 {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-100px, 50px) rotate(360deg); }
-}
-
-@keyframes floatParticle4 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-50px, -30px); }
+@keyframes haloPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.1; transform: scale(1.1); }
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .intro-title {
-        font-size: 4rem;
-    }
-    
-    .text-2 { transform: translateZ(40px) translateX(50px); }
-    .text-3 { transform: translateZ(30px) translateX(-50px); }
-    
-    .floating-jet {
-        width: 300px;
+    .blusky-jets__title {
+        font-size: 3.8rem;
     }
 }
 
-@media (max-width: 768px) {
-    .intro-title {
+@media (max-width: 900px) {
+    .blusky-jets__title {
         font-size: 3rem;
+        flex-direction: column;
+        gap: 10px;
     }
     
-    .text-block {
-        max-width: 100%;
+    .blusky-jets__content-grid {
+        grid-template-columns: 1fr;
     }
     
-    .text-1, .text-2, .text-3 {
-        transform: none !important;
-    }
-    
-    .floating-jet {
-        display: none;
+    .blusky-jets__card {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
-@media (max-width: 480px) {
-    .intro-title {
-        font-size: 2.5rem;
+@media (max-width: 600px) {
+    .blusky-jets__title {
+        font-size: 2.2rem;
     }
     
-    .text-card p {
+    .blusky-jets__subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .blusky-jets__card-inner {
+        padding: 30px;
+    }
+    
+    .blusky-jets__card-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .blusky-jets__card-content p {
+        font-size: 1rem;
+    }
+    
+    .blusky-jets__cta {
+        bottom: 40px;
+    }
+    
+    .blusky-jets__cta-core {
+        padding: 15px 25px;
+    }
+    
+    .blusky-jets__cta-core span {
         font-size: 1rem;
     }
 }
 </style>
 
-<section class="holo-services">
-  <!-- Floating Orb Background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('blusky-jets__particles', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00c6ff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00c6ff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 0.5
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    }
+});
+</script>
+
+
+
+  <!-- Holographic Pod System -->
+ <section class="holo-services">
+  <!-- Animated Background Elements -->
   <div class="orb-bg"></div>
+  <div class="floating-cubes">
+    <div class="cube cube-1"></div>
+    <div class="cube cube-2"></div>
+    <div class="cube cube-3"></div>
+  </div>
   
-  <!-- Interactive Title -->
   <div class="holo-header">
-    <h2 class="holo-title">
-      <span class="title-char">S</span>
-      <span class="title-char">E</span>
-      <span class="title-char">R</span>
-      <span class="title-char">V</span>
-      <span class="title-char">I</span>
-      <span class="title-char">C</span>
-      <span class="title-char">E</span>
-      <span class="title-char">S</span>
-    </h2>
+    <h1 class="holo-title">
+      <span class="title-char" style="--char-index:0">O</span>
+      <span class="title-char" style="--char-index:1">U</span>
+      <span class="title-char" style="--char-index:2">R</span>
+      <span class="title-char" style="--char-index:3">&nbsp;</span>
+      <span class="title-char" style="--char-index:4">S</span>
+      <span class="title-char" style="--char-index:5">E</span>
+      <span class="title-char" style="--char-index:6">R</span>
+      <span class="title-char" style="--char-index:7">V</span>
+      <span class="title-char" style="--char-index:8">I</span>
+      <span class="title-char" style="--char-index:9">C</span>
+      <span class="title-char" style="--char-index:10">E</span>
+      <span class="title-char" style="--char-index:11">S</span>
+    </h1>
     <div class="title-beam"></div>
   </div>
 
-  <!-- Holographic Pod System -->
-  <div class="pod-system">
-    <!-- Pod 1 -->
-    <div class="service-pod" data-service="management">
-      <div class="pod-core">
-        <div class="pod-icon">🛩️</div>
-        <h3>AIRCRAFT MANAGEMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">⏱️</span> Flight Ops</li>
-          <li><span class="detail-icon">🛠️</span> Maintenance</li>
-          <li><span class="detail-icon">📜</span> Regulations</li>
-          <li><span class="detail-icon">💰</span> Finance</li>
-          <li><span class="detail-icon">🛡️</span> Insurance</li>
-          <li><span class="detail-icon">👨‍✈️</span> Crew</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
+  <!-- Service 1 - With 3D Tilt Effect -->
+  <div class="service-container" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Aircraft Management" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
     </div>
-
-    <!-- Pod 2 -->
-    <div class="service-pod" data-service="investment">
-      <div class="pod-core">
-        <div class="pod-icon">📈</div>
-        <h3>AIRCRAFT INVESTMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">⏳</span> Lease Terms</li>
-          <li><span class="detail-icon">🔄</span> ACMI Lease</li>
-          <li><span class="detail-icon">✈️✈️</span> Fleet Solutions</li>
-          <li><span class="detail-icon">💦</span> Dry/Wet Lease</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-
-    <!-- Pod 3 -->
-    <div class="service-pod" data-service="crew">
-      <div class="pod-core">
-        <div class="pod-icon">👨‍✈️</div>
-        <h3>CREW MANAGEMENT</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">🔍</span> Recruitment</li>
-          <li><span class="detail-icon">⚙️</span> Operational Support</li>
-          <li><span class="detail-icon">📝</span> Compliance</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
-    </div>
-
-    <!-- Pod 4 -->
-    <div class="service-pod" data-service="leasing">
-      <div class="pod-core">
-        <div class="pod-icon">💼</div>
-        <h3>AIRCRAFT LEASING</h3>
-      </div>
-      <div class="pod-details">
-        <ul>
-          <li><span class="detail-icon">🧩</span> Fractional Ownership</li>
-          <li><span class="detail-icon">💸</span> Purchase Advisory</li>
-          <li><span class="detail-icon">📉</span> Risk Management</li>
-          <li><span class="detail-icon">🔎</span> Market Analysis</li>
-          <li><span class="detail-icon">⚖️</span> Legal Structuring</li>
-        </ul>
-        <div class="pod-connector"></div>
-      </div>
-      <div class="pod-glow"></div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">🛩️</div>
+      <h2 data-aos="fade-up">AIRCRAFT MANAGEMENT</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Comprehensive management solutions ensuring optimal performance, compliance, and value retention for your aircraft assets.</p>
+      <ul class="service-features">
+        <li data-aos="fade-right" data-aos-delay="200"><span class="feature-icon">⏱️</span> Flight Operations</li>
+        <li data-aos="fade-right" data-aos-delay="250"><span class="feature-icon">🛠️</span> Maintenance Programs</li>
+        <li data-aos="fade-right" data-aos-delay="300"><span class="feature-icon">📜</span> Regulatory Compliance</li>
+        <li data-aos="fade-right" data-aos-delay="350"><span class="feature-icon">💰</span> Financial Management</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
     </div>
   </div>
 
-  <!-- Floating Data Nodes -->
+  <!-- Service 2 - With 3D Tilt Effect -->
+  <div class="service-container reverse" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="./images/airplane-runway-airport-sunset-travel-concept (1).jpg" alt="Aircraft Investment" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
+    </div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">📈</div>
+      <h2 data-aos="fade-up">AIRCRAFT INVESTMENT</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Strategic investment solutions that maximize returns while minimizing risk in the aviation market.</p>
+      <ul class="service-features">
+        <li data-aos="fade-left" data-aos-delay="200"><span class="feature-icon">⏳</span> Long-term Lease Structures</li>
+        <li data-aos="fade-left" data-aos-delay="250"><span class="feature-icon">🔄</span> ACMI Lease Solutions</li>
+        <li data-aos="fade-left" data-aos-delay="300"><span class="feature-icon">✈️✈️</span> Fleet Optimization</li>
+        <li data-aos="fade-left" data-aos-delay="350"><span class="feature-icon">💦</span> Dry/Wet Lease Options</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
+    </div>
+  </div>
+
+  <!-- Service 3 - With 3D Tilt Effect -->
+  <div class="service-container" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="./images/airplane-flying-mountain-range-high-speed-generative-ai.jpg" alt="Crew Management" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
+    </div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">👨‍✈️</div>
+      <h2 data-aos="fade-up">CREW MANAGEMENT</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Professional crew solutions ensuring safety, compliance, and operational excellence.</p>
+      <ul class="service-features">
+        <li data-aos="fade-right" data-aos-delay="200"><span class="feature-icon">🔍</span> Expert Recruitment</li>
+        <li data-aos="fade-right" data-aos-delay="250"><span class="feature-icon">⚙️</span> Operational Support</li>
+        <li data-aos="fade-right" data-aos-delay="300"><span class="feature-icon">📝</span> Regulatory Compliance</li>
+        <li data-aos="fade-right" data-aos-delay="350"><span class="feature-icon">🎯</span> Performance Management</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
+    </div>
+  </div>
+
+  <!-- Service 4 - With 3D Tilt Effect -->
+  <div class="service-container reverse" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="./images/view-3d-airplane-with-wings-engine (2).jpg" alt="Aircraft Leasing" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
+    </div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">💼</div>
+      <h2 data-aos="fade-up">AIRCRAFT LEASING</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Flexible leasing solutions tailored to your operational and financial requirements.</p>
+      <ul class="service-features">
+        <li data-aos="fade-left" data-aos-delay="200"><span class="feature-icon">🧩</span> Fractional Ownership</li>
+        <li data-aos="fade-left" data-aos-delay="250"><span class="feature-icon">💸</span> Purchase Advisory</li>
+        <li data-aos="fade-left" data-aos-delay="300"><span class="feature-icon">📉</span> Risk Management</li>
+        <li data-aos="fade-left" data-aos-delay="350"><span class="feature-icon">🔎</span> Market Analysis</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
+    </div>
+  </div>
+<div class="service-container" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="./images/cessna-citation-mustang-exterior-1540x960.jpg" alt="Private Jet Charter" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
+    </div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">🛩️</div>
+      <h2 data-aos="fade-up">PRIVATE JET CHARTER</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Experience unparalleled luxury and convenience with our global private jet solutions.</p>
+      <ul class="service-features">
+        <li data-aos="fade-right" data-aos-delay="200"><span class="feature-icon">✈️</span> Fleet of 2,400+ safety-vetted private jets</li>
+        <li data-aos="fade-right" data-aos-delay="250"><span class="feature-icon">📱</span> Seamless booking via app or aviation experts</li>
+        <li data-aos="fade-right" data-aos-delay="300"><span class="feature-icon">🎯</span> Tailored solutions for business & leisure</li>
+        <li data-aos="fade-right" data-aos-delay="350"><span class="feature-icon">⏱️</span> 24/7 global availability</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
+    </div>
+  </div>
+
+  <!-- Air Ambulance Jet -->
+  <div class="service-container reverse" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+    <div class="service-image">
+      <img src="./images/luxury-design-private-jet-flying-clouds-ai-generated-image (1).jpg" alt="Air Ambulance Jet" class="parallax-img" data-depth="0.1">
+      <div class="image-overlay"></div>
+      <div class="image-reflection"></div>
+    </div>
+    <div class="service-content">
+      <div class="service-icon" data-aos="zoom-in">🚑</div>
+      <h2 data-aos="fade-up">AIR AMBULANCE JET</h2>
+      <p class="service-description" data-aos="fade-up" data-aos-delay="100">Critical care transport with specialized medical teams and equipment for international transfers.</p>
+      <ul class="service-features">
+        <li data-aos="fade-left" data-aos-delay="200"><span class="feature-icon">🌍</span> Global medical transport from Dubai</li>
+        <li data-aos="fade-left" data-aos-delay="250"><span class="feature-icon">⚕️</span> Fully-equipped ICU in the sky</li>
+        <li data-aos="fade-left" data-aos-delay="300"><span class="feature-icon">⏱️</span> Rapid response emergency flights</li>
+        <li data-aos="fade-left" data-aos-delay="350"><span class="feature-icon">🛡️</span> Complete patient care coordination</li>
+      </ul>
+      <div class="service-glow"></div>
+      <div class="particle-orb"></div>
+    </div>
+  </div>
+  <!-- Floating Elements -->
   <div class="data-nodes">
     <div class="node" style="--delay:0"></div>
     <div class="node" style="--delay:1"></div>
     <div class="node" style="--delay:2"></div>
     <div class="node" style="--delay:3"></div>
   </div>
+  
+  <!-- Interactive Floating Particles -->
+  <canvas id="particle-canvas"></canvas>
 </section>
+
+<!-- Include required libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
 <style>
-    .holo-services {
+.holo-services {
   position: relative;
   padding: 120px 20px;
   background: radial-gradient(ellipse at center, #0a1120 0%, #000000 100%);
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .orb-bg {
@@ -751,13 +1006,64 @@
   left: 50%;
   transform: translate(-50%, -50%);
   animation: orbPulse 15s infinite alternate;
+  z-index: 0;
+}
+
+.floating-cubes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.cube {
+  position: absolute;
+  background: rgba(0, 200, 255, 0.05);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  backdrop-filter: blur(2px);
+  transform-style: preserve-3d;
+  animation: cubeFloat 25s infinite linear;
+}
+
+.cube-1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+  transform: rotateX(45deg) rotateZ(30deg);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation-delay: 0s;
+}
+
+.cube-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 15%;
+  right: 8%;
+  transform: rotateX(60deg) rotateZ(-20deg);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation-delay: 5s;
+}
+
+.cube-3 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 80%;
+  transform: rotateX(30deg) rotateZ(45deg);
+  clip-path: circle(50% at 50% 50%);
+  animation-delay: 10s;
 }
 
 .holo-header {
   position: relative;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   z-index: 2;
+  transform-style: preserve-3d;
 }
 
 .holo-title {
@@ -765,6 +1071,7 @@
   gap: 8px;
   margin: 0;
   perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .title-char {
@@ -795,123 +1102,192 @@
   animation: beamScan 3s infinite linear;
 }
 
-.pod-system {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
+.service-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 100px;
   position: relative;
-  z-index: 2;
-}
-
-.service-pod {
-  position: relative;
-  height: 400px;
-  perspective: 1000px;
-}
-
-.pod-core {
-  position: absolute;
-  width: 100%;
-  height: 120px;
-  background: rgba(20, 40, 80, 0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background: rgba(10, 30, 60, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 60px;
-  border: 1px solid rgba(0, 200, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 150, 255, 0.2);
+  border: 1px solid rgba(0, 200, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  z-index: 1;
+}
+
+.service-container:hover {
+  box-shadow: 0 30px 60px rgba(0, 150, 255, 0.4);
+}
+
+.service-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.service-container:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 100, 255, 0.2), transparent);
+  z-index: 1;
+}
+
+.image-reflection {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, 
+    rgba(0, 200, 255, 0.1), 
+    transparent);
+  transform: scaleY(-1);
+  opacity: 0.5;
+  filter: blur(10px);
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.service-container:hover .image-reflection {
+  bottom: -30%;
+  opacity: 0.8;
+}
+
+.service-content {
+  flex: 1;
+  padding: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 2;
+  transform-style: preserve-3d;
 }
 
-.service-pod:hover .pod-core {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 40px rgba(0, 200, 255, 0.4);
-}
-
-.pod-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00c6ff;
   filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7));
+  transform: translateZ(20px);
+  transition: all 0.5s ease;
 }
 
-.pod-core h3 {
+.service-container:hover .service-icon {
+  transform: translateZ(30px) scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(0, 200, 255, 0.9));
+}
+
+.service-content h2 {
   color: white;
+  font-size: 2rem;
+  margin: 0 0 20px;
+  position: relative;
+  transform: translateZ(30px);
+}
+
+.service-description {
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
-  margin: 0;
-  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  transform: translateZ(20px);
 }
 
-.pod-details {
-  position: absolute;
-  width: 100%;
-  top: 140px;
-  background: rgba(10, 30, 60, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px 20px;
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 200, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.service-pod:hover .pod-details {
-  transform: scaleY(1);
-}
-
-.pod-details ul {
+.service-features {
   list-style: none;
   padding: 0;
   margin: 0;
+  transform-style: preserve-3d;
 }
 
-.pod-details li {
+.service-features li {
   color: rgba(255, 255, 255, 0.9);
-  padding: 8px 0;
-  font-size: 0.9rem;
+  padding: 10px 0;
+  font-size: 1rem;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.1);
+  transform: translateZ(10px);
+  transition: all 0.3s ease;
 }
 
-.detail-icon {
-  margin-right: 10px;
-  font-size: 1.1rem;
+.service-features li:hover {
+  color: white;
+  transform: translateZ(20px) translateX(10px);
+  border-bottom-color: rgba(0, 200, 255, 0.3);
 }
 
-.pod-connector {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: linear-gradient(to bottom, 
-    rgba(0, 200, 255, 0.8), 
-    transparent);
-  transform: translateX(-50%);
+.feature-icon {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #00c6ff;
+  transition: all 0.3s ease;
 }
 
-.pod-glow {
+.service-features li:hover .feature-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(0, 200, 255, 0.7));
+}
+
+.service-glow {
   position: absolute;
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at center, 
     rgba(0, 150, 255, 0.1) 0%, 
     transparent 70%);
-  border-radius: 60px;
+  top: 0;
+  left: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s ease;
+  z-index: -1;
 }
 
-.service-pod:hover .pod-glow {
-  opacity: 1;
+.service-container:hover .service-glow {
+  opacity: 0.5;
+}
+
+.particle-orb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, 
+    rgba(0, 200, 255, 0.1) 0%, 
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.service-container:hover .particle-orb {
+  opacity: 0.3;
+  animation: orbPulseSmall 3s infinite alternate;
 }
 
 .data-nodes {
@@ -939,10 +1315,26 @@
 .node:nth-child(3) { top: 40%; left: 85%; }
 .node:nth-child(4) { top: 80%; left: 90%; }
 
+/* Particle Canvas */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Animations */
 @keyframes orbPulse {
   0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.3; }
   100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
+}
+
+@keyframes orbPulseSmall {
+  0% { transform: scale(0.8); opacity: 0.2; }
+  100% { transform: scale(1.2); opacity: 0.4; }
 }
 
 @keyframes charFloat {
@@ -963,6 +1355,14 @@
   100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
 }
 
+@keyframes cubeFloat {
+  0% { transform: rotateX(0) rotateY(0) rotateZ(0) translateY(0); }
+  25% { transform: rotateX(15deg) rotateY(30deg) rotateZ(5deg) translateY(-30px); }
+  50% { transform: rotateX(0) rotateY(60deg) rotateZ(0) translateY(0); }
+  75% { transform: rotateX(-15deg) rotateY(30deg) rotateZ(-5deg) translateY(30px); }
+  100% { transform: rotateX(0) rotateY(0) rotateZ(0) translateY(0); }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .holo-title {
@@ -973,8 +1373,17 @@
     font-size: 2.5rem;
   }
   
-  .pod-system {
-    grid-template-columns: 1fr 1fr;
+  .service-container {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  
+  .service-image {
+    min-height: 300px;
+  }
+  
+  .service-content {
+    padding: 30px;
   }
 }
 
@@ -987,16 +1396,12 @@
     font-size: 2rem;
   }
   
-  .service-pod {
-    height: 380px;
+  .service-content h2 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .pod-system {
-    grid-template-columns: 1fr;
-  }
-  
   .holo-title {
     flex-wrap: wrap;
     justify-content: center;
@@ -1005,8 +1410,123 @@
   .title-char {
     font-size: 1.8rem;
   }
+  
+  .service-features li {
+    font-size: 0.9rem;
+  }
 }
 </style>
+
+<script>
+// Initialize AOS animation library
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out-quad',
+  once: true
+});
+
+// Initialize VanillaTilt for 3D tilt effect
+VanillaTilt.init(document.querySelectorAll(".service-container"), {
+  max: 5,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.2,
+  perspective: 1000
+});
+
+// Initialize Parallax effect on images
+document.querySelectorAll('.parallax-img').forEach(img => {
+  new Parallax(img, {
+    relativeInput: true,
+    hoverOnly: true,
+    calibrateX: true,
+    calibrateY: true,
+    invertX: false,
+    invertY: false,
+    limitX: false,
+    limitY: false,
+    scalarX: 5,
+    scalarY: 5,
+    frictionX: 0.1,
+    frictionY: 0.1,
+    originX: 0.5,
+    originY: 0.5
+  });
+});
+
+// Interactive Particle Canvas
+document.addEventListener('DOMContentLoaded', function() {
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  const particles = [];
+  const particleCount = window.innerWidth < 768 ? 30 : 60;
+  
+  // Create particles
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1,
+      speedX: Math.random() * 1 - 0.5,
+      speedY: Math.random() * 1 - 0.5,
+      color: `rgba(0, ${Math.floor(Math.random() * 200 + 55)}, 255, ${Math.random() * 0.5 + 0.1})`
+    });
+  }
+  
+  // Animation loop
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Update and draw particles
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      
+      // Update position
+      p.x += p.speedX;
+      p.y += p.speedY;
+      
+      // Bounce off edges
+      if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+      
+      // Draw particle
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+      
+      // Draw connections
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const distance = Math.sqrt(Math.pow(p.x - p2.x, 2) + Math.pow(p.y - p2.y, 2));
+        
+        if (distance < 150) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(0, 200, 255, ${1 - distance/150})`;
+          ctx.lineWidth = 0.5;
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    }
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+  
+  // Handle resize
+  window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+});
+</script>
   
     <!-- footer begin -->
     <footer class="text-light section-dark">
@@ -1020,7 +1540,7 @@
                             BCA 94107
                         </div>
                         <div>
-                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
+                                               <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -1062,3 +1582,222 @@
 </body>
 
 </html>
+
+
+<style>
+/* Change all dark backgrounds to white */
+body.dark-scheme {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+.bg-dark {
+    background-color: #f8f9fa !important;
+    color: #333333 !important;
+}
+
+.section-dark {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+/* Update the Blusky Jets section */
+.blusky-jets {
+    background: #ffffff !important;
+    color: #333333 !important;
+}
+
+.blusky-jets__card-inner {
+    background:#0a2463;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    color: #333333 !important;
+}
+
+.blusky-jets__card-content h3 {
+    color: #0A2463 !important;
+}
+
+.blusky-jets__card-content p {
+    color:white;
+}
+
+/* Update the Holographic Pod System */
+.holo-services {
+    background: #ffffff !important;
+    color: white;
+}
+
+.service-container {
+    background: #0a2463;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05) !important;
+}
+
+.service-content h2 {
+    color: #0A2463 !important;
+}
+
+.service-description {
+    color: white;
+}
+
+.service-features li {
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Update footer */
+footer.text-light {
+    background-color: #f8f9fa !important;
+    color: #333333 !important;
+}
+
+.subfooter {
+    background-color: #e9ecef !important;
+    color: #333333 !important;
+}
+
+/* Keep all animations and 3D effects intact */
+/* All animation keyframes and transform properties remain unchanged */
+</style>
+
+
+<style>
+  :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.section-dark {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Text colors */
+.text-light {
+    color: var(--color-dark) !important;
+}
+
+/* Buttons and accents */
+.btn-main, .bg-color, .id-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-line {
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary-dark) !important;
+    background: transparent !important;
+}
+
+.hover-bg-color:hover {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Header */
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid var(--color-light-gray) !important;
+    box-shadow: 0 4px 12px rgba(10, 36, 99, 0.1) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Links */
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Video background adjustments */
+.jarallax > video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.gradient-edge-top {
+    background: linear-gradient(to bottom, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.gradient-edge-bottom {
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.sw-overlay {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Marquee section */
+.bg-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.bg-color-2 {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+    color: var(--color-primary-dark) !important;
+}
+
+.mobile-menu a {
+    color: white !important;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary-pale) !important;
+}
+
+/* Special elements */
+.hover:hover {
+    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
+}
+</style>

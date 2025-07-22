@@ -157,9 +157,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                       <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 200px; width: 400px;">
-                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
+                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -169,7 +169,8 @@
                                 <div class="de-flex-col header-col-mid">
                                     <!-- Mobile menu button -->
                                     <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars"></i>
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
                                     </div>
                                     
                                     <!-- Main desktop menu -->
@@ -184,9 +185,9 @@
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                             <!-- <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -502,8 +503,8 @@
         
         <div class="content-container">
             <div class="text-content">
-                <h1 class="fade-in">WHERE LUXURY AND SMART INVESTING <span class="delay-1">ASCEND TOGETHER</span></h1>
-                <p class="fade-in delay-2">We are a global leader in investment and business innovation, backed by an in-house team with decades of experience in aviation finance, structured deals, and aircraft operations—delivering a disciplined, data-driven approach to every investment.
+                <p class="fade-in" style="color: black; font-weight: bold; font-size: 34px;">WHERE LUXURY AND SMART INVESTING <span class="delay-1">ASCEND TOGETHER</span></p>
+                <p class="fade-in delay-2" style="color: #000;">We are a global leader in investment and business innovation, backed by an in-house team with decades of experience in aviation finance, structured deals, and aircraft operations—delivering a disciplined, data-driven approach to every investment.
 
 </p>
                 
@@ -532,6 +533,53 @@
             </div>
         </div>
     </section>
+    <style>
+/* Existing styles... */
+
+.jet-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.jet-image {
+    max-height: 400px;
+    width: auto;
+    transform: translateX(50px);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .jet-image {
+        max-height: 300px;
+        transform: none !important; /* Remove the translateX */
+        margin-top: 40px;
+        width: 100%; /* Make it responsive */
+        max-width: 300px; /* Limit maximum size */
+        height: auto;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+}
+
+@media (max-width: 576px) {
+    .jet-image {
+        max-height: 250px;
+        max-width: 250px;
+    }
+}
+</style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
@@ -1516,11 +1564,11 @@
             </div>
         </div>
         
-        <div class="floating-coins">
+        <!-- <div class="floating-coins">
             <div class="coin">🪙</div>
             <div class="coin">💰</div>
             <div class="coin">💎</div>
-        </div>
+        </div> -->
     </div>
 </section>
 <style>
@@ -1968,10 +2016,10 @@
         </div>
     </div>
     
-    <div class="floating-jets">
+    <!-- <div class="floating-jets">
         <div class="jet">✈️</div>
         <div class="jet">✈️</div>
-    </div>
+    </div> -->
 </section>
 <style>
     .join-section {
@@ -2320,7 +2368,7 @@
                             BCA 94107
                         </div>
                         <div>
-                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
+                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -2362,3 +2410,225 @@
 </body>
 
 </html>
+<style>
+  
+
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+ :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+</style>
+<style>
+  body {
+    background-color: white !important;
+    color: #333 !important; /* Dark text for better readability on white */
+  }
+  
+  /* Override dark sections */
+  .blusky-section,
+  .investment-model-section,
+  .secure-capital-section,
+  .income-sources,
+  .join-section {
+    background-color: white !important;
+    color: #333 !important;
+  }
+  
+  /* Update text colors for better contrast */
+  h1, h2, h3, h4, h5, h6,
+  .section-title,
+  .secure-title,
+  .join-title,
+  .title-char,
+  .title-word {
+    color: white;
+  }
+  
+  /* Update card backgrounds */
+  .card-front,
+  .card-back,
+  .step-front,
+  .step-back,
+  .card-main {
+    background-color:  var(--color-primary-dark) !important;
+    border-color: #dee2e6 !important;
+  }
+  
+  /* Update footer colors */
+  footer.text-light {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+  }
+  
+  .subfooter {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+  }
+</style>
+
+
+<style>
+  :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.section-dark {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Text colors */
+.text-light {
+    color: var(--color-dark) !important;
+}
+
+/* Buttons and accents */
+.btn-main, .bg-color, .id-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-line {
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary-dark) !important;
+    background: transparent !important;
+}
+
+.hover-bg-color:hover {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Header */
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid var(--color-light-gray) !important;
+    box-shadow: 0 4px 12px rgba(10, 36, 99, 0.1) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Links */
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Video background adjustments */
+.jarallax > video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.gradient-edge-top {
+    background: linear-gradient(to bottom, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.gradient-edge-bottom {
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.sw-overlay {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Marquee section */
+.bg-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.bg-color-2 {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+    color: var(--color-primary-dark) !important;
+}
+
+.mobile-menu a {
+    color: white !important;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary-pale) !important;
+}
+
+/* Special elements */
+.hover:hover {
+    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
+}
+</style>

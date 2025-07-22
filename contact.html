@@ -149,9 +149,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                         <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
+                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -161,7 +161,8 @@
                                 <div class="de-flex-col header-col-mid">
                                     <!-- Mobile menu button -->
                                     <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars"></i>
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
                                     </div>
                                     
                                     <!-- Main desktop menu -->
@@ -176,9 +177,9 @@
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                             <!-- <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -205,44 +206,19 @@
             </div>
         </header>
 
-        <!-- Rest of your content -->
-        
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const closeBtn = document.querySelector('.mobile-menu-close');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            
-            // Open menu when hamburger is clicked
-            if (menuBtn) {
-                menuBtn.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'block';
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                });
-            }
-            
-            // Close menu when X is clicked
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto'; // Enable scrolling
-                });
-            }
-            
-            // Close menu when clicking on a link
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            });
-        });
-        </script>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="./images/luxury-design-private-jet-flying-clouds-ai-generated-image (1).jpg" alt="City Image" class="hero-img" />
+  </section>
+
+  <!-- Request a Callback -->
+  <div class="callback-tab">
+    <a href="#">Request a Callback</a>
+  </div>
 
 
 
+  
   
     <style>
         /* Base Styles */
@@ -261,7 +237,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        body {
+        /* body {
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
@@ -272,9 +248,9 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-        }
+        } */
         
-        /* Header Styles */
+        /* Header Styles
         header {
             text-align: center;
             margin-bottom: 3rem;
@@ -288,9 +264,9 @@
             font-weight: 800;
             position: relative;
             display: inline-block;
-        }
+        } */
         
-        header h1::after {
+        /* header h1::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -300,14 +276,14 @@
             height: 4px;
             background: var(--accent);
             border-radius: 2px;
-        }
+        } */
         
-        header p {
+        /* header p {
             font-size: 1.2rem;
             color: var(--dark);
             max-width: 600px;
             margin: 0 auto;
-        }
+        } */
         
         /* Contact Section */
         .contact-container {
@@ -548,11 +524,11 @@
     <div class="floating floating-1"></div>
     <div class="floating floating-2"></div>
     
-    <div class="container">
+    <!-- <div class="container">
         <header>
             <h1>Get In Touch</h1>
             <p style="color: white;">Have questions or want to work together? Fill out the form below or contact us directly. We'd love to hear from you!</p>
-        </header>
+        </header> -->
         
         <div class="contact-container">
             <form class="contact-form">
@@ -611,6 +587,11 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018042!2d-73.9878449241646!3d40.74844097138962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
         </div> -->
     </div>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/7715841612" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
 
     <!-- footer begin -->
     <footer class="text-light section-dark">
@@ -624,7 +605,7 @@
                             BCA 94107
                         </div>
                         <div>
-                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
+                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -653,9 +634,9 @@
         </div>
     </footer>
     <!-- footer end -->
-    <!--  <!-- <div id="buy-now" class="show-on-scroll">
+    <!-- <div id="buy-now" class="show-on-scroll">
         <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>
-    </div> --> -->
+    </div> --> 
     <!-- Javascript Files
     ================================================== -->
     <script src="js/vendors.js"></script>
@@ -666,3 +647,236 @@
 </body>
 
 </html>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.top-nav {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button .book-meeting {
+  background-color: #c17a44;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Hero Image */
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Request a Callback Tab */
+.callback-tab {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  background-color: #101546;
+  color: white;
+  padding: 12px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.callback-tab a {
+  color: white;
+  text-decoration: none;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+</style>
+
+
+
+
+<style>
+  :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.section-dark {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Text colors */
+.text-light {
+    color: var(--color-dark) !important;
+}
+
+/* Buttons and accents */
+.btn-main, .bg-color, .id-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-line {
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary-dark) !important;
+    background: transparent !important;
+}
+
+.hover-bg-color:hover {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Header */
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid var(--color-light-gray) !important;
+    box-shadow: 0 4px 12px rgba(10, 36, 99, 0.1) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Links */
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Video background adjustments */
+.jarallax > video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.gradient-edge-top {
+    background: linear-gradient(to bottom, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.gradient-edge-bottom {
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.sw-overlay {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Marquee section */
+.bg-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.bg-color-2 {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+    color: var(--color-primary-dark) !important;
+}
+
+.mobile-menu a {
+    color: white !important;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary-pale) !important;
+}
+
+/* Special elements */
+.hover:hover {
+    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
+}
+</style>

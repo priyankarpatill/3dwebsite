@@ -18,8 +18,6 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
 
 </head>
 <style>
@@ -151,9 +149,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 100%; height: 100px; display: block;" />
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <!-- <img class="logo-mobile" src="images/logo.png" alt="" style="height: 150px; width: 250px;"> -->
+                                        <img class="logo-mobile" src="images/logo.png" alt="" style="height: 250px; width: 150px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -163,7 +161,8 @@
                                 <div class="de-flex-col header-col-mid">
                                     <!-- Mobile menu button -->
                                     <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars"></i>
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
                                     </div>
                                     
                                     <!-- Main desktop menu -->
@@ -178,9 +177,9 @@
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                             <!-- <div class="de-flex-col">
                                 <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -243,7 +242,7 @@
         </script>
     </div>
 
- <style>
+<style>
         :root {
             --primary: #3a86ff;
             --secondary: #8338ec;
@@ -262,149 +261,202 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
-            overflow-x: hidden;
-        }
-        
-        .contact-hero {
-            position: relative;
-            height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            overflow: hidden;
+            align-items: center;
+            padding: 20px;
         }
         
-        .floating-island {
-            position: relative;
-            width: 80%;
-            max-width: 1200px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 50px;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform-style: preserve-3d;
-            animation: float 8s ease-in-out infinite;
-            z-index: 2;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .contact-title {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
-            background: linear-gradient(to right, #fff, #3a86ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 10px rgba(58, 134, 255, 0.3);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
+        .booking-container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
             border-radius: 20px;
-            padding: 30px;
-            transition: var(--transition);
-            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: var(--transition);
         }
         
-        .contact-card::before {
-            content: '';
+        .booking-container:hover {
+            transform: translateY(-5px) rotateX(2deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-header::before {
+            content: "";
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                transparent,
-                transparent,
-                transparent,
-                rgba(58, 134, 255, 0.1)
-            );
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
             transform: rotate(30deg);
-            z-index: -1;
+            animation: shine 6s infinite linear;
         }
         
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.15);
+        @keyframes shine {
+            0% { transform: rotate(30deg) translate(-30%, -30%); }
+            100% { transform: rotate(30deg) translate(30%, 30%); }
         }
         
-        .contact-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
+        .tabs {
+            display: flex;
+            background: #f1f3f5;
+            border-bottom: 1px solid #dee2e6;
         }
         
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .contact-form {
-            grid-column: span 2;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-control {
-            width: 100%;
+        .tab {
+            flex: 1;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: white;
-            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--dark);
             transition: var(--transition);
+            position: relative;
+            border: none;
+            background: none;
+            font-size: 16px;
         }
         
-        .form-control:focus {
+        .tab:hover {
+            color: var(--primary);
+            background: rgba(58, 134, 255, 0.1);
+        }
+        
+        .tab.active {
+            color: var(--primary);
+            font-weight: 600;
+            background: white;
+        }
+        
+        .tab.active::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            animation: tabUnderline 0.3s ease-out;
+        }
+        
+        @keyframes tabUnderline {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        
+        .form-panel {
+            padding: 30px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-panel.active {
+            display: block;
+        }
+        
+        .booking-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .form-row {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .custom-select, 
+        .booking-form input:not([type="submit"]):not([type="button"]) {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: var(--transition);
+            background: white;
+            box-shadow: var(--shadow);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .custom-select:hover,
+        .booking-form input:not([type="submit"]):not([type="button"]):hover {
+            border-color: var(--primary);
+            transform: translateY(-2px) translateZ(10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .custom-select:focus,
+        .booking-form input:not([type="submit"]):not([type="button"]):focus {
             outline: none;
             border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.25);
         }
         
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
+        button[type="submit"], 
         .submit-btn {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            flex: 1;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             border: none;
-            padding: 15px 30px;
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform-style: preserve-3d;
             position: relative;
             overflow: hidden;
-            z-index: 1;
         }
         
+        button[type="submit"]:hover, 
+        .submit-btn:hover {
+            transform: translateY(-3px) translateZ(10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        button[type="submit"]:active, 
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+        
+        button[type="submit"]::before, 
         .submit-btn::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: -100%;
@@ -412,218 +464,595 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: 0.5s;
-            z-index: -1;
         }
         
+        button[type="submit"]:hover::before, 
         .submit-btn:hover::before {
             left: 100%;
         }
         
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Floating elements in background */
-        .floating-element {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
-            z-index: 1;
-            animation: floatElement 15s infinite ease-in-out;
-        }
-        
-        @keyframes floatElement {
-            0%, 100% { transform: translate(0, 0); }
-            25% { transform: translate(20px, 20px); }
-            50% { transform: translate(0, 40px); }
-            75% { transform: translate(-20px, 20px); }
-        }
-        
-        .element-1 {
-            width: 200px;
-            height: 200px;
-            top: 10%;
-            left: 5%;
-            animation-duration: 20s;
-        }
-        
-        .element-2 {
-            width: 150px;
-            height: 150px;
-            bottom: 15%;
-            right: 10%;
-            animation-duration: 25s;
-            animation-delay: 2s;
-        }
-        
-        .element-3 {
-            width: 100px;
-            height: 100px;
-            top: 30%;
-            right: 20%;
-            animation-duration: 18s;
-            animation-delay: 1s;
-        }
-        
-        /* 3D Map Container */
-        .map-container {
-            position: relative;
-            height: 400px;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-top: 50px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-        
-        .map-container iframe {
+        .trip-segment {
             width: 100%;
-            height: 100%;
-            border: none;
-            filter: grayscale(50%) contrast(120%) brightness(90%);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(248, 249, 250, 0.5);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 1px dashed #dee2e6;
             transition: var(--transition);
+            transform-style: preserve-3d;
         }
         
-        .map-container:hover iframe {
-            transform: scale(1.05);
-            filter: grayscale(0%) contrast(100%) brightness(100%);
+        .trip-segment:hover {
+            background: rgba(248, 249, 250, 0.8);
+            border-color: var(--primary);
+            transform: translateZ(10px);
+        }
+        
+        .select2-container--default .select2-selection--single {
+            height: auto;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+        }
+        
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 100%;
+        }
+        
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 1.5;
+            padding-left: 0;
+        }
+        
+        .airport-option {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .airport-code {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* 3D Plane Animation */
+        .plane-animation {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            font-size: 30px;
+            animation: fly 8s linear infinite;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        @keyframes fly {
+            0% { transform: translate(-100px, -50%) rotate(0deg); }
+            50% { transform: translate(100px, -30%) rotate(5deg); }
+            100% { transform: translate(300px, -50%) rotate(0deg); }
         }
         
         /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form {
-                grid-column: span 1;
-            }
-            
-            .contact-title {
-                font-size: 2.5rem;
-            }
-            
-            .floating-island {
-                width: 90%;
-                padding: 30px;
-            }
-        }
-        
         @media (max-width: 768px) {
-            .contact-title {
-                font-size: 2rem;
+            .booking-form input,
+            .custom-select {
+                min-width: 100%;
             }
             
-            .floating-island {
-                width: 95%;
-                padding: 20px;
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
             }
             
-            .contact-card {
-                padding: 20px;
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                padding: 12px;
             }
         }
+
+        /* Add this to your existing styles */
+.booking-container {
+    margin-top: 60px; /* Adjust this value as needed */
+    margin-bottom: 40px; /* Optional: adds space at the bottom too */
+}
+/* Responsive spacing */
+@media (min-width: 992px) {
+    .booking-container {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .booking-container {
+        margin-top: 80px;
+    }
+}
     </style>
-    
-</head>
+
+
 <body>
-    <div class="contact-hero">
-        <!-- Floating background elements -->
-        <div class="floating-element element-1"></div>
-        <div class="floating-element element-2"></div>
-        <div class="floating-element element-3"></div>
+    <div class="booking-container">
+        <div class="form-header">
+            <h2>✈️ Book Your Flight</h2>
+            <div class="plane-animation">🛩️</div>
+        </div>
         
-        <!-- Main floating island (without mouse-move effect) -->
-        <div class="floating-island">
-            <h1 class="contact-title">Get In Touch With Us</h1>
-            
-            <div class="contact-grid">
-                <!-- Contact Info Card 1 -->
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="round">ROUND TRIP</button>
+            <button class="tab" data-tab="oneway">ONE-WAY</button>
+            <button class="tab" data-tab="multi">MULTI TRIP</button>
+        </div>
+        
+        <!-- Booking Forms -->
+        <!-- ROUND TRIP -->
+        <div class="form-panel active" id="round">
+            <form class="booking-form" action="./process_booking.php" method="post">
+                <input type="hidden" name="trip_type" value="round">
+                
+                <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                
+                <!-- <select name="arrival" class="custom-select searchable" required>
+                    <option value="">Select Arrival</option> -->
+                    <!-- Options will be populated by JavaScript -->
+                <!-- </select> -->
+                    <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                
+                <input type="date" name="departure_date[]" placeholder="Departure Date" required>
+                <input type="date" name="return_date[]" placeholder="Return Date" required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email ID" required>
+                <input type="number" name="passengers" placeholder="Number of Passengers" min="1" required>
+                
+                <button type="submit">Submit Your Booking</button>
+            </form>
+        </div>
+        
+        <!-- ONE-WAY -->
+        <div class="form-panel" id="oneway">
+            <form class="booking-form" action="./process_booking.php" method="post">
+                <input type="hidden" name="trip_type" value="oneway">
+                
+                  <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                
+                  <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                
+                <input type="date" name="departure_date[]" placeholder="Departure Date" required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email ID" required>
+                <input type="number" name="passengers" placeholder="Number of Passengers" min="1" required>
+                
+                <button type="submit">Submit Your Booking</button>
+            </form>
+        </div>
+        
+        <!-- MULTI TRIP -->
+        <div class="form-panel" id="multi">
+            <form class="booking-form" action="./process_booking.php" method="post">
+                <input type="hidden" name="trip_type" value="multi">
+                
+                <div id="multi-trip-container">
+                    <div class="trip-segment">
+                          <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                        
+                           <div class="airport-search-container">
+  <input type="text" class="airport-search-input" placeholder="Type airport name or code..." autocomplete="off">
+  <div class="airport-results"></div>
+</div>
+                        <input type="date" name="departure_date[]" placeholder="Departure Date" required>
+                        <input type="date" name="return_date[]" placeholder="Return Date" required>
                     </div>
-                    <h3>Our Location</h3>
-                    <p>121 AI Boulevard<br>San Francisco, CA 94107<br>United States</p>
                 </div>
                 
-                <!-- Contact Info Card 2 -->
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3>Phone Numbers</h3>
-                    <p>+1 (123) 456-7890<br>+1 (987) 654-3210</p>
+                <div style="flex: 1 1 100%; text-align: center;">
+                    <button type="button" onclick="addTripSegment()" style="margin: 10px 0; padding: 12px 20px; background: var(--light); border: 1px solid var(--primary); color: var(--primary); border-radius: 8px; cursor: pointer; transition: var(--transition);">
+                        + Add Another Trip
+                    </button>
                 </div>
                 
-                <!-- Contact Info Card 3 -->
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Addresses</h3>
-                    <p>info@crystalwings.com<br>support@crystalwings.com</p>
+                <div class="form-row">
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                    <input type="email" name="email" placeholder="Email ID" required>
+                    <input type="number" name="passengers" placeholder="Number of Passengers" min="1" required>
                 </div>
                 
-                <!-- Contact Form -->
-                <div class="contact-card contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Map Container -->
-            <!-- <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.538962143603!2d-122.4194155846821!3d37.77492997975946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-            </div> -->
+                <button type="submit" class="submit-btn">Submit Your Booking</button>
+            </form>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        // Animate elements when scrolling into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // Airport data
+        const airports = [
+            // India
+            { id: "BLR", text: "Bengaluru (Kempegowda) – BLR", group: "India" },
+            { id: "IXE", text: "Mangaluru – IXE", group: "India" },
+            { id: "HBX", text: "Hubli – HBX", group: "India" },
+            { id: "MYQ", text: "Mysuru – MYQ", group: "India" },
+            { id: "IXG", text: "Belgaum – IXG", group: "India" },
+            { id: "DEL", text: "Delhi (Indira Gandhi) – DEL", group: "India" },
+            { id: "BOM", text: "Mumbai (Chhatrapati Shivaji) – BOM", group: "India" },
+            { id: "MAA", text: "Chennai – MAA", group: "India" },
+            { id: "CCU", text: "Kolkata (Netaji Subhas Chandra Bose) – CCU", group: "India" },
+            { id: "HYD", text: "Hyderabad (Rajiv Gandhi) – HYD", group: "India" },
+            { id: "AMD", text: "Ahmedabad – AMD", group: "India" },
+            { id: "PNQ", text: "Pune – PNQ", group: "India" },
+            { id: "COK", text: "Kochi (Cochin) – COK", group: "India" },
+            { id: "GOI", text: "Goa (Dabolim) – GOI", group: "India" },
+            { id: "JAI", text: "Jaipur – JAI", group: "India" },
+            { id: "LKO", text: "Lucknow – LKO", group: "India" },
+            { id: "VNS", text: "Varanasi – VNS", group: "India" },
+            { id: "IDR", text: "Indore – IDR", group: "India" },
+            { id: "GAU", text: "Guwahati – GAU", group: "India" },
+            
+            // Middle East & Gulf
+            { id: "DXB", text: "Dubai, UAE – DXB", group: "Middle East / Gulf" },
+            { id: "AUH", text: "Abu Dhabi, UAE – AUH", group: "Middle East / Gulf" },
+            { id: "SHJ", text: "Sharjah, UAE – SHJ", group: "Middle East / Gulf" },
+            { id: "RAK", text: "Ras Al Khaimah, UAE – RAK", group: "Middle East / Gulf" },
+            { id: "DOH", text: "Doha, Qatar – DOH", group: "Middle East / Gulf" },
+            { id: "MCT", text: "Muscat, Oman – MCT", group: "Middle East / Gulf" },
+            { id: "BAH", text: "Bahrain – BAH", group: "Middle East / Gulf" },
+            { id: "KWI", text: "Kuwait City, Kuwait – KWI", group: "Middle East / Gulf" },
+            { id: "JED", text: "Jeddah, Saudi Arabia – JED", group: "Middle East / Gulf" },
+            { id: "RUH", text: "Riyadh, Saudi Arabia – RUH", group: "Middle East / Gulf" },
+            { id: "DMM", text: "Dammam, Saudi Arabia – DMM", group: "Middle East / Gulf" },
+            { id: "MED", text: "Medina, Saudi Arabia – MED", group: "Middle East / Gulf" },
+            
+            // South & SE Asia
+            { id: "CMB", text: "Colombo, Sri Lanka – CMB", group: "South & SE Asia" },
+            { id: "MLE", text: "Malé, Maldives – MLE", group: "South & SE Asia" },
+            { id: "KTM", text: "Kathmandu, Nepal – KTM", group: "South & SE Asia" },
+            { id: "DAC", text: "Dhaka, Bangladesh – DAC", group: "South & SE Asia" },
+            { id: "BKK", text: "Bangkok, Thailand – BKK", group: "South & SE Asia" },
+            { id: "DMK", text: "Bangkok (Don Mueang), Thailand – DMK", group: "South & SE Asia" },
+            { id: "HKT", text: "Phuket, Thailand – HKT", group: "South & SE Asia" },
+            { id: "SIN", text: "Singapore – SIN", group: "South & SE Asia" },
+            { id: "KUL", text: "Kuala Lumpur, Malaysia – KUL", group: "South & SE Asia" },
+            { id: "HKG", text: "Hong Kong – HKG", group: "South & SE Asia" },
+            { id: "HAN", text: "Hanoi, Vietnam – HAN", group: "South & SE Asia" },
+            { id: "SGN", text: "Ho Chi Minh City, Vietnam – SGN", group: "South & SE Asia" },
+            
+            // Asia-Pacific & Africa
+            { id: "HND", text: "Tokyo Haneda, Japan – HND", group: "Asia‑Pacific & Africa" },
+            { id: "NGO", text: "Nagoya, Japan – NGO", group: "Asia‑Pacific & Africa" },
+            { id: "NRT", text: "Tokyo Narita, Japan – NRT", group: "Asia‑Pacific & Africa" },
+            { id: "DPS", text: "Denpasar (Bali), Indonesia – DPS", group: "Asia‑Pacific & Africa" },
+            { id: "MRU", text: "Mauritius – MRU", group: "Asia‑Pacific & Africa" },
+            { id: "ADD", text: "Addis Ababa, Ethiopia – ADD", group: "Asia‑Pacific & Africa" },
+            
+            // Europe
+            { id: "LHR", text: "London Heathrow, UK – LHR", group: "Europe" },
+            { id: "AMS", text: "Amsterdam, Netherlands – AMS", group: "Europe" },
+            { id: "FRA", text: "Frankfurt, Germany – FRA", group: "Europe" },
+            { id: "MUC", text: "Munich, Germany – MUC", group: "Europe" },
+            { id: "CDG", text: "Paris CDG, France – CDG", group: "Europe" },
+            { id: "ZRH", text: "Zurich, Switzerland – ZRH", group: "Europe" },
+            { id: "VIE", text: "Vienna, Austria – VIE", group: "Europe" },
+            
+            // North America & Oceania
+            { id: "SFO", text: "San Francisco, USA – SFO", group: "North America & Oceania" },
+            { id: "SYD", text: "Sydney, Australia – SYD", group: "North America & Oceania" }
+        ];
+
+        // Format airport data for Select2 with groups
+        function formatAirportGroup(airport) {
+            if (!airport.id) return airport.text;
+            
+            const $airport = $(
+                `<div class="airport-option">
+                    <span>${airport.text.split(' – ')[0]}</span>
+                    <span class="airport-code">${airport.text.split(' – ')[1]}</span>
+                </div>`
+            );
+            return $airport;
+        };
+
+        // Initialize Select2 with airport data
+        function initSelect2(element) {
+            $(element).select2({
+                placeholder: 'Search for airport...',
+                allowClear: true,
+                data: airports,
+                templateResult: formatAirportGroup,
+                templateSelection: formatAirportGroup,
+                matcher: function(params, data) {
+                    // If there are no search terms, return all of the data
+                    if ($.trim(params.term) === '') {
+                        return data;
+                    }
+                    
+                    // Do not display the item if there is no 'text' property
+                    if (typeof data.text === 'undefined') {
+                        return null;
+                    }
+                    
+                    // Match against both city name and airport code
+                    const term = params.term.toLowerCase();
+                    const text = data.text.toLowerCase();
+                    
+                    // Check if the text contains the term
+                    if (text.indexOf(term) > -1) {
+                        return data;
+                    }
+                    
+                    // Check if the airport code matches exactly
+                    const parts = data.text.split(' – ');
+                    if (parts.length > 1 && parts[1].toLowerCase().indexOf(term) > -1) {
+                        return data;
+                    }
+                    
+                    // If it doesn't contain the term, don't return it
+                    return null;
                 }
             });
-        }, { threshold: 0.1 });
-        
-        // Observe all cards and the map
-        const cards = document.querySelectorAll('.contact-card');
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
+        }
+
+        // Tab switching functionality
+        const tabs = document.querySelectorAll(".tab");
+        const panels = document.querySelectorAll(".form-panel");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                tab.classList.add("active");
+
+                panels.forEach(panel => panel.classList.remove("active"));
+                document.getElementById(tab.dataset.tab).classList.add("active");
+            });
         });
-        
-        const mapContainer = document.querySelector('.map-container');
-        mapContainer.style.opacity = '0';
-        mapContainer.style.transform = 'translateY(50px)';
-        mapContainer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(mapContainer);
+
+        // Add trip segment for multi-trip
+        function addTripSegment() {
+            const container = document.getElementById("multi-trip-container");
+            const segment = document.createElement("div");
+            segment.classList.add("trip-segment");
+            
+            segment.innerHTML = `
+                <select name="departure[]" class="custom-select searchable" required>
+                    <option value="">Select Departure</option>
+                </select>
+                
+                <select name="arrival[]" class="custom-select searchable" required>
+                    <option value="">Select Arrival</option>
+                </select>
+                
+                <input type="date" name="departure_date[]" placeholder="Departure Date" required>
+                <input type="date" name="return_date[]" placeholder="Return Date" required>
+            `;
+            
+            container.appendChild(segment);
+            
+            // Initialize Select2 for new dropdowns
+            initSelect2(segment.querySelector('select[name="departure[]"]'));
+            initSelect2(segment.querySelector('select[name="arrival[]"]'));
+            
+            // Add animation
+            segment.style.opacity = "0";
+            segment.style.transform = "translateY(20px)";
+            
+            setTimeout(() => {
+                segment.style.transition = "all 0.3s ease";
+                segment.style.opacity = "1";
+                segment.style.transform = "translateY(0)";
+            }, 10);
+        }
+
+        // Initialize all Select2 dropdowns on page load
+        $(document).ready(function() {
+            $('.searchable').each(function() {
+                initSelect2(this);
+            });
+            
+            // Set minimum date for date inputs to today
+            const today = new Date().toISOString().split('T')[0];
+            $('input[type="date"]').attr('min', today);
+            
+            // Add 3D hover effect to booking container
+            const bookingContainer = document.querySelector('.booking-container');
+            
+            bookingContainer.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                bookingContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+            
+            bookingContainer.addEventListener('mouseenter', () => {
+                bookingContainer.style.transition = 'none';
+            });
+            
+            bookingContainer.addEventListener('mouseleave', () => {
+                bookingContainer.style.transition = 'all 0.5s ease';
+                bookingContainer.style.transform = 'rotateY(0deg) rotateX(0deg)';
+            });
+        });
+
+
+
+        // Update the Select2 initialization to show all options by default
+function initSelect2(element) {
+    $(element).select2({
+        placeholder: 'Select airport...',
+        allowClear: true,
+        data: airports,
+        templateResult: formatAirportGroup,
+        templateSelection: formatAirportGroup,
+        minimumResultsForSearch: 1, // Show search box only when there are enough options
+        dropdownAutoWidth: true,
+        width: '100%',
+        dropdownCssClass: 'enhanced-dropdown'
+    });
+}
+
+// Update the airport data format to show both name and code
+function formatAirportGroup(airport) {
+    if (!airport.id) return airport.text;
+    
+    const parts = airport.text.split(' – ');
+    const name = parts[0];
+    const code = parts[1] || '';
+    
+    return $(
+        `<div style="display: flex; justify-content: space-between;">
+            <span>${name}</span>
+            <span style="color: #3a86ff; font-weight: 600;">${code}</span>
+        </div>`
+    );
+}
     </script>
+    <style>
+      /* Enhanced dropdown styling */
+.enhanced-dropdown .select2-results__option {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f3f5;
+    display: flex;
+    justify-content: space-between;
+}
 
+.enhanced-dropdown .select2-results__option--highlighted {
+    background-color: #f8f9fa;
+    color: var(--primary);
+}
 
+.enhanced-dropdown .select2-results__group {
+    padding: 8px 15px;
+    font-weight: 600;
+    color: var(--dark);
+    background-color: #f1f3f5;
+}
+
+/* Make the dropdown wider to accommodate full names */
+.select2-container .select2-dropdown {
+    min-width: 300px;
+}
+    </style>
+
+<script>
+// Replace the Select2 initialization with this
+document.querySelectorAll('.airport-search-input').forEach(input => {
+  const resultsContainer = input.nextElementSibling;
+  
+  input.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    resultsContainer.innerHTML = '';
+    
+    if (searchTerm.length < 2) {
+      resultsContainer.style.display = 'none';
+      return;
+    }
+    
+    const filtered = airports.filter(airport => 
+      airport.text.toLowerCase().includes(searchTerm)
+    );
+    
+    if (filtered.length > 0) {
+      filtered.forEach(airport => {
+        const div = document.createElement('div');
+        div.className = 'airport-result';
+        div.innerHTML = `
+          <strong>${airport.text.split(' – ')[0]}</strong>
+          <span>${airport.text.split(' – ')[1]}</span>
+        `;
+        div.addEventListener('click', () => {
+          input.value = airport.text;
+          resultsContainer.style.display = 'none';
+        });
+        resultsContainer.appendChild(div);
+      });
+      resultsContainer.style.display = 'block';
+    } else {
+      resultsContainer.style.display = 'none';
+    }
+  });
+  
+  input.addEventListener('focus', function() {
+    if (this.value.length >= 2 && resultsContainer.children.length > 0) {
+      resultsContainer.style.display = 'block';
+    }
+  });
+  
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+      resultsContainer.style.display = 'none';
+    }
+  });
+});
+</script>
+<style>
+  /* Add these styles */
+.airport-search-container {
+  position: relative;
+  width: 100%;
+}
+
+.airport-search-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.airport-results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ced4da;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.airport-result {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.airport-result:hover {
+  background-color: #f8f9fa;
+}
+
+.airport-result strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.airport-result span {
+  color: var(--primary);
+  font-weight: 600;
+}
+</style>
     <!-- footer begin -->
-    <footer class="text-light section-dark">
+    <footer class="text-light section-dark" >
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-12">
@@ -634,7 +1063,7 @@
                             BCA 94107
                         </div>
                         <div>
-                            <img src="images/logo__1_-removebg-preview.png" class="w-150px" alt="" style="height: 150px; width: 150px;"><br>
+                           <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -678,115 +1107,4 @@
 </html>
 
 
-<style>
-    header {
-    position: relative; /* or fixed if you want it to stay at top */
-    z-index: 1000; /* ensures it stays above other content */
-}
-    /* Add this to your existing styles */
-    .contact-hero {
-        padding-top: 100px; /* Creates space below the header */
-        position: relative;
-        min-height: 100vh; /* Ensures it takes at least full viewport height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
 
-    /* Responsive adjustments */
-    @media (max-width: 991px) {
-        .contact-hero {
-            padding-top: 80px; /* Smaller gap on mobile */
-        }
-    }
-</style>
-<style>
-    .contact-hero {
-        padding-top: 100px; /* Very large gap */
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .floating-island {
-        margin-top: 100px; /* Additional large spacing */
-    }
-
-    @media (max-width: 991px) {
-        .contact-hero {
-            padding-top: 150px;
-        }
-        
-        .floating-island {
-            margin-top: 50px;
-        }
-    }
-</style>
-<style>
-    /* Add this to your existing styles */
-    .contact-hero {
-        padding-top: 400px; /* Space below header */
-        padding-bottom: 100px; /* Space above footer */
-        position: relative;
-        min-height: calc(100vh - 200px); /* Adjust height to account for padding */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: visible; /* Changed from hidden to visible */
-    }
-
-    .floating-island {
-        margin: 50px 0; /* Vertical spacing */
-    }
-
-    /* Ensure footer has proper spacing */
-    footer {
-        position: relative;
-        z-index: 10;
-        padding: 100px 0;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 991px) {
-        .contact-hero {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            min-height: calc(100vh - 160px);
-        }
-        
-        .floating-island {
-            margin: 30px 0;
-        }
-    }
-
-    /* Update the contact grid styles */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    width: 100%;
-}
-
-/* Make the form span two columns on larger screens */
-@media (min-width: 992px) {
-    .contact-form {
-        grid-column: span 2;
-    }
-}
-
-/* Ensure form elements take full width */
-.form-group {
-    width: 100%;
-}
-
-/* Fix the floating island width */
-.floating-island {
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-}
-</style>
