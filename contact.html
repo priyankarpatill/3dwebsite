@@ -387,7 +387,38 @@
                     <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
                 </div>
             </div>
-        </header>
+        </header>  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
 
   <!-- Hero Section -->
   <section class="hero">
