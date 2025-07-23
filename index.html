@@ -337,6 +337,7 @@
 }
 </style>
 
+
 <body class="dark-scheme">
     <div id="wrapper">
         <header class="transparent" style="background-color: black;">
@@ -348,13 +349,17 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
+                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none; filter: brightness(0.7) contrast(1.2);" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
                                         <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
                             </div>
+
+
+
+
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
@@ -366,12 +371,12 @@
                                     
                                     <!-- Main desktop menu -->
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
-                                        <li><a class="menu-item" href="./services.html">Services</a></li>
-                                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
-                                        <li><a class="menu-item" href="./investment.html">Investment</a></li>
-                                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
-                                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                                        <li><a class="menu-item active" href="./index.html" style="color: black;">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html" style="color: black;">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html" style="color: black;">Fleet</a></li>
+                                        <li><a class="menu-item" href="./investment.html" style="color: black;">Investment</a></li>
+                                        <li><a class="menu-item" href="./booking.html" style="color: black;">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html" style="color: black;">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -400,7 +405,7 @@
                         <li><a class="menu-item" href="./booking.html">Booking</a></li>
                         <li><a class="menu-item" href="./contact.html">Contact</a></li>
                     </ul>
-                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                    <!-- <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a> -->
                 </div>
             </div>
         </header>
@@ -439,6 +444,20 @@
             });
         });
         </script>
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const scrollThreshold = 100; // Change this value to adjust when the color appears
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+</script>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
@@ -473,7 +492,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <section
   id="section-hero"
   class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-jarallax
-  data-video-src="mp4:images/istockphoto-1010231236-640_adpp_is (1)-vmake.mp4"  data-speed="0.5">
+  data-video-src="mp4:images/Timeline 122.mov"  data-speed="0.5">
   <!-- Your content here -->
   <style>
     /* Brighten video background */
@@ -497,7 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <!-- <div class="subtitle">The Future of Intelligence</div> -->
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Crystal Wings</h1>
+                            <!-- <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Crystal Wings</h1> -->
 
                             <!-- <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
@@ -562,7 +581,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li class="wow fadeInUp" data-wow-delay=".9s">Global network of premium destinations</li>
                         <li class="wow fadeInUp" data-wow-delay="1s">Curated fleet of luxury aircraft</li>
                     </ul>
-                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">A global leader in investment and business innovation, with a team of professionals bringing decades of experience in aviation finance, structured deals, aircraft operations. The approach is disciplined and data-driven, ensuring that every investment is backed by insight and expertise. Built on the principle that luxury and smart investing should rise together, this model bridges the gap between high-performance asset ownership and sustainable financial growth.</p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">A global leader in investment and business innovation, with a team of professionals bringing decades of experience in aviation finance, structured deals, aircraft operations. The approach is disciplined and data-driven, ensuring that every investment is backed by insight and expertise. </p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Air Ambulance, we understand the critical nature of international patient transfers, particularly from the Dubai to various locations across the globe. With our exceptional air ambulance services, we ensure safe, reliable, and seamless medical transport for patients requiring specialized care, even across vast distances.</p>
                 </div>
             </div>
 
@@ -584,7 +604,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             width: 100%;
                             height: 100%;
                         ">
-                            <source src="./1992-153555258_small.mp4" type="video/mp4">
+                            <source src="../1992-153555258_small.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -678,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Fix for the section background */
 #section-about.bg-dark.section-dark {
-  background-color: #FFFFFF !important; /* White background */
+  background-color: #FFE6D5 !important; /* White background */
   color: #000000 !important; /* Black text */
 }
 
@@ -716,8 +736,8 @@ document.addEventListener("DOMContentLoaded", function () {
                  <span class="fs-60 mx-3 op-2">/</span>
                 <span class="fs-60 mx-3">Personalized Service</span>
                  <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Safety Excellence</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
+                <!-- <span class="fs-60 mx-3">Safety Excellence</span>
+                 <span class="fs-60 mx-3 op-2">/</span> -->
                 <span class="fs-60 mx-3">Investment in Aviation</span>
                  <span class="fs-60 mx-3 op-2">/</span>
               </div>
@@ -733,8 +753,8 @@ document.addEventListener("DOMContentLoaded", function () {
                  <span class="fs-60 mx-3 op-2">/</span>
                 <span class="fs-60 mx-3">Personalized Service</span>
                  <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Safety Excellence</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
+                <!-- <span class="fs-60 mx-3">Safety Excellence</span>
+                 <span class="fs-60 mx-3 op-2">/</span> -->
                 <span class="fs-60 mx-3">Investment in Aviation</span>
                  <span class="fs-60 mx-3 op-2">/</span>
               </div>
@@ -756,6 +776,23 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="spacer-single"></div>
 
         <div class="row g-4">
+              <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/ad1.jpg" class="card-image" alt="Global Destinations">
+                        </div>
+                        <div class="card-content">
+                            <h4>Global Destinations</h4>
+                            <p>Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
             <!-- Card 1 -->
             <div class="col-lg-4 col-md-6">
                 <div class="feature-card-wrapper">
@@ -773,22 +810,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card-wrapper">
-                    <div class="feature-card-3d">
-                      <div class="card-inner">
-                        <div class="card-image-container">
-                            <img src="images/global.jpg" class="card-image" alt="Global Destinations">
-                        </div>
-                        <div class="card-content">
-                            <h4>Global Destinations</h4>
-                            <p>Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+          
 
             <!-- Card 3 -->
             <div class="col-lg-4 col-md-6">
@@ -799,24 +821,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img src="images/time.jpg" class="card-image" alt="Time Efficiency">
                         </div>
                         <div class="card-content">
-                            <h4>Time Efficiency</h4>
-                            <p>Skip long security lines and boarding procedures, with the ability to depart within as little as 3 hours' notice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card-wrapper">
-                    <div class="feature-card-3d">
-                      <div class="card-inner">
-
-                        <div class="card-image-container">
-                            <img src="images/ad1.jpg" class="card-image" alt="Personalized Service">
-                        </div>
-                        <div class="card-content">
                             <h4>Personalized Service</h4>
                             <p>Experience bespoke travel with customized catering, ground transportation, and in-flight amenities tailored to your preferences.</p>
                         </div>
@@ -825,8 +829,29 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             </div>
 
+            <!-- Card 4 -->
+           <!-- Second Row (Single Centered Card) -->
+<div class="row g-4 justify-content-center">  <!-- Added justify-content-center -->
+    <!-- Card 4 - Air Ambulance (Centered) -->
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card-wrapper">
+            <div class="feature-card-3d">
+                <div class="card-inner">
+                    <div class="card-image-container">
+                        <img src="images/WhatsApp Image 2025-07-23 at 17.04.14_575fc591.jpg" class="card-image" alt="Air Ambulance">
+                    </div>
+                    <div class="card-content">
+                        <h4>Air Ambulance</h4>
+                        <p>Our air ambulance service ensures rapid medical transportation with fully equipped aircraft and trained medical teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
             <!-- Card 5 -->
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="feature-card-wrapper">
                     <div class="feature-card-3d">
                       <div class="card-inner">
@@ -841,10 +866,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
-            </div>
+            </div> -->
 
             <!-- Card 6 -->
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="feature-card-wrapper">
                     <div class="feature-card-3d">
                       <div class="card-inner">
@@ -859,7 +884,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -1542,8 +1567,8 @@ document.addEventListener("DOMContentLoaded", function () {
     --color-primary-pale: #7C9AC5;
     
     /* White and off-white colors */
-    --color-white: #FFFFFF;
-    --color-off-white: #F8FAFC;
+    --color-white:  #FFE6D5;
+    --color-off-white: #FFE6D5;
     --color-light-gray: #EFF2F7;
     
     /* Text colors */
@@ -1591,8 +1616,23 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 /* Header */
-header.transparent {
+/* header.transparent {
     background-color: var(--color-primary-dark) !important;
+} */
+
+/* Header styles */
+header.transparent {
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: black !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Testimonials */

@@ -1402,6 +1402,64 @@ document.querySelectorAll('.airport-search-input').forEach(input => {
         }
 
 
-
+ /* Full white background */
+    body,
+    .dark-scheme,
+    .bg-dark,
+    .section-dark,
+  
+    #mobile-menu-overlay {
+        background-color: #FFE6D5 !important;
+        color: #000000 !important;
+    }
         
+</style>
+
+<style>
+    /* Add this CSS to fix the overlapping issue */
+    
+    /* 1. Ensure body has proper padding-top */
+    body {
+        padding-top: 150px; /* Adjust based on your header height */
+        background-color: #ffffff !important;
+    }
+    
+    /* 2. Adjust header positioning */
+    header.transparent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        height: 150px; /* Fixed height */
+    }
+    
+    /* 3. Modify booking container spacing */
+    .booking-container {
+        margin-top: 60px !important; /* Reduced from 100px */
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1; /* Ensure it stays below header */
+    }
+    
+    /* 4. Responsive adjustments */
+    @media (max-width: 991px) {
+        body {
+            padding-top: 120px; /* Smaller header height on mobile */
+        }
+        
+        header.transparent {
+            height: 120px;
+        }
+        
+        .booking-container {
+            margin-top: 40px !important;
+        }
+    }
+    
+    /* 5. Ensure content flows correctly */
+    #wrapper {
+        position: relative;
+        overflow: visible;
+    }
 </style>
