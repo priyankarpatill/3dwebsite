@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
 
-           <div class="col-lg-6">
+       <div class="col-lg-6">
     <div class="wow scaleIn" style="position: relative; width: 100%;">
         <!-- Circular/Oval Video Container -->
         <div class="video-mask" style="
@@ -597,12 +597,20 @@ document.addEventListener("DOMContentLoaded", function () {
             overflow: hidden;
             margin: 0 auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            /* Mobile-specific styles */
+            @media (max-width: 768px) {
+                max-width: 300px;
+            }
         ">
             <video class="w-100 h-100" autoplay muted loop playsinline style="
                 object-fit: cover;
                 object-position: center;
                 width: 100%;
                 height: 100%;
+                /* Fallback for aspect-ratio */
+                position: absolute;
+                top: 0;
+                left: 0;
             ">
                 <source src="../1992-153555258_small.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -610,27 +618,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </div>
 </div>
-
-<style>
-    /* Mobile-specific styles */
-    @media (max-width: 767px) {
-        .video-mask {
-            max-width: 300px !important; /* Smaller size for mobile */
-        }
-        
-        /* Ensure video displays properly on mobile */
-        video {
-            display: block !important;
-            visibility: visible !important;
-        }
-        
-        /* Fix potential wow.js animation issues */
-        .wow.scaleIn {
-            transform: none !important;
-            opacity: 1 !important;
-        }
-    }
-</style>
         </div>
     </div>
 </section>
