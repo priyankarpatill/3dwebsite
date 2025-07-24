@@ -568,8 +568,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <section id="section-about" class="bg-dark section-dark text-light" style="color: black;">
     <div class="container">
         <div class="row gx-5 align-items-center justify-content-between">
-            <div class="col-lg-6">
-                <div class="me-lg-5 pe-lg-5 py-5 my-5">
+            <div class="col-lg-6 order-lg-1 order-2">
+                <div class="me-lg-5 pe-lg-5 py-lg-5 my-lg-5 py-3 my-3">
                     <p class="wow fadeInUp" data-wow-delay=".4s" style="color: black; font-size: 40px;">Elevating Your Travel Experience</p>
                     <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.</p>
 
@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 order-lg-2 order-1">
                 <div class="wow scaleIn" style="position: relative; width: 100%;">
                     <div class="video-mask" style="
                         width: 100%;
@@ -593,24 +593,36 @@ document.addEventListener("DOMContentLoaded", function () {
                         overflow: hidden;
                         margin: 0 auto;
                         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                        background: #000;
                     ">
-                        <video class="w-100 h-100" 
+                        <video id="heroVideo" class="w-100 h-100" 
                                autoplay 
                                muted 
                                loop 
                                playsinline
                                webkit-playsinline
-                               x-webkit-airplay="allow"
+                               preload="auto"
                                style="
                                   object-fit: cover;
                                   object-position: center;
                                   width: 100%;
                                   height: 100%;
+                                  display: block;
                                ">
                             <source src="../1992-153555258_small.mp4" type="video/mp4">
                             <source src="../1992-153555258_small.webm" type="video/webm">
-                            Your browser does not support the video tag.
+                            Your browser does not support HTML5 video.
                         </video>
+                        <div id="videoFallback" style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: #000 url('placeholder-image.jpg') no-repeat center center;
+                            background-size: cover;
+                            display: none;
+                        "></div>
                     </div>
                 </div>
             </div>
@@ -623,78 +635,85 @@ document.addEventListener("DOMContentLoaded", function () {
     @media (max-width: 768px) {
         .video-mask {
             max-width: 300px !important;
-            margin-top: 30px !important;
-            margin-bottom: 30px !important;
+            margin: 30px auto !important;
         }
         
-        /* Ensure video container doesn't push content */
-        .col-lg-6:last-child {
-            order: -1; /* Move video above text on mobile */
-            padding-top: 20px;
+        /* Ensure proper spacing on mobile */
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
         }
         
-        /* Fix for video autoplay on mobile */
+        /* Make video always visible */
         video {
-            display: block !important;
+            opacity: 1 !important;
             visibility: visible !important;
         }
     }
     
-    /* Additional fallback for older browsers */
+    /* Video container fallback */
     .video-mask {
-        background-color: #000; /* Fallback color */
         position: relative;
-    }
-    
-    .video-mask::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: transparent;
-        pointer-events: none;
     }
 </style>
 
 <script>
-// Enhanced video handling for mobile devices
 document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('video');
+    const video = document.getElementById('heroVideo');
+    const fallback = document.getElementById('videoFallback');
     
-    // Check if mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Check if video is supported and can play
+    function supportsVideo() {
+        return !!document.createElement('video').canPlayType;
+    }
     
-    if (isMobile) {
-        // For mobile, we'll try to play the video when it's in view
+    // Try to play video with fallback
+    function attemptPlay() {
+        if (!supportsVideo()) {
+            showFallback();
+            return;
+        }
+        
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // Video played successfully
+                fallback.style.display = 'none';
+            }).catch(error => {
+                // Video failed to play
+                showFallback();
+            });
+        }
+    }
+    
+    function showFallback() {
+        fallback.style.display = 'block';
+        video.style.display = 'none';
+    }
+    
+    // Initial attempt to play
+    attemptPlay();
+    
+    // For mobile devices - try playing when visible
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const playPromise = video.play();
-                    
-                    if (playPromise !== undefined) {
-                        playPromise.catch(error => {
-                            // If autoplay fails, show a play button overlay
-                            console.log("Autoplay prevented, showing fallback");
-                        });
-                    }
+                    attemptPlay();
                 }
             });
         }, {threshold: 0.5});
         
         observer.observe(video);
-    } else {
-        // For desktop, just try to play immediately
-        video.play().catch(e => console.log("Autoplay prevented:", e));
+        
+        // Also add click-to-play functionality
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+            }
+        });
     }
-    
-    // Fallback for browsers that don't support autoplay
-    video.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-        }
-    });
 });
 </script>
         
