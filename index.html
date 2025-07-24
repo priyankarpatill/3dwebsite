@@ -585,44 +585,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="col-lg-6 order-lg-2 order-1">
                 <div class="wow scaleIn" style="position: relative; width: 100%;">
-                    <div class="video-mask" style="
-                        width: 100%;
-                        max-width: 500px;
-                        aspect-ratio: 1;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        margin: 0 auto;
-                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                        background: #000;
-                    ">
-                        <video id="heroVideo" class="w-100 h-100" 
-                               autoplay 
-                               muted 
-                               loop 
-                               playsinline
-                               webkit-playsinline
-                               preload="auto"
-                               style="
-                                  object-fit: cover;
-                                  object-position: center;
-                                  width: 100%;
-                                  height: 100%;
-                                  display: block;
-                               ">
-                            <source src="../1992-153555258_small.mp4" type="video/mp4">
-                            <source src="../1992-153555258_small.webm" type="video/webm">
-                            Your browser does not support HTML5 video.
-                        </video>
-                        <div id="videoFallback" style="
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: #000 url('placeholder-image.jpg') no-repeat center center;
-                            background-size: cover;
-                            display: none;
-                        "></div>
+                    <!-- Update your video section with these changes -->
+<div class="video-mask" style="
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #000;
+">
+    <video id="heroVideo" class="w-100 h-100" 
+           autoplay 
+           muted 
+           loop 
+           playsinline
+           webkit-playsinline
+           preload="auto"
+           style="
+              object-fit: cover;
+              object-position: center;
+              width: 100%;
+              height: 100%;
+              display: block;
+           ">
+        <!-- Add multiple sources with different formats -->
+        <source src="../1992-153555258_small.mp4" type="video/mp4">
+        <source src="../1992-153555258_small.webm" type="video/webm">
+        <!-- Add a poster image as additional fallback -->
+        <img src="placeholder-image.jpg" alt="Private jet service" style="width:100%;height:100%;object-fit:cover;">
+    </video>
+</div>
                     </div>
                 </div>
             </div>
@@ -712,6 +706,33 @@ document.addEventListener('DOMContentLoaded', function() {
             if (video.paused) {
                 video.play();
             }
+        });
+    }
+});
+</script>
+<!-- Update your JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('heroVideo');
+    
+    // Mobile-specific handling
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Ensure video is visible and properly sized
+        video.style.display = 'block';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        
+        // Force play when user interacts with page (touch event)
+        document.body.addEventListener('touchstart', function() {
+            if (video.paused) {
+                video.play().catch(e => console.log('Video play failed:', e));
+            }
+        }, {once: true});
+        
+        // Try to play automatically (may still be blocked)
+        video.play().catch(e => {
+            console.log('Autoplay blocked, waiting for user interaction');
+            // Show play button overlay if needed
         });
     }
 });

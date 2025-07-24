@@ -1,64 +1,145 @@
-<section id="section-about" class="bg-dark section-dark text-light" style="color: black;">
+<section id="section-about" style="background: #f8f9fa; color: black; padding: 40px 0;">
     <div class="container">
-        <div class="row gx-5 align-items-center justify-content-between">
+        <div class="row align-items-center">
+            <!-- Text Column -->
             <div class="col-lg-6 order-lg-1 order-2">
-                <div class="me-lg-5 pe-lg-5 py-lg-5 my-lg-5 py-3 my-3">
-                    <p class="wow fadeInUp" data-wow-delay=".4s" style="color: black; font-size: 40px;">Elevating Your Travel Experience</p>
-                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.</p>
-
-                    <ul class="ul-check">
-                        <li class="wow fadeInUp" data-wow-delay=".8s">24/7 on-demand private jet charter services</li>
-                        <li class="wow fadeInUp" data-wow-delay=".9s">Global network of premium destinations</li>
-                        <li class="wow fadeInUp" data-wow-delay="1s">Curated fleet of luxury aircraft</li>
+                <div style="padding: 20px;">
+                    <h2 style="font-size: 40px; color: black;">Elevating Your Travel Experience</h2>
+                    <p style="color: black;">Crystal Wings offers unparalleled private jet charter services...</p>
+                    <ul>
+                        <li>24/7 on-demand private jet charter services</li>
+                        <li>Global network of premium destinations</li>
+                        <li>Curated fleet of luxury aircraft</li>
                     </ul>
-                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">A global leader in investment and business innovation, with a team of professionals bringing decades of experience in aviation finance, structured deals, aircraft operations. The approach is disciplined and data-driven, ensuring that every investment is backed by insight and expertise. </p>
-                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Air Ambulance, we understand the critical nature of international patient transfers, particularly from the Dubai to various locations across the globe. With our exceptional air ambulance services, we ensure safe, reliable, and seamless medical transport for patients requiring specialized care, even across vast distances.</p>
                 </div>
             </div>
 
+            <!-- Video Column -->
             <div class="col-lg-6 order-lg-2 order-1">
-                <div class="wow scaleIn" style="position: relative; width: 100%;">
-                    <div class="video-mask" style="
+                <div style="text-align: center; padding: 20px;">
+                    <div class="video-container" style="
                         width: 100%;
-                        max-width: 500px;
-                        aspect-ratio: 1;
+                        max-width: 400px;
+                        margin: 0 auto;
                         border-radius: 50%;
                         overflow: hidden;
-                        margin: 0 auto;
-                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                        background: #000;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                        background-color: #000;
+                        position: relative;
                     ">
-                        <video id="heroVideo" class="w-100 h-100" 
+                        <!-- Video Element -->
+                        <video id="mobileVideo" 
                                autoplay 
                                muted 
                                loop 
                                playsinline
                                webkit-playsinline
                                preload="auto"
-                               style="
-                                  object-fit: cover;
-                                  object-position: center;
-                                  width: 100%;
-                                  height: 100%;
-                                  display: block;
-                               ">
-                            <source src="../1992-153555258_small.mp4" type="video/mp4">
-                            <source src="../1992-153555258_small.webm" type="video/webm">
-                            Your browser does not support HTML5 video.
+                               style="width: 100%; height: 100%; object-fit: cover;"
+                        >
+                            <source src="https://example.com/path-to-your-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
+                        
+                        <!-- Fallback Content -->
                         <div id="videoFallback" style="
                             position: absolute;
                             top: 0;
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: #000 url('placeholder-image.jpg') no-repeat center center;
-                            background-size: cover;
+                            background-color: #000;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
                             display: none;
-                        "></div>
+                        ">
+                            <p>Video cannot be displayed</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('mobileVideo');
+    const fallback = document.getElementById('videoFallback');
+    
+    // 1. First check if video element exists and is properly loaded
+    if (!video) {
+        console.error("Video element not found");
+        return;
+    }
+    
+    // 2. Check if video sources exist
+    video.addEventListener('error', function() {
+        console.error("Video loading failed");
+        fallback.style.display = 'flex';
+        video.style.display = 'none';
+    });
+    
+    // 3. Mobile-specific handling
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    function attemptPlay() {
+        // For iOS devices, we need to trigger play on user interaction
+        if (video.paused) {
+            const promise = video.play();
+            
+            if (promise !== undefined) {
+                promise.catch(error => {
+                    // Autoplay was prevented
+                    console.log("Autoplay prevented, showing fallback");
+                    fallback.style.display = 'flex';
+                    video.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    // Initial play attempt
+    attemptPlay();
+    
+    // For mobile devices, set up additional play triggers
+    if (isMobile) {
+        // Try playing when the user interacts with the page
+        document.addEventListener('touchstart', function() {
+            attemptPlay();
+        }, { once: true });
+        
+        // Try playing when the video comes into view
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                attemptPlay();
+            }
+        }, { threshold: 0.5 });
+        
+        observer.observe(video);
+    }
+});
+</script>
+
+<style>
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+        .video-container {
+            max-width: 300px !important;
+            height: 300px !important;
+            margin-bottom: 30px !important;
+        }
+        
+        #mobileVideo {
+            min-height: 100%;
+            min-width: 100%;
+        }
+    }
+    
+    /* Ensure video container maintains aspect ratio */
+    .video-container {
+        aspect-ratio: 1/1;
+    }
+</style>
