@@ -481,53 +481,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-<section id="section-hero" class="section-dark no-top no-bottom text-light relative min-vh-100">
-  <!-- Desktop Jarallax Background -->
-  <div class="jarallax d-none d-md-block" data-jarallax data-video-src="mp4:images/Timeline 122.mp4" data-speed="0.5">
-    <div class="jarallax-video"></div>
-  </div>
-  
-  <!-- Mobile Video Background -->
-  <video class="d-block d-md-none w-100 h-100 position-absolute start-0 top-0" autoplay muted loop playsinline>
-    <source src="./images/Timeline 122.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  
-  <!-- Content Container (positioned above video) -->
-  <div class="container position-relative z-index-1 py-5">
-    <!-- Your content here -->
-  </div>
+<style>
+/* Smooth transition for zoom effects */
+.jarallax-video {
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+}
+</style>
+
+<section
+  id="section-hero"
+  class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-jarallax
+  data-video-src="mp4:images/Timeline 122.mov"  data-speed="0.5">
+  <!-- Your content here -->
   <style>
-    /* Ensure section takes full viewport height */
-.min-vh-100 {
-  min-height: 100vh;
-}
+    /* Brighten video background */
+    .jarallax > video {
+      filter: brightness(1.4) contrast(1.1);
+    }
 
-/* Mobile video styling */
-#section-hero video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
-
-/* Content container positioning */
-.z-index-1 {
-  z-index: 1;
-}
-
-/* Fallback if video fails to load */
-#section-hero {
-  background-color: #000; /* Fallback color */
-  background-size: cover;
-  background-position: center;
-}
+    /* Remove dark overlays */
+    /* .gradient-edge-top, */
+    /* .gradient-edge-bottom, */
+    .sw-overlay {
+      display: none !important;
+    }
   </style>
-
-
 
             <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
@@ -608,29 +587,50 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
            <div class="col-lg-6">
-                <div class="wow scaleIn" style="position: relative; width: 100%;">
-                    <!-- Circular/Oval Video Container -->
-                    <div class="video-mask" style="
-                        width: 100%;
-                        max-width: 500px;
-                        aspect-ratio: 1;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        margin: 0 auto;
-                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                    ">
-                        <video class="w-100 h-100" autoplay muted loop playsinline style="
-                            object-fit: cover;
-                            object-position: center;
-                            width: 100%;
-                            height: 100%;
-                        ">
-                            <source src="../1992-153555258_small.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
+    <div class="wow scaleIn" style="position: relative; width: 100%;">
+        <!-- Circular/Oval Video Container -->
+        <div class="video-mask" style="
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        ">
+            <video class="w-100 h-100" autoplay muted loop playsinline style="
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            ">
+                <source src="../1992-153555258_small.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Mobile-specific styles */
+    @media (max-width: 767px) {
+        .video-mask {
+            max-width: 300px !important; /* Smaller size for mobile */
+        }
+        
+        /* Ensure video displays properly on mobile */
+        video {
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+        /* Fix potential wow.js animation issues */
+        .wow.scaleIn {
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+</style>
         </div>
     </div>
 </section>
@@ -746,7 +746,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 </style>
 
- <section class="section-dark p-0" aria-label="section" style="color: black;">
+      <section class="section-dark p-0" aria-label="section" style="color: black;">
   <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
     <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
       <span class="marquee-text">Luxury Fleet Selection</span>
@@ -826,6 +826,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 </style>
+
 
 <section id="section-why-attend" class="bg-dark section-dark text-light">
     <div class="container">
