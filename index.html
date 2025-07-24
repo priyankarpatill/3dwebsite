@@ -565,11 +565,11 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
         
-<section id="section-about" class="bg-dark section-dark text-light" style="color: black;">
+<section id="section-about" class="bg-dark section-dark text-light" style="background-color: white !important;">
     <div class="container">
         <div class="row gx-5 align-items-center justify-content-between">
-            <div class="col-lg-6 order-lg-1 order-2">
-                <div class="me-lg-5 pe-lg-5 py-lg-5 my-lg-5 py-3 my-3">
+            <div class="col-lg-6">
+                <div class="me-lg-5 pe-lg-5 py-5 my-5">
                     <p class="wow fadeInUp" data-wow-delay=".4s" style="color: black; font-size: 40px;">Elevating Your Travel Experience</p>
                     <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.</p>
 
@@ -583,40 +583,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
 
-            <div class="col-lg-6 order-lg-2 order-1">
+            <div class="col-lg-6">
                 <div class="wow scaleIn" style="position: relative; width: 100%;">
-                    <!-- Update your video section with these changes -->
-<div class="video-mask" style="
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    background: #000;
-">
-    <video id="heroVideo" class="w-100 h-100" 
-           autoplay 
-           muted 
-           loop 
-           playsinline
-           webkit-playsinline
-           preload="auto"
-           style="
-              object-fit: cover;
-              object-position: center;
-              width: 100%;
-              height: 100%;
-              display: block;
-           ">
-        <!-- Add multiple sources with different formats -->
-        <source src="../1992-153555258_small.mp4" type="video/mp4">
-        <source src="../1992-153555258_small.webm" type="video/webm">
-        <!-- Add a poster image as additional fallback -->
-        <img src="placeholder-image.jpg" alt="Private jet service" style="width:100%;height:100%;object-fit:cover;">
-    </video>
-</div>
+                    <!-- Circular/Oval Video Container -->
+                    <div class="video-mask" style="
+                        width: 100%;
+                        max-width: 500px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 0 auto;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                        background-color: #f0f0f0;
+                    ">
+                        <video class="w-100 h-100" autoplay muted loop playsinline style="
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        ">
+                            <source src="1992-153555258_small.mp4" type="video/mp4">
+                            <!-- Fallback image if video doesn't load -->
+                            <img src="fallback-image.jpg" alt="Private Jet Service" style="width:100%;height:100%;object-fit:cover;">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -625,126 +616,9 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 <style>
-    /* Mobile-specific styles */
-    @media (max-width: 768px) {
-        .video-mask {
-            max-width: 300px !important;
-            margin: 30px auto !important;
-        }
-        
-        /* Ensure proper spacing on mobile */
-        .py-3 {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-        }
-        
-        /* Make video always visible */
-        video {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-    }
-    
-    /* Video container fallback */
-    .video-mask {
-        position: relative;
-    }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('heroVideo');
-    const fallback = document.getElementById('videoFallback');
-    
-    // Check if video is supported and can play
-    function supportsVideo() {
-        return !!document.createElement('video').canPlayType;
-    }
-    
-    // Try to play video with fallback
-    function attemptPlay() {
-        if (!supportsVideo()) {
-            showFallback();
-            return;
-        }
-        
-        const playPromise = video.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                // Video played successfully
-                fallback.style.display = 'none';
-            }).catch(error => {
-                // Video failed to play
-                showFallback();
-            });
-        }
-    }
-    
-    function showFallback() {
-        fallback.style.display = 'block';
-        video.style.display = 'none';
-    }
-    
-    // Initial attempt to play
-    attemptPlay();
-    
-    // For mobile devices - try playing when visible
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    attemptPlay();
-                }
-            });
-        }, {threshold: 0.5});
-        
-        observer.observe(video);
-        
-        // Also add click-to-play functionality
-        video.addEventListener('click', function() {
-            if (video.paused) {
-                video.play();
-            }
-        });
-    }
-});
-</script>
-<!-- Update your JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('heroVideo');
-    
-    // Mobile-specific handling
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Ensure video is visible and properly sized
-        video.style.display = 'block';
-        video.style.width = '100%';
-        video.style.height = '100%';
-        
-        // Force play when user interacts with page (touch event)
-        document.body.addEventListener('touchstart', function() {
-            if (video.paused) {
-                video.play().catch(e => console.log('Video play failed:', e));
-            }
-        }, {once: true});
-        
-        // Try to play automatically (may still be blocked)
-        video.play().catch(e => {
-            console.log('Autoplay blocked, waiting for user interaction');
-            // Show play button overlay if needed
-        });
-    }
-});
-</script>
-        
-
-<style>
     /* Circular/Oval Video Styling */
     .video-mask {
-        border-radius: 50%; /* Perfect circle */
-        /* OR for oval shape: */
-        /* border-radius: 50% / 60%; */
+        border-radius: 50%;
         overflow: hidden;
         position: relative;
     }
@@ -760,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /* Responsive adjustments */
     @media (max-width: 991px) {
         .video-mask {
-            max-width: 300px;
+            max-width: 350px;
             margin-top: 30px;
             margin-bottom: 30px;
         }
@@ -768,6 +642,25 @@ document.addEventListener('DOMContentLoaded', function() {
         #section-about .col-lg-6 {
             padding-left: 15px;
             padding-right: 15px;
+        }
+        
+        /* Stack columns vertically on mobile */
+        #section-about .row {
+            flex-direction: column;
+        }
+        
+        /* Adjust spacing for mobile */
+        .me-lg-5.pe-lg-5.py-5.my-5 {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .video-mask {
+            max-width: 280px;
         }
     }
     
@@ -786,70 +679,27 @@ document.addEventListener('DOMContentLoaded', function() {
     #section-about li {
         color: black !important;
     }
-</style>
-<style>
-  /* Remove any fixed height constraints */
-.wow.scaleIn {
-    height: auto !important;
-    max-height: none !important;
-}
-
-/* Video container aspect ratio */
-.video-container {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Adjust column spacing */
-.col-lg-6 {
-    padding-left: 0;
-    padding-right: 0;
-}
-  /* Fix for the heading visibility */
-#section-about h2 {
-  color: #000000 !important; /* Force black color */
-  opacity: 1 !important; /* Ensure full visibility */
-  text-shadow: none !important; /* Remove any shadows that might hide it */
-}
-
-/* Fix for the section background */
-#section-about.bg-dark.section-dark {
-  background-color: #FFE6D5 !important; /* White background */
-  color: #000000 !important; /* Black text */
-}
-
-/* Fix for the list items */
-#section-about .ul-check li {
-  color: #000000 !important;
-}
-
-/* Optional: Add contrast to the video container */
-.col-lg-5 {
-  background-color: #F8F9FA; /* Light gray background for video */
-  padding: 15px;
-  border-radius: 8px;
-}
-    /* Optional: Add this CSS to ensure no native controls appear */
-    video::-webkit-media-controls {
-        display: none !important;
+    
+    /* Fix list styling */
+    .ul-check {
+        list-style-type: none;
+        padding-left: 0;
     }
-    video::-webkit-media-controls-enclosure {
-        display: none !important;
+    
+    .ul-check li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
     }
-    video::-webkit-media-controls-panel {
-        display: none !important;
+    
+    .ul-check li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #000;
+        font-weight: bold;
     }
 </style>
-
       <section class="section-dark p-0" aria-label="section" style="color: black;">
   <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
     <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
