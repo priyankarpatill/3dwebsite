@@ -481,56 +481,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-<style>
-/* Smooth transition for zoom effects */
-.jarallax-video {
-    transition: transform 0.5s ease-out;
-    transform-origin: center center;
-}
-</style>
-
-<section
-  id="section-hero"
-  class="section-dark no-top no-bottom text-light jarallax relative mh-800"
-  data-jarallax
-  data-video-src="mp4:images/Timeline 122.mov"
-  data-speed="0.5"
->
-  <!-- Mobile fallback video -->
-  <video
-    class="mobile-video d-block d-md-none"
-    autoplay
-    muted
-    loop
-    playsinline
-    style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
-  >
-    <source src="images/Timeline 122.mp4" type="video/mp4" />
+<section id="section-hero" class="section-dark no-top no-bottom text-light relative min-vh-100">
+  <!-- Desktop Jarallax Background -->
+  <div class="jarallax d-none d-md-block" data-jarallax data-video-src="mp4:images/Timeline 122.mp4" data-speed="0.5">
+    <div class="jarallax-video"></div>
+  </div>
+  
+  <!-- Mobile Video Background -->
+  <video class="d-block d-md-none w-100 h-100 position-absolute start-0 top-0" autoplay muted loop playsinline>
+    <source src="./images/Timeline 122.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
-
-  <!-- Your existing content here -->
-
-  <!-- Your content here -->
+  
+  <!-- Content Container (positioned above video) -->
+  <div class="container position-relative z-index-1 py-5">
+    <!-- Your content here -->
+  </div>
   <style>
-    /* Optional if you don't use Bootstrap */
-@media (min-width: 768px) {
-  .mobile-video {
-    display: none !important;
-  }
+    /* Ensure section takes full viewport height */
+.min-vh-100 {
+  min-height: 100vh;
 }
 
-    /* Brighten video background */
-    .jarallax > video {
-      filter: brightness(1.4) contrast(1.1);
-    }
+/* Mobile video styling */
+#section-hero video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
 
-    /* Remove dark overlays */
-    /* .gradient-edge-top, */
-    /* .gradient-edge-bottom, */
-    .sw-overlay {
-      display: none !important;
-    }
+/* Content container positioning */
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Fallback if video fails to load */
+#section-hero {
+  background-color: #000; /* Fallback color */
+  background-size: cover;
+  background-position: center;
+}
   </style>
+
+
 
             <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
@@ -749,43 +746,86 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 </style>
 
-        <section class="section-dark p-0" aria-label="section" style="color: black;">
-            <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
-              <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
-                <span class="fs-60 mx-3">Luxury Fleet Selection</span>
-                <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Global Destinations</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Time Efficiency</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Personalized Service</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <!-- <span class="fs-60 mx-3">Safety Excellence</span>
-                 <span class="fs-60 mx-3 op-2">/</span> -->
-                <span class="fs-60 mx-3">Investment in Aviation</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-              </div>
-            </div>
+ <section class="section-dark p-0" aria-label="section" style="color: black;">
+  <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
+    <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
+      <span class="marquee-text">Luxury Fleet Selection</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Global Destinations</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Time Efficiency</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Personalized Service</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Investment in Aviation</span>
+      <span class="marquee-separator">/</span>
+    </div>
+  </div>
 
-            <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
-              <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-                <span class="fs-60 mx-3">Luxury Fleet Selection</span>
-                <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Global Destinations</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Time Efficiency</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Personalized Service</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <!-- <span class="fs-60 mx-3">Safety Excellence</span>
-                 <span class="fs-60 mx-3 op-2">/</span> -->
-                <span class="fs-60 mx-3">Investment in Aviation</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-              </div>
-            </div>
-        </section>
+  <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
+    <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
+      <span class="marquee-text">Luxury Fleet Selection</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Global Destinations</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Time Efficiency</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Personalized Service</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Investment in Aviation</span>
+      <span class="marquee-separator">/</span>
+    </div>
+  </div>
+</section>
 
-
+<style>
+  /* Base styles for all devices */
+  .marquee-text {
+    font-size: 60px;
+    margin: 0 12px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .marquee-separator {
+    font-size: 60px;
+    margin: 0 12px;
+    opacity: 0.2;
+    display: inline-block;
+  }
+  
+  /* Mobile styles - will override desktop styles */
+  @media only screen and (max-width: 767px) {
+    .marquee-text {
+      font-size: 24px !important; /* Force smaller size on mobile */
+      margin: 0 8px !important;
+    }
+    
+    .marquee-separator {
+      font-size: 24px !important; /* Force smaller size on mobile */
+      margin: 0 8px !important;
+    }
+    
+    /* Adjust container padding */
+    .bg-color, 
+    .bg-color-2 {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+    
+    /* Make sure the animation classes don't interfere */
+    .de-marquee-list-1,
+    .de-marquee-list-2 {
+      animation: none !important;
+    }
+    
+    /* Ensure wow.js animations don't prevent our styles */
+    .wow {
+      animation-name: none !important;
+      visibility: visible !important;
+    }
+  }
+</style>
 
 <section id="section-why-attend" class="bg-dark section-dark text-light">
     <div class="container">
