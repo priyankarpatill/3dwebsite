@@ -18,7 +18,8 @@
     <!-- color scheme -->
 <link id="colors" href="css/colors/custom.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <script src="https://unpkg.com/jarallax@2/dist/jarallax.min.js"></script>
+<script src="https://unpkg.com/jarallax@2/dist/jarallax-video.min.js"></script>
 
 </head>
 <style>
@@ -489,11 +490,17 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 </style>
 
+
+
 <section
   id="section-hero"
-  class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-jarallax
-  data-video-src="mp4:images/Timeline 122.mov"  data-speed="0.5">
-  <!-- Your content here -->
+  class="section-dark no-top no-bottom text-light jarallax relative mh-800 vh-100 fixed-top" 
+  data-jarallax
+  data-video-src="mp4:images/Timeline 122.mov"
+  data-speed="0.5">
+  
+  <!-- Your content here (navigation, temperature, time, etc.) -->
+  
   <style>
     /* Brighten video background */
     .jarallax > video {
@@ -501,68 +508,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* Remove dark overlays */
-    /* .gradient-edge-top, */
-    /* .gradient-edge-bottom, */
     .sw-overlay {
       display: none !important;
     }
+    
+    /* Make section full viewport height and fixed */
+    #section-hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1; /* Send to background */
+    }
+    
+    /* Ensure content below hero section is visible */
+    body {
+      padding-top: 100vh; /* Push content down by viewport height */
+    }
   </style>
 
-            <div class="gradient-edge-top op-6 h-50 color"></div>
-            <div class="gradient-edge-bottom"></div>
-            <div class="sw-overlay op-8"></div>
-            <div class="abs abs-centered z-2 w-80">
-                <div class="container wow scaleIn" data-wow-duration="3s">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <!-- <div class="subtitle">The Future of Intelligence</div> -->
-                            <!-- <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Crystal Wings</h1> -->
 
-                            <!-- <div class="d-block d-md-flex justify-content-center">
-                                <div class="d-flex justify-content-center align-items-center mx-4">
-                                    <i class="fa fa-calendar id-color me-3"></i> -->
-                                    <!-- <h4 class="mb-0">October 1–5, 2025</h4> -->
-                                <!-- </div> -->
-
-                                <!-- <div class="d-flex justify-content-center align-items-center mx-4">
-                                    <i class="fa fa-location-pin id-color me-3"></i> -->
-                                    <!-- <h4 class="mb-0">San Francisco, CA</h4> -->
-                                <!-- </div> -->
-                            </div>
-
-                            <div class="spacer-single"></div>
-
-                            <!-- <a class="btn-main mx-2 fx-slide" href="#section-tickets"><span>Get Tickets</span></a>
-                            <a class="btn-main btn-line mx-2 fx-slide" href="#section-schedule"><span>View Schedule</span></a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="abs w-100 start-0 bottom-0 z-3">
-                <div class="container">
-                    <div class="sm-hide border-white-op-3 p-40 py-4 rounded-1 bg-blur relative overflow-hidden wow fadeInUp">
-                        <div class="gradient-edge-bottom color start-0 h-50 op-5"></div>
-                        <div class="row g-4 justify-content-between align-items-center relative z-2">
-                            <div class="col-lg-3">
-                                <h2 class="mb-0">Hurry Up!</h2>
-                                <h4 class="mb-0">Book Your Seat Now</h4>
-                            </div>
-                            <div class="col-lg-4">
-                                <div id="defaultCountdown" class="pt-2"></div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="d-flex">
-                                    <i class="fs-60 icofont-google-map id-color"></i>
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">121 AI Blvd,<br>San Francisco BCA 94107</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
         </section>
         
 <section id="section-about" class="bg-dark section-dark text-light" style="background-color: #FFE6D5;">
@@ -711,7 +677,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="marquee-separator">/</span>
       <span class="marquee-text">Personalized Service</span>
       <span class="marquee-separator">/</span>
-      <span class="marquee-text">Investment in Aviation</span>
+      <span class="marquee-text">Invest in Aviation</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Air Ambulance</span>
       <span class="marquee-separator">/</span>
     </div>
   </div>
@@ -726,7 +694,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="marquee-separator">/</span>
       <span class="marquee-text">Personalized Service</span>
       <span class="marquee-separator">/</span>
-      <span class="marquee-text">Investment in Aviation</span>
+      <span class="marquee-text">Invest in Aviation</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Air Ambulance</span>
       <span class="marquee-separator">/</span>
     </div>
   </div>
@@ -1289,7 +1259,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Card 1 -->
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card rounded-1 overflow-hidden border-0">
-                    <img src="images/airambulance11.jpg" class="card-img w-100" alt="Air Ambulance">
+                    <img src="images/air221.jpg" class="card-img w-100" alt="Air Ambulance">
                     <div class="card-img-overlay d-flex align-items-end p-0">
                         <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
                             <span class="text-white">Air Ambulance</span>
@@ -1301,7 +1271,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Card 2 -->
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card rounded-1 overflow-hidden border-0">
-                    <img src="images/luxury-design-private-jet-flying-clouds-ai-generated-image (1).jpg" class="card-img w-100" alt="Aircraft Management">
+                    <img src="images/air management11.jpeg" class="card-img w-100" alt="Aircraft Management">
                     <div class="card-img-overlay d-flex align-items-end p-0">
                         <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
                             <span class="text-white">Aircraft Management</span>
@@ -1735,3 +1705,6 @@ a:hover {
     box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
 }
 </style>
+
+
+
