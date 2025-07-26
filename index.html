@@ -771,7 +771,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="feature-card-3d">
                       <div class="card-inner">
                         <div class="card-image-container">
-                            <img src="images/ad1.jpg" class="card-image" alt="Global Destinations">
+                            <img src="images/group.webp" class="card-image" alt="Global Destinations">
                         </div>
                         <div class="card-content">
                             <h4>Global Destinations</h4>
@@ -788,7 +788,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="feature-card-3d">
                       <div class="card-inner">
                         <div class="card-image-container">
-                            <img src="images/luxury.jpg" class="card-image" alt="Luxury Fleet">
+                            <img src="images/Ben_Pipe_Photo_042523_AirX_063.webp" class="card-image" alt="Luxury Fleet">
                         </div>
                         <div class="card-content">
                             <h4>Luxury Fleet Selection</h4>
@@ -1341,7 +1341,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       
       
-
+<!-- 
         <section  id="section-faq" class="bg-dark section-dark text-light" style="background-color: var(--color-primary-dark) !important;">
             <div class="container">
                 <div class="row g-4">
@@ -1399,7 +1399,176 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+        <section class="contact-section" id="contact">
+  <div class="contact-container">
+    <!-- Left Side: Contact Form -->
+    <div class="contact-form" data-aos="fade-right">
+      <h2>REQUEST A QUOTE</h2>
+      <p>Ready to elevate your travel experience? Contact us for a personalized quote.</p>
+      
+      <form class="form" action="#" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name*" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email*" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Journey Details*" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">SUBMIT REQUEST <span>✈️</span></button>
+      </form>
+    </div>
+
+    <!-- Right Side: Contact Info -->
+    <div class="contact-info" data-aos="fade-left">
+      <div class="info-card">
+        <h3>CONTACT US</h3>
+        <ul>
+          <li><span>📞</span> +1 (555) 123-4567</li>
+          <li><span>✉️</span> contact@crystalwings.com</li>
+          <li><span>📍</span> Global Headquarters: 123 Aviation Way, New York, NY</li>
+        </ul>
+      </div>
+      
+      <div class="hours-card">
+        <h3>OPERATIONAL HOURS</h3>
+        <ul>
+          <li>24/7 Charter Booking</li>
+          <li>Customer Support: 5AM–11PM GMT</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Contact Section Styling */
+  .contact-section {
+    padding: 80px 20px;
+    background: #0a0e17; /* Solid dark background */
+    color: #e0e0e0; /* Light gray text for readability */
+    position: relative;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .contact-form {
+    background: #1a1f2d; /* Darker card background */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #2a3a5a; /* Subtle border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+
+  .contact-form p {
+    margin-bottom: 30px;
+    color: #a0a0a0;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: #1e2435;
+    border: 1px solid #2a3a5a;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: #3a7bd5; /* Solid blue button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .submit-btn:hover {
+    background: #2c65b0;
+    transform: translateY(-2px);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-card, .hours-card {
+    background: #1a1f2d;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #2a3a5a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-card h3, .hours-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #2a3a5a;
+    padding-bottom: 10px;
+  }
+
+  .info-card ul, .hours-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-card li, .hours-card li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #c0c0c0;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form, .info-card, .hours-card {
+      padding: 25px;
+    }
+  }
+</style>
 
         <!-- <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
             <img src="images/background/3.webp" class="jarallax-img" alt="">
@@ -1708,3 +1877,85 @@ a:hover {
 
 
 
+<style>
+    /* Add this to your CSS */
+body {
+  background-color: #FFE6D5 !important; /* Your desired background color */
+}
+
+/* Force all sections to use the correct background */
+section, 
+#section-about, 
+#section-why-attend, 
+#section-faq {
+  background-color: #FFE6D5 !important;
+}
+
+/* Make sure text is readable */
+section, 
+#section-about, 
+#section-why-attend, 
+#section-faq {
+  color: black !important;
+}
+
+
+
+/* Remove any transparent effects that might be interfering */
+header.transparent.scrolled {
+  background-color: black !important;
+}
+@media (max-width: 991px) {
+  /* Force all sections to use the correct background */
+  body, 
+  section, 
+  #section-about, 
+  #section-why-attend, 
+  #section-faq {
+    background-color: #FFE6D5 !important;
+  }
+  
+  /* Ensure text is black */
+  body, 
+  section, 
+  #section-about, 
+  #section-why-attend, 
+  #section-faq {
+    color: black !important;
+  }
+  
+  /* Header stays black */
+  header.transparent {
+    background-color: black !important;
+  }
+  
+  /* Fix any z-index issues */
+  header {
+    z-index: 1000;
+    position: relative;
+  }
+}
+#section-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Make sure content below the hero is visible */
+body {
+  padding-top: 100vh;
+}
+/* Override dark scheme colors */
+.dark-scheme {
+  background-color: #FFE6D5 !important;
+  color: black !important;
+}
+
+.dark-scheme section {
+  background-color: #FFE6D5 !important;
+  color: black !important;
+}
+</style>
