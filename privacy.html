@@ -1,0 +1,1528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="AIvent" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+
+<body class="dark-scheme">
+
+    <div id="wrapper">
+
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+
+    <!-- Add Font Awesome for icons -->
+    
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 100px !important;
+                width: 150px !important;
+            }
+        }
+        
+    </style>
+ <style>
+/* Logo styles for all screens */
+.logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-main {
+  height: 150px;
+  width: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Adjust header height and padding */
+  header.transparent {
+    min-height: 120px;
+    padding: 10px 15px; /* Added left/right padding */
+  }
+  
+  /* Make logo container flexible with padding */
+  #logo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px; /* Added left padding */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    margin-left: 0; /* Ensure no negative margin */
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Adjust menu button position */
+  .mobile-menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto; /* Push to the right */
+    padding-right: 15px; /* Add right padding */
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Reset header padding and alignment */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 0 !important; /* Remove side padding */
+  }
+  
+  /* Make logo container stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Logo image adjustments - stick to left edge */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 120px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start (left) */
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Push menu button to right */
+  .mobile-menu-btn {
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove row margins */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Header adjustments */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 15px !important; /* Added side padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container - stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Header layout - space between logo and menu */
+  .de-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Menu button - stick to right edge */
+  .mobile-menu-btn {
+    position: relative;
+    right: 0;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Adjust the menu icon alignment */
+  .mobile-menu-btn i {
+    margin-left: auto; /* Push icon to the right */
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure row takes full width */
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+</style>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <header class="transparent" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
+                                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                             <!-- <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
+                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                    </ul>
+                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+    </div>
+    
+
+<style>
+
+   .logo-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-container img {
+  height: 380px; /* You can adjust this */
+  width: auto;
+  display: block;
+}
+
+
+
+nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      position: relative;
+    }
+
+    .logo-container img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 8px 10px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #a4713d;
+    }
+
+    /* Dropdown Styles */
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background:#333333;
+      padding: 15px 0;
+      min-width: 200px;
+      border-top: 2px solid #a4713d;
+      z-index: 99;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .dropdown a:hover {
+      background: #333;
+    }
+
+    .contact-number {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .phone-icon {
+      margin-right: 5px;
+      color: #a4713d;
+    }
+
+  </style>
+
+<main>
+  <section class="hero" id="hero">
+    <!-- <h1>Empower Your Business with Our Cutting-Edge Services</h1> -->
+    <!-- <p>Innovative solutions that transform your ideas into reality, with unmatched dedication and expertise.</p> -->
+    <!-- <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get Started</button> -->
+  </section>
+</main>
+
+  <style>
+    /* * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    } */
+
+    /* body {
+      background-color: #f5f8fa;
+      color: #333;
+      line-height: 1.6;
+    } */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+      color: #222;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+      padding: 40px;
+      min-width: 300px;
+    }
+
+    .contact-info {
+      background-color: #333333;
+      color: white;
+    }
+
+    .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 1rem;
+    }
+
+    .contact-info strong {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 12px;
+      color: white;
+      font-size: 22px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+      transform: scale(1.1);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #444;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: #007BFF;
+    }
+
+    .contact-form label {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .contact-form button {
+      padding: 14px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+
+      .contact-form,
+      .contact-info {
+        padding: 30px 20px;
+      }
+    }
+    .contact-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
+  </style>
+
+
+ <section class="privacy-section">
+  <h1 style="color: white;">Privacy Policy</h1>
+  <p style="color: white;">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+  <p style="color: white;">We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+  <p style="color: white;">This Privacy Policy has been created with the help of the Free Privacy Policy Generator.</p>
+
+  <h2> Interpretation and Definitions</h2>
+  <h3 style="color: white;">Interpretation</h3>
+  <p style="color: white;">The words of which the initial letter is capitalized have meanings defined under the following conditions. These definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+  <h3 style="color: white;"> Definitions</h3>
+  <p style="color: white;">For the purposes of this Privacy Policy:</p>
+  <ul>
+    <li style="color: white;"><strong style="color: pink;">Account:</strong> A unique account created for You to access our Service.</li>
+    <li style="color: white;"><strong style="color: pink;">Affiliate:</strong> Entity that controls/is controlled by/under common control with a party.</li>
+    <li style="color: white;"><strong style="color: pink;">Company:</strong> ("We", "Us", or "Our") refers to Finaxa Investments, 505, Emaar Square Building, Downtown, Dubai.</li>
+    <li style="color: white;"><strong
+         style="color: pink;">Cookies:</strong> Small files placed on Your device by a website, containing browsing data.</li>
+    <li style="color: white;"><strong style="color: pink;">Country:</strong> United Arab Emirates</li>
+    <li style="color: white;"><strong style="color: pink;">Device:</strong> Any device that can access the Service such as a computer, cellphone, or tablet.</li>
+    <li style="color: white;"><strong style="color: pink;">Personal Data:</strong> Information that relates to an identified or identifiable individual.</li>
+    <li style="color: white;"><strong style="color: pink;">Service:</strong> The Website.</li>
+    <li style="color: white;"><strong style="color: pink;"
+>Service Provider:</strong> Third-party that processes data on behalf of the Company.</li>
+    <li style="color: white;"><strong style="color: pink;">Usage Data:</strong> Data collected automatically when using the Service.</li>
+    <li style="color: white;"><strong style="color: pink;">Website:</strong> Finaxa Investments – <a href="https://finaxainvestments.com/" target="_blank">https://finaxainvestments.com/</a></li>
+    <li style="color: white;"><strong style="color: pink;">You:</strong> The individual or legal entity using the Service.</li>
+  </ul>
+
+  <h2 style="color: white;">Collecting and Using Your Personal Data</h2>
+  <h3 style="color: white;">Types of Data Collected</h3>
+
+  <h4 style="color: white;">Personal Data</h4>
+  <p  style="color: white;">We may ask You to provide personally identifiable information such as:</p>
+  <ul>
+    <li style="color: white;">Email address</li>
+    <li style="color: white;">First and last name</li>
+    <li style="color: white;">Phone number</li>
+  </ul>
+
+  <h4 style="color: white;">Usage Data</h4>
+  <p style="color: white;">Collected automatically and may include:</p>
+  <ul>
+    <li style="color: white;">IP address, browser type/version</li>
+    <li style="color: white;">Pages visited, time/date of visit</li>
+    <li style="color: white;">Device identifiers, diagnostics</li>
+  </ul>
+
+  <h3 style="color: white;">Tracking Technologies and Cookies</h3>
+  <p style="color: white;">We use cookies and similar tracking technologies:</p>
+  <ul>
+    <li style="color: white;"><strong style="color: pink;">Cookies or Browser Cookies:</strong> Small text files for functionality and analytics.</li>
+    <li style="color: white;"><strong style="color: pink;">Web Beacons:</strong> Electronic files used to count users and monitor behavior.</li>
+  </ul>
+
+  <p><strong style="color: white;">Types of Cookies:</strong></p>
+  <ul>
+    <li style="color: white;"> <strong style="color: pink;">Essential Cookies:</strong> Necessary for website functionality.</li>
+    <li style="color: white;"><strong style="color: pink;">Notice Acceptance Cookies:</strong> Track acceptance of cookie usage.</li>
+    <li style="color: white;"><strong style="color: pink;">Functionality Cookies:</strong> Remember preferences/settings.</li>
+  </ul>
+
+  <h2 style="color: white;">Use of Your Personal Data</h2>
+  <p style="color: white;">We may use Personal Data to:</p>
+  <ul style="color: white;">
+    <li>Provide and maintain the Service</li>
+    <li>Manage Your Account</li>
+    <li>Fulfill contracts</li>
+    <li>Communicate with You</li>
+    <li>Send news, offers, and promotions</li>
+    <li>Handle user requests</li>
+    <li>Conduct analysis or business transfers</li>
+  </ul>
+
+  <p style="color: white;"><strong style="color: white;">Your information may be shared with:</strong></p>
+  <ul style="color: white;">
+    <li>Service Providers</li>
+    <li>Business partners and affiliates</li>
+    <li>Other users (if shared in public areas)</li>
+    <li>Third parties with your consent</li>
+  </ul>
+
+  <h2>Retention of Your Personal Data</h2>
+  <p style="color: white;">We retain Personal Data as long as needed for legal, business, and operational purposes.</p>
+
+  <h2>Transfer of Your Personal Data</h2>
+  <p style="color: white;">Data may be stored and processed outside Your location. By using the Service, You consent to such transfer.</p>
+
+  <h2>Delete Your Personal Data</h2>
+  <p style="color: white;">You may request deletion of Your data by contacting us or via your account settings.</p>
+
+  <h2>Disclosure of Your Personal Data</h2>
+  <ul style="color: white;">
+    <li>During business transactions</li>
+    <li>To comply with laws or legal processes</li>
+    <li>To protect rights, safety, and prevent misuse</li>
+  </ul>
+
+  <h2>Security of Your Personal Data</h2>
+  <p style="color: white;">We strive to use acceptable means to protect Your data, though no method is 100% secure.</p>
+
+  <h2>Children's Privacy</h2>
+  <p style="color: white;">We do not knowingly collect data from users under age 13. If discovered, we delete it promptly.</p>
+
+  <h2>Links to Other Websites</h2>
+  <p style="color: white;">Our Service may contain links to third-party websites. We are not responsible for their content or privacy practices.</p>
+
+  <h2>Changes to this Privacy Policy</h2>
+  <p style="color: white;">We may update our Privacy Policy. You will be notified via email or site notice. Please review periodically.</p>
+
+  <h2>Contact Us</h2>
+  <p style="color: white;">If you have any questions, please contact us at <a href="https://finaxainvestments.com/contact" target="_blank">https://finaxainvestments.com/contact</a></p>
+</section>
+
+
+<script>
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "auto",
+    geoIpLookup: function (success, failure) {
+      fetch('https://ipapi.co/json')
+        .then(res => res.json())
+        .then(data => success(data.country_code))
+        .catch(() => success("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+  });
+</script>
+<style>
+  .privacy-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.privacy-section h1,
+.privacy-section h2,
+.privacy-section h3 {
+  color: #222;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.privacy-section a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.privacy-section a:hover {
+  color: #0056b3;
+}
+
+</style>
+
+ 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9710521154446" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+<!-- Footer End -->
+
+<style>
+  .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+</style>
+<style>
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 60px 0 20px;
+    width: 100%;
+}
+
+.footer-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-item a:hover {
+    color: #f39c12;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-icons .btn {
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons .btn:hover {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .footer-item {
+        margin-bottom: 2rem;
+    }
+}
+</style>
+
+  <!-- WhatsApp Floating Button -->
+   <a href="https://wa.me/9710521154446" target="_blank" class="whatsapp-tab">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+<style>
+/* WhatsApp Tab Styling */
+    .whatsapp-tab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-tab:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+    }
+    
+    .whatsapp-tab img {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-tab {
+        width: 50px;
+        height: 50px;
+      }
+
+      .whatsapp-tab img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+</style>
+
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1f1f1f;
+      color: white;
+      padding: 15px 30px;
+      z-index: 1000; /* menu layer */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar button {
+      background-color: #c98d53;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* CALL NOW side button */
+    .call-now-btn {
+      position: fixed;
+      right: 0;
+      top: 40%;
+      background-color: #4a2e1e;
+      color: white;
+      padding: 12px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1500;
+    }
+
+    /* Overlay */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000; /* above navbar */
+    }
+
+    /* Popup Form */
+    .popup-form {
+      background-color: #0f1127;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      color: white;
+      position: relative;
+    }
+
+    .popup-form h2 {
+      margin-top: 0;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .popup-form input,
+    .popup-form select,
+    .popup-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .popup-form input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .popup-form label {
+      display: block;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .popup-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #c98d53;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .popup-form .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    .popup-form .close-btn:hover {
+      color: white;
+    }
+
+    /* Main content placeholder */
+    .content {
+      padding: 100px 30px;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+    }
+  </style>
+
+
+  <!-- Top Nav -->
+  <!-- <div class="navbar">
+    <div>
+      <strong>FINAXA INVESTMENTS</strong>
+      <a href="#">WHAT WE ARE</a>
+      <a href="#">INVESTMENT PRODUCTS</a>
+      <a href="#">INSIGHTS</a>
+      <a href="#">CONTACT US</a>
+    </div>
+    <button>Schedule a Meeting</button>
+  </div> -->
+
+  <!-- CALL NOW side button -->
+   <div class="call-now-btn" onclick="openPopup()">Request a Callback</div>
+
+  <!-- Popup Overlay -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-form">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Request of call back</h2>
+      <!-- <form id="callbackForm"> -->
+  
+
+ <!-- <div class="form-container">
+<section id="contact" class="contact" aria-label="Contact Section"> -->
+  <!-- <h2>Send a Message</h2> -->
+  <!-- <div class="contact-form"> -->
+        <!-- <h2>Send a Message</h2> -->
+         
+ <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="a970e3f2-c165-47d5-b4b7-0ce236bb1398">
+<!-- <h2>Send a Message</h2> -->
+          <input type="text" name="name" placeholder="Your Name" class="form-input" required />
+          <input type="email" name="email" placeholder="Your Email" class="form-input" required />
+                  <input type="tel" id="phone1" name="phone1" placeholder="Phone number" required />
+
+          <label for="investment">I'm Looking To Invest</label>
+          <select name="investment" id="investment" class="form-input" required>
+               <option value="" disabled selected>I'm LookingTo Invest</option>
+            <!-- <option value="">I'm Looking To Invest</option> -->
+          <option value="real_estate">Real Estate</option>
+          <option value="aviation">Aviation</option>
+          <option value="commodities">Commodities</option>
+          </select>
+
+          <label for="referral">Where did you hear about us?</label>
+          <select name="referral" id="referral"  class="form-input" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="google">Google Search</option>
+            <option value="social-media">Social Media</option>
+            <option value="friends">Friends & Relatives</option>
+            <option value="other">Other</option>
+          </select>
+
+          <textarea name="message" class="form-input" rows="5" placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        </div>
+</section>
+<script>
+  const input1 = document.querySelector("#phone1");
+  const input2 = document.querySelector("#phone2");
+
+  window.intlTelInput(input1, {
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      fetch("https://ipinfo.io/json?token=YOUR_TOKEN")
+        .then((resp) => resp.json())
+        .then((resp) => callback(resp.country))
+        .catch(() => callback("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+  });
+
+  window.intlTelInput(input2, {
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      fetch("https://ipinfo.io/json?token=YOUR_TOKEN")
+        .then((resp) => resp.json())
+        .then((resp) => callback(resp.country))
+        .catch(() => callback("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+  });
+</script>
+
+<style>
+  .form-input {
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000; /* black inside */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* Ensure intl-tel-input doesn't override width */
+.iti {
+  width: 100%;
+}
+.iti input {
+  background-color: #000 !important;
+  color: #fff !important;
+  height: 45px;
+  border-radius: 6px;
+}
+
+
+
+
+  /* General input styles */
+.form-input {
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000; /* Black inside */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Style specifically for intl-tel-input plugin */
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  background-color: white !important;
+  color: #fff !important;
+  border-radius: 6px;
+  height: 45px;
+}
+
+/* Dropdown menu styling */
+.iti__country-list {
+  background-color:white !important;
+  color: black;
+  border-radius: 6px;
+}
+
+.iti__country:hover,
+.iti__country.iti__highlight {
+  background-color: gray !important;
+}
+
+/* Fix flag area padding issue */
+.iti--allow-dropdown input {
+  padding-left: 52px !important;
+}
+
+  .iti {
+  width: 100%;
+}
+#phone {
+  padding-left: 52px !important;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.form-input{
+  
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: black;
+  background-color: white; /* Black inside */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.iti {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+input.form-input,
+input#phone {
+  height: 45px;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Make sure phone input looks the same */
+.iti--allow-dropdown input {
+  width: 100% !important;
+  padding-left: 52px !important; /* for flag */
+}
+
+</style>
+
+
+<style>/* === Popup Overlay Background === */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* === Popup Form Box === */
+.popup-form {
+  background-color: #0a0d2c;
+  color: #fff;
+  padding: 30px 35px;
+  border-radius: 14px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* === Close Button (X) === */
+.popup-form .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* === Headline === */
+.popup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* === Input, Select, Textarea === */
+.popup-form input,
+.popup-form select,
+.popup-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  outline: none;
+}
+
+/* === Placeholder Color Fix for Dark Mode === */
+.popup-form input::placeholder,
+.popup-form textarea::placeholder {
+  color: #aaa;
+}
+
+/* === Checkbox Labels === */
+.popup-form .checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.popup-form .checkbox input[type="checkbox"] {
+  margin-top: 4px;
+}
+
+/* === Submit Button === */
+.popup-form button[type="submit"] {
+  background-color: #d49156;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-form button[type="submit"]:hover {
+  background-color: #b8713e;
+}
+
+/* === Call Now Side Button === */
+.call-now-btn {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  background-color: #0a0d2c;
+  color: #fff;
+  padding: 12px 20px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  z-index: 999;
+}
+</style>
+
+  <!-- Placeholder content -->
+  <!-- <div class="content">
+    <h1>Insights</h1>
+    <p>This is the insights page content below the navbar.</p>
+  </div> -->
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    document.getElementById("callbackForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form submitted successfully!");
+      closePopup();
+    });
+  </script>
+
+
+<script>
+  const canonicalLink = document.createElement("link");
+  canonicalLink.rel = "canonical";
+  canonicalLink.href = window.location.href;
+  document.head.appendChild(canonicalLink);
+</script>
+
+
+    <!-- footer begin -->
+    <footer class="text-light section-dark">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            121 AI Blvd, San Francisco<br>
+                            BCA 94107
+                            <br><br>
+                             <a href="./privacy.html" class="text-link">Privacy Policy</a>
+                        </div>
+                        <div>
+                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
+                            <div class="social-icons mb-sm-30 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                            T. +1 123 456 789<br>
+                            M. contact@aivent.com
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright 2025 - AIvent by Designesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/custom-marquee.js"></script>
+
+    </body>
+</html>
