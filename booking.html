@@ -757,7 +757,47 @@
         margin-top: 80px;
     }
 }
-    </style>
+   
+   
+   input[type="date"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Remove the default calendar icon in some browsers */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* Custom calendar icon */
+.date-input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.date-input-wrapper::after {
+    content: "📅";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}</style>
 
 
 <body>
@@ -1066,6 +1106,57 @@ document.querySelectorAll('.airport-search-input').forEach(input => {
             { id: "IDR", text: "Indore – IDR", group: "India" },
             { id: "GAU", text: "Guwahati – GAU", group: "India" },
             
+             // United States
+    { id: "LAX", text: "Los Angeles, California – LAX", group: "United States" },
+    { id: "SFO", text: "San Francisco, California – SFO", group: "United States" },
+    { id: "SAN", text: "San Diego, California – SAN", group: "United States" },
+    { id: "JFK", text: "New York (JFK) – JFK", group: "United States" },
+    { id: "ORD", text: "Chicago (O'Hare) – ORD", group: "United States" },
+    { id: "MIA", text: "Miami – MIA", group: "United States" },
+    { id: "LAS", text: "Las Vegas – LAS", group: "United States" },
+    { id: "SEA", text: "Seattle – SEA", group: "United States" },
+    
+    // Canada
+    { id: "YYZ", text: "Toronto (Pearson) – YYZ", group: "Canada" },
+    { id: "YVR", text: "Vancouver – YVR", group: "Canada" },
+    { id: "YUL", text: "Montreal – YUL", group: "Canada" },
+    { id: "YYC", text: "Calgary – YYC", group: "Canada" },
+
+
+     // Europe
+    { id: "LHR", text: "London Heathrow – LHR", group: "Europe" },
+    { id: "CDG", text: "Paris (Charles de Gaulle) – CDG", group: "Europe" },
+    { id: "FRA", text: "Frankfurt – FRA", group: "Europe" },
+    { id: "AMS", text: "Amsterdam – AMS", group: "Europe" },
+    { id: "MAD", text: "Madrid – MAD", group: "Europe" },
+    { id: "FCO", text: "Rome (Fiumicino) – FCO", group: "Europe" },
+    
+    // Asia
+    { id: "HND", text: "Tokyo (Haneda) – HND", group: "Asia" },
+    { id: "PEK", text: "Beijing – PEK", group: "Asia" },
+    { id: "PVG", text: "Shanghai (Pudong) – PVG", group: "Asia" },
+    { id: "HKG", text: "Hong Kong – HKG", group: "Asia" },
+    { id: "SIN", text: "Singapore – SIN", group: "Asia" },
+    { id: "BKK", text: "Bangkok – BKK", group: "Asia" },
+    
+    // Australia
+    { id: "SYD", text: "Sydney – SYD", group: "Australia" },
+    { id: "MEL", text: "Melbourne – MEL", group: "Australia" },
+    
+    // Middle East
+    { id: "DXB", text: "Dubai – DXB", group: "Middle East" },
+    { id: "AUH", text: "Abu Dhabi – AUH", group: "Middle East" },
+    { id: "DOH", text: "Doha – DOH", group: "Middle East" },
+    
+    // Africa
+    { id: "JNB", text: "Johannesburg – JNB", group: "Africa" },
+    { id: "CPT", text: "Cape Town – CPT", group: "Africa" },
+    { id: "NBO", text: "Nairobi – NBO", group: "Africa" },
+    
+    // South America
+    { id: "GRU", text: "São Paulo – GRU", group: "South America" },
+    { id: "EZE", text: "Buenos Aires – EZE", group: "South America" },
+    { id: "SCL", text: "Santiago – SCL", group: "South America" },
             // Middle East & Gulf
             { id: "DXB", text: "Dubai, UAE – DXB", group: "Middle East / Gulf" },
             { id: "AUH", text: "Abu Dhabi, UAE – AUH", group: "Middle East / Gulf" },
@@ -1293,6 +1384,10 @@ document.querySelectorAll('.airport-search-input').forEach(input => {
             });
         });
     </script>
+    <script>document.querySelector('input[name="passengers"]').addEventListener('change', function() {
+    if (this.value < 1) this.value = 1;
+    if (this.value > 15) this.value = 15;
+});</script>
 </body>
 </html>
 <style>

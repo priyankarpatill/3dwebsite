@@ -666,7 +666,7 @@ document.addEventListener("DOMContentLoaded", function () {
         font-weight: bold;
     }
 </style>
-      <section class="section-dark p-0" aria-label="section" style="color: black;">
+      <!-- <section class="section-dark p-0" aria-label="section" style="color: black;">
   <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
     <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
       <span class="marquee-text">Luxury Fleet Selection</span>
@@ -700,7 +700,35 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="marquee-separator">/</span>
     </div>
   </div>
+</section> -->
+
+<section class="marquee-section" style="background-color: black; color: white; padding: 20px 0; overflow: hidden;">
+  <div class="marquee-container" style="display: flex; white-space: nowrap;">
+    <div class="marquee-track" style="display: inline-flex; animation: scroll 20s linear infinite;">
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Luxury Fleet Selection</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Global Destinations</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Time Efficiency</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Personalized Service</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Invest in Aviation</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Air Ambulance</span>
+      
+      <!-- Duplicate items for seamless looping -->
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Luxury Fleet Selection</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Global Destinations</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Time Efficiency</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Personalized Service</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Invest in Aviation</span>
+      <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Air Ambulance</span>
+    </div>
+  </div>
 </section>
+
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
 
 <style>
   /* Base styles for all devices */
