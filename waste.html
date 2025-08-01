@@ -1,546 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CRYSTAL WINGS</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <title>Crystal Wings</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="AIvent" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/colors/custom.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <script src="https://unpkg.com/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://unpkg.com/jarallax@2/dist/jarallax-video.min.js"></script>
+    
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
+        /* Sticky Header Implementation */
+        header.transparent {
             position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #2c3e50;
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #3498db;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .request-callback {
-            margin-right: 20px;
-            padding: 8px 15px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        .search-icon {
-            margin-right: 20px;
-            color: #333;
-            cursor: pointer;
-        }
-
-        .language-date {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            font-size: 0.9rem;
-        }
-
-        .language-selector {
-            margin-bottom: 5px;
-        }
-
-        .language-selector span {
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .language-selector span.active {
-            font-weight: bold;
-            color: #3498db;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-            margin-top: 70px; /* To account for fixed header */
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-image: url('./images/luxury-design-private-jet-flying-clouds-ai-generated-image\ \(1\).jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -1;
-            filter: brightness(0.7);
+            z-index: 1000;
+            background-color: black !important;
+            transition: background-color 0.3s ease;
+            min-height: 100px;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 0 20px;
+        /* Ensure content starts below header */
+        body {
+            padding-top: 100px; /* Matches header height */
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-            gap: 30px;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-info h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .contact-info p {
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            margin-bottom: 30px;
-        }
-
-        .contact-details div {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .contact-details i {
-            margin-right: 15px;
-            color: #3498db;
-            font-size: 1.2rem;
-        }
-
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: #2980b9;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 992px) {
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
+        @media (max-width: 991px) {
+            header.transparent {
+                min-height: 120px;
             }
-
-            nav ul {
-                margin: 15px 0;
-            }
-
-            nav ul li {
-                margin-left: 0;
-                margin-right: 20px;
-            }
-
-            .header-right {
-                width: 100%;
-                justify-content: space-between;
-                margin-top: 10px;
+            body {
+                padding-top: 120px; /* Adjusted for mobile header height */
             }
         }
 
-        @media (max-width: 768px) {
-            .hero {
-                height: 50vh;
-                margin-top: 120px; /* More space for stacked header */
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .contact-container {
-                flex-direction: column;
-            }
-
-            .contact-info, .contact-form {
-                width: 100%;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-
-            .request-callback {
-                padding: 6px 10px;
-                font-size: 0.8rem;
-            }
-
-            .language-date {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
-    <style>
-/* Mobile-specific adjustments */
-@media (max-width: 991px) {
-  /* Header adjustments */
-  header.transparent {
-    min-height: 100px;
-    padding: 5px 15px !important; /* Added side padding */
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Logo container - stick to left edge */
-  #logo {
-    height: auto;
-    width: auto;
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    left: 0;
-    flex-shrink: 0; /* Prevent logo from shrinking */
-  }
-  
-  /* Logo image adjustments */
-  .logo-main,
-  .logo-scroll,
-  .logo-mobile {
-    height: 100px !important;
-    width: 200px !important;
-    max-width: none !important;
-    object-fit: contain;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  /* Header layout - space between logo and menu */
-  .de-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0;
-  }
-  
-  /* Menu button - stick to right edge */
-  .mobile-menu-btn {
-    position: relative;
-    right: 0;
-    margin-left: auto; /* This pushes it to the right */
-    padding: 10px;
-    z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  /* Adjust the menu icon alignment */
-  .mobile-menu-btn i {
-    margin-left: auto; /* Push icon to the right */
-  }
-  
-  /* Remove container padding */
-  .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  /* Ensure row takes full width */
-  .row {
-    width: 100%;
-    margin: 0 !important;
-  }
-}
-</style>
-<style>
-/* Logo styles for all screens */
-.logo {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.logo-main {
-  height: 150px;
-  width: 350px;
-  object-fit: contain;
-  display: block;
-  margin: 0;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 991px) {
-  /* Adjust header height and padding */
-  header.transparent {
-    min-height: 120px;
-    padding: 10px 15px; /* Added left/right padding */
-  }
-  
-  /* Make logo container flexible with padding */
-  #logo {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; /* Changed from center to flex-start */
-    padding-left: 15px; /* Added left padding */
-  }
-  
-  /* Logo image adjustments */
-  .logo-main,
-  .logo-scroll,
-  .logo-mobile {
-    height: 100px !important;
-    width: 200px !important;
-    max-width: 100% !important;
-    object-fit: contain;
-    margin-left: 0; /* Ensure no negative margin */
-  }
-  
-  /* Adjust header layout */
-  .de-flex {
-    flex-direction: row; /* Changed from column to row */
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  /* Adjust menu button position */
-  .mobile-menu-btn {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-left: auto; /* Push to the right */
-    padding-right: 15px; /* Add right padding */
-  }
-  
-  /* Container adjustments */
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-</style>
-<style>
-/* Mobile-specific adjustments */
-@media (max-width: 991px) {
-  /* Reset header padding and alignment */
-  header.transparent {
-    min-height: 100px;
-    padding: 5px 0 !important; /* Remove side padding */
-  }
-  
-  /* Make logo container stick to left edge */
-  #logo {
-    height: auto;
-    width: auto;
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    left: 0;
-  }
-  
-  /* Logo image adjustments - stick to left edge */
-  .logo-main,
-  .logo-scroll,
-  .logo-mobile {
-    height: 120px !important;
-    width: 200px !important;
-    max-width: none !important;
-    object-fit: contain;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative;
-    left: 0;
-  }
-  
-  /* Adjust header layout */
-  .de-flex {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start; /* Align items to start (left) */
-    width: 100%;
-    padding: 0;
-  }
-  
-  /* Push menu button to right */
-  .mobile-menu-btn {
-    margin-left: auto;
-    padding-right: 15px;
-  }
-  
-  /* Remove container padding */
-  .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  /* Remove row margins */
-  .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
-
-
-
-</style>
-   <style>
-        /* Mobile Menu Styles */
+        /* Original Mobile Menu Styles */
         .mobile-menu-btn {
-            display: none; /* Hidden by default */
+            display: none;
             cursor: pointer;
             padding: 15px;
             color: white;
@@ -619,15 +127,221 @@
             }
         }
         
+        /* Logo styles for all screens */
+        .logo {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo-main {
+            height: 150px;
+            width: 350px;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 991px) {
+            /* Make logo container flexible with padding */
+            #logo {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 15px;
+            }
+            
+            /* Logo image adjustments */
+            .logo-main,
+            .logo-scroll,
+            .logo-mobile {
+                height: 100px !important;
+                width: 200px !important;
+                max-width: 100% !important;
+                object-fit: contain;
+                margin-left: 0;
+            }
+            
+            /* Adjust header layout */
+            .de-flex {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0;
+            }
+            
+            /* Adjust menu button position */
+            .mobile-menu-btn {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-left: auto;
+                padding-right: 15px;
+            }
+            
+            /* Container adjustments */
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        /* Additional mobile adjustments */
+        @media (max-width: 991px) {
+            /* Reset header padding and alignment */
+            header.transparent {
+                min-height: 100px;
+                padding: 5px 0 !important;
+            }
+            
+            /* Make logo container stick to left edge */
+            #logo {
+                height: auto;
+                width: auto;
+                display: block;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                left: 0;
+                flex-shrink: 0;
+            }
+            
+            /* Logo image adjustments - stick to left edge */
+            .logo-main,
+            .logo-scroll,
+            .logo-mobile {
+                height: 120px !important;
+                width: 200px !important;
+                max-width: none !important;
+                object-fit: contain;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* Header layout - space between logo and menu */
+            .de-flex {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0;
+            }
+            
+            /* Menu button - stick to right edge */
+            .mobile-menu-btn {
+                position: relative;
+                right: 0;
+                margin-left: auto;
+                padding: 10px;
+                z-index: 1000;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            /* Adjust the menu icon alignment */
+            .mobile-menu-btn i {
+                margin-left: auto;
+            }
+            
+            /* Remove container padding */
+            .container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                max-width: 100% !important;
+            }
+            
+            /* Ensure row takes full width */
+            .row {
+                width: 100%;
+                margin: 0 !important;
+            }
+        }
+
+        /* Video Background Section */
+        #section-hero {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .jarallax > video {
+            filter: brightness(1.4) contrast(1.1);
+        }
+
+        .sw-overlay {
+            display: none !important;
+        }
+
+        /* About Section */
+        #section-about {
+            margin-top: 100vh; /* Start content after video */
+            position: relative;
+            z-index: 1;
+            background-color: #FFE6D5 !important;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-tab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .whatsapp-tab img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-tab {
+                width: 50px;
+                height: 50px;
+            }
+            .whatsapp-tab img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* Rest of the styles */
+        /* (All other styles from your original code remain unchanged) */
     </style>
-    <!-- Using Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
-    <!-- Header Section -->
-   <div id="wrapper">
-        <header class="transparent" style="background-color: black;">
+<body class="dark-scheme">
+    <div id="wrapper">
+        <header class="transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -636,7 +350,7 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none; filter: brightness(0.7) contrast(1.2);" />
                                         <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
                                         <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
@@ -648,25 +362,20 @@
                                 <div class="de-flex-col header-col-mid">
                                     <!-- Mobile menu button -->
                                     <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars" style="color: white;"
-                                        ></i>
+                                        <i class="fas fa-bars" style="color: white;"></i>
                                     </div>
                                     
                                     <!-- Main desktop menu -->
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
-                                        <li><a class="menu-item" href="./services.html">Services</a></li>
-                                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
-                                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
-                                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
-                                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                                        <li><a class="menu-item active" href="./index.html" style="color: black;">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html" style="color: black;">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html" style="color: black;">Fleet</a></li>
+                                        <li><a class="menu-item" href="./investment.html" style="color: black;">Investment</a></li>
+                                        <li><a class="menu-item" href="./booking.html" style="color: black;">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html" style="color: black;">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
-
-                             <!-- <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -684,284 +393,781 @@
                         <li><a class="menu-item active" href="./index.html">Who we are</a></li>
                         <li><a class="menu-item" href="./services.html">Services</a></li>
                         <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
-                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
                         <li><a class="menu-item" href="./booking.html">Booking</a></li>
                         <li><a class="menu-item" href="./contact.html">Contact</a></li>
                     </ul>
-                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
                 </div>
             </div>
-        </header>  <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const closeBtn = document.querySelector('.mobile-menu-close');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            
-            // Open menu when hamburger is clicked
-            if (menuBtn) {
-                menuBtn.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'block';
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+        </header>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                const closeBtn = document.querySelector('.mobile-menu-close');
+                const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+                
+                // Open menu when hamburger is clicked
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', function() {
+                        mobileMenuOverlay.style.display = 'block';
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    });
+                }
+                
+                // Close menu when X is clicked
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function() {
+                        mobileMenuOverlay.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Enable scrolling
+                    });
+                }
+                
+                // Close menu when clicking on a link
+                const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuOverlay.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    });
                 });
-            }
-            
-            // Close menu when X is clicked
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto'; // Enable scrolling
-                });
-            }
-            
-            // Close menu when clicking on a link
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                
+                // Header scroll effect
+                const header = document.querySelector('header.transparent');
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
                 });
             });
-        });
         </script>
 
+        <!-- Video Background Section -->
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800 vh-100" data-jarallax data-video-src="mp4:images/Airplane View.mp4" data-speed="0.5">
+            <!-- Background video will render here -->
+        </section>
+        
+        <!-- About Section -->
+        <section id="section-about" class="bg-dark section-dark text-light">
+            <div class="container">
+                <div class="row gx-5 align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="me-lg-5 pe-lg-5 py-5 my-5">
+                            <p class="wow fadeInUp" data-wow-delay=".4s" style="color: black; font-size: 40px;">Elevating Your Travel Experience</p>
+                            <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.</p>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Get In Touch</h1>
-            <p>We'd love to hear from you. Contact us for any questions or inquiries.</p>
-        </div>
-    </section>
+                            <ul class="ul-check">
+                                <li class="wow fadeInUp" data-wow-delay=".8s">24/7 on-demand private jet charter services</li>
+                                <li class="wow fadeInUp" data-wow-delay=".9s">Global network of premium destinations</li>
+                                <li class="wow fadeInUp" data-wow-delay="1s">Curated fleet of luxury aircraft</li>
+                            </ul>
+                            <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">A global leader in investment and business innovation, with a team of professionals bringing decades of experience in aviation finance, structured deals, aircraft operations. The approach is disciplined and data-driven, ensuring that every investment is backed by insight and expertise. </p>
+                            <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Air Ambulance, we understand the critical nature of international patient transfers, particularly from the Dubai to various locations across the globe. With our exceptional air ambulance services, we ensure safe, reliable, and seamless medical transport for patients requiring specialized care, even across vast distances.</p>
+                        </div>
+                    </div>
 
-    <!-- Contact Section -->
-    <div class="contact-container">
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p>Fill out the form or reach out to us through the contact details below.</p>
-            
-            <div class="contact-details">
-                <div>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>123 Business Street, City, Country</span>
+                    <div class="col-lg-6">
+                        <div class="wow scaleIn" style="position: relative; width: 100%;">
+                            <!-- Circular/Oval Video Container -->
+                            <div class="video-mask" style="width: 100%; max-width: 500px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #FFE6D5;">
+                                <video class="w-100 h-100" autoplay muted loop playsinline style="object-fit: cover; object-position: center; width: 100%; height: 100%; display: block;">
+                                    <source src="1992-153555258_small.mp4" type="video/mp4">
+                                    <!-- Fallback image if video doesn't load -->
+                                    <img src="fallback-image.jpg" alt="Private Jet Service" style="width:100%;height:100%;object-fit:cover;">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <i class="fas fa-phone"></i>
-                    <span>+1 (123) 456-7890</span>
+            </div>
+        </section>
+
+        <!-- Marquee Section -->
+        <section class="marquee-section" style="background-color: black; color: white; padding: 20px 0; overflow: hidden;">
+            <div class="marquee-container" style="display: flex; white-space: nowrap;">
+                <div class="marquee-track" style="display: inline-flex; animation: scroll 20s linear infinite;">
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Luxury Fleet Selection</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Global Destinations</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Time Efficiency</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Personalized Service</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Invest in Aviation</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Air Ambulance</span>
+                    
+                    <!-- Duplicate items for seamless looping -->
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Luxury Fleet Selection</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Global Destinations</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Time Efficiency</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Personalized Service</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Invest in Aviation</span>
+                    <span class="marquee-item" style="margin: 0 30px; font-size: 16px; font-weight: 500;">Air Ambulance</span>
                 </div>
-                <div>
-                    <i class="fas fa-envelope"></i>
-                    <span>contact@crystalwings.com</span>
-                </div>
-                <div>
-                    <i class="fas fa-clock"></i>
-                    <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
-                </div>
+            </div>
+        </section>
+
+        <style>
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+        </style>
+
+        <!-- Why Choose Us Section -->
+       
+<section id="section-why-attend" class="bg-dark section-dark text-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="subtitle wow fadeInUp mb-3" style="color: black;">Why Choose Us</div>
+                <p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 30px; color: black;">The Crystal Wings Advantage</p>
+                <p class="lead mb-0 wow fadeInUp" style="color: gray;">Experience unmatched luxury, flexibility, and personalized service with our premium private jet charter solutions.</p>
             </div>
         </div>
 
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="spacer-single"></div>
+
+        <div class="row g-4">
+              <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/group.webp" class="card-image" alt="Global Destinations">
+                        </div>
+                        <div class="card-content">
+                            <h4>Global Destinations</h4>
+                            <p>Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+            </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/Ben_Pipe_Photo_042523_AirX_063.webp" class="card-image" alt="Luxury Fleet">
+                        </div>
+                        <div class="card-content">
+                            <h4>Luxury Fleet Selection</h4>
+                            <p>Choose from our meticulously maintained fleet of premium aircraft tailored to your specific needs.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
+            </div>
+            </div>
+
+          
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/time.jpg" class="card-image" alt="Time Efficiency">
+                        </div>
+                        <div class="card-content">
+                            <h4>Personalized Service</h4>
+                            <p>Experience bespoke travel with customized catering, ground transportation, and in-flight amenities tailored to your preferences.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+            </div>
+            </div>
+
+            <!-- Card 4 -->
+           <!-- Second Row (Single Centered Card) -->
+<div class="row g-4 justify-content-center">  <!-- Added justify-content-center -->
+    <!-- Card 4 - Air Ambulance (Centered) -->
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card-wrapper">
+            <div class="feature-card-3d">
+                <div class="card-inner">
+                    <div class="card-image-container">
+                        <img src="images/WhatsApp Image 2025-07-23 at 17.04.14_575fc591.jpg" class="card-image" alt="Air Ambulance">
+                    </div>
+                    <div class="card-content">
+                        <h4>Air Ambulance</h4>
+                        <p>Our air ambulance service ensures rapid medical transportation with fully equipped aircraft and trained medical teams.</p>
+                    </div>
                 </div>
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
         </div>
     </div>
+</div>
 
-    <script>
-        // Update date and time dynamically
-        function updateDateTime() {
-            const now = new Date();
-            const date = `${now.getDate()}.${now.getMonth()+1}-${now.getFullYear()}`;
-            const time = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            document.querySelector('.date-time').textContent = `${date} | ${time}`;
-        }
-        
-        // Update immediately and then every minute
-        updateDateTime();
-        setInterval(updateDateTime, 60000);
-    </script>
+            <!-- Card 5 -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
 
-    <a href="https://wa.me/7715841612" class="whatsapp-btn" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
-
-
-    <!-- footer begin -->
-    <footer class="text-light section-dark">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-12">
-                    <div class="d-lg-flex align-items-center justify-content-between text-center">
-                        <div>
-                            <h3 class="fs-20">Address</h3>
-                            121 AI Blvd, San Francisco<br>
-                            BCA 94107
-
-                            <br><br>
-                             <a href="./privacy.html" class="text-link">Privacy Policy</a>
+                        <div class="card-image-container">
+                            <img src="images/safety.webp" class="card-image" alt="Safety Excellence">
                         </div>
-                        <div>
-                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
-                            <div class="social-icons mb-sm-30 mt-4">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-
+                        <div class="card-content">
+                            <h4>Safety Excellence</h4>
+                            <p>Fly with confidence knowing our aircraft meet the highest safety standards with experienced pilots and regular maintenance.</p>
                         </div>
-                        <div>
-                            <h3 class="fs-20">Contact Us</h3>
-                            T. +1 123 456 789<br>
-                            M. contact@aivent.com
-                        </div>
-                    </div>
-                </div>                    
-            </div>
-        </div>
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        Copyright 2025 - AIvent by Designesia
                     </div>
                 </div>
             </div>
+            </div> -->
+
+            <!-- Card 6 -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+
+                        <div class="card-image-container">
+                            <img src="images/flexible.jpg" class="card-image" alt="Investment in Aviation">
+                        </div>
+                        <div class="card-content">
+                            <h4>Investment in Aviation</h4>
+                            <p>Exclusive access to private aviation opportunities that combine luxury, performance, and solid ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> -->
         </div>
-    </footer>
-    <!-- footer end -->
-    <!-- <div id="buy-now" class="show-on-scroll">
-        <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>
-    </div> --> 
-    <!-- Javascript Files
-    ================================================== -->
+    </div>
+</section>
+<style>
+    /* Sophisticated 3D Card Styling */
+    .feature-card-wrapper {
+        height: 100%;
+        perspective: 1200px;
+        position: relative;
+    }
+    
+    .feature-card-3d {
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateY(0) rotateX(0) rotateY(0) scale(1);
+        animation: subtle-float 8s ease-in-out infinite;
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d {
+        transform: translateY(-12px) rotateX(3deg) rotateY(3deg) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(10, 36, 99, 0.25);
+    }
+    
+    .card-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.1);
+        transform: translateZ(40px);
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        position: relative;
+        backface-visibility: hidden;
+    }
+    
+    .feature-card-wrapper:hover .card-inner {
+        transform: translateZ(60px);
+    }
+    
+    .card-image-container {
+        height: 240px;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateZ(30px) scale(1.01);
+        will-change: transform;
+    }
+    
+    .feature-card-wrapper:hover .card-image {
+        transform: translateZ(50px) scale(1.03);
+    }
+    
+    .card-content {
+        padding: 28px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        transform: translateZ(30px);
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        background: white;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .feature-card-wrapper:hover .card-content {
+        transform: translateZ(50px);
+    }
+    
+    /* Sophisticated Floating Animation */
+    @keyframes subtle-float {
+        0%, 100% {
+            transform: translateY(0) rotateX(0.5deg) rotateY(0.5deg);
+        }
+        50% {
+            transform: translateY(-10px) rotateX(1deg) rotateY(1deg);
+        }
+    }
+    
+    /* Individual card animations with staggered delay */
+    .feature-card-wrapper:nth-child(1) .feature-card-3d {
+        animation-delay: 0s;
+    }
+    .feature-card-wrapper:nth-child(2) .feature-card-3d {
+        animation-delay: 0.15s;
+    }
+    .feature-card-wrapper:nth-child(3) .feature-card-3d {
+        animation-delay: 0.3s;
+    }
+    .feature-card-wrapper:nth-child(4) .feature-card-3d {
+        animation-delay: 0.45s;
+    }
+    .feature-card-wrapper:nth-child(5) .feature-card-3d {
+        animation-delay: 0.6s;
+    }
+    .feature-card-wrapper:nth-child(6) .feature-card-3d {
+        animation-delay: 0.75s;
+    }
+    
+    /* Elegant Hover Glow Effect */
+    .feature-card-3d::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        background: radial-gradient(circle at 50% 0%, rgba(0,206,209,0.08), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        z-index: 1;
+        transform: translateZ(20px);
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d::after {
+        opacity: 1;
+        transform: translateZ(40px);
+    }
+    
+    /* Subtle Edge Highlight */
+    .card-inner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.3);
+        pointer-events: none;
+        z-index: 3;
+        transform: translateZ(60px);
+    }
+    
+    /* Depth Shadow Effect */
+    .feature-card-3d::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 5%;
+        width: 90%;
+        height: 20px;
+        background: rgba(10,36,99,0.1);
+        filter: blur(12px);
+        transform: translateZ(-20px) rotateX(-85deg);
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity: 0.6;
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d::before {
+        opacity: 0.9;
+        transform: translateZ(-30px) rotateX(-85deg) scale(1.05);
+        filter: blur(16px);
+    }
+    
+    /* Typography Enhancements */
+    .card-content h4 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #0A2463;
+        letter-spacing: 0.5px;
+        transition: all 0.4s ease;
+    }
+    
+    .feature-card-wrapper:hover .card-content h4 {
+        color: #008B8B;
+    }
+    
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4A5568;
+        margin-bottom: 0;
+        transition: all 0.4s ease;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .card-image-container {
+            height: 220px;
+        }
+        .feature-card-3d {
+            animation: subtle-mobile-float 8s ease-in-out infinite;
+        }
+        @keyframes subtle-mobile-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .card-image-container {
+            height: 200px;
+        }
+        .card-content {
+            padding: 22px;
+        }
+        .feature-card-3d::before,
+        .feature-card-3d::after {
+            display: none;
+        }
+    }
+</style>
+
+      <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+            <img src="images/background/4.webp" class="jarallax-img" alt="">
+            <div class="gradient-edge-top"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+            <div class="container relative z-4">
+                <div class="row align-items-center g-5">
+                    <!-- <div class="col-md-4">
+                        <div class="relative w-100 d-inline-block pe-5">
+                            <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
+                                <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
+                            </div>
+                            <img src="images/ai.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <h3 class="fs-32 mb-4 wow fadeInUp">“Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization.”</h3>
+
+                        <span>Elon Musk</span>
+                    </div> -->
+                    <style>
+   
+
+    .testimonials-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .testimonials-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      color: #222;
+    }
+
+    .testimonial-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transform-style: preserve-3d;
+      transform: translateY(60px) scale(0.95);
+      opacity: 0;
+    }
+
+    .testimonial-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .testimonial-card:hover {
+      transform: rotateY(6deg) rotateX(6deg) scale(1.03);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .testimonial-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      color: #111;
+    }
+
+    .testimonial-role {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- <section class="testimonials-section"> -->
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img" alt="User" style="color: black;">
+      <div class="testimonial-name">Sophia</div>
+      <div class="testimonial-role">Marketing Manager</div>
+      <p class="testimonial-text" style="color: black;">"This product has changed the way our team works. Excellent support and smooth performance!"</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/35.jpg" class="testimonial-img" alt="User">
+      <div class="testimonial-name">Daniel</div>
+      <div class="testimonial-role">Startup Founder</div>
+      <p class="testimonial-text" style="color: black;">"Absolutely amazing! The UI is intuitive and the results are impressive."</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img" alt="User">
+      <div class="testimonial-name">Olivia</div>
+      <div class="testimonial-role">Freelancer</div>
+      <p class="testimonial-text" style="color: black;">"Highly recommend to anyone looking for professional solutions at great value."</p>
+    </div>
+  </div>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.testimonial-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+                </div>
+            </div>
+        </section>
+        <!-- Aviation Solutions Section -->
+        <section id="section-speakers" class="bg-dark text-light py-5">
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 text-center">
+                        <p class="wow fadeInUp" data-wow-delay=".2s" style="color: black; font-size: 30px;">Comprehensive Aviation Solutions</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card rounded-1 overflow-hidden border-0">
+                            <img src="images/air221.jpg" class="card-img w-100" alt="Air Ambulance">
+                            <div class="card-img-overlay d-flex align-items-end p-0">
+                                <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                                    <span class="text-white">Air Ambulance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card rounded-1 overflow-hidden border-0">
+                            <img src="images/air management11.jpeg" class="card-img w-100" alt="Aircraft Management">
+                            <div class="card-img-overlay d-flex align-items-end p-0">
+                                <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                                    <span class="text-white">Aircraft Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card rounded-1 overflow-hidden border-0">
+                            <img src="images/3.-Netjets.webp" class="card-img w-100" alt="Aircraft Leasing">
+                            <div class="card-img-overlay d-flex align-items-end p-0">
+                                <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                                    <span class="text-white">Aircraft Leasing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <!-- Left Side: Contact Form -->
+                <div class="contact-form">
+                    <h2>REQUEST A QUOTE</h2>
+                    <p>Ready to elevate your travel experience? Contact us for a personalized quote.</p>
+                    
+                    <form class="form" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Journey Details*" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT REQUEST <span>✈</span></button>
+                    </form>
+                </div>
+
+                <!-- Right Side: Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>CONTACT US</h3>
+                        <ul>
+                            <li><span>📞</span> +1 (555) 123-4567</li>
+                            <li><span>✉</span> contact@crystalwings.com</li>
+                            <li><span>📍</span> Global Headquarters: 123 Aviation Way, New York, NY</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hours-card">
+                        <h3>OPERATIONAL HOURS</h3>
+                        <ul>
+                            <li>24/7 Charter Booking</li>
+                            <li>Customer Support: 5AM–11PM GMT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-light section-dark">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-12">
+                        <div class="d-lg-flex align-items-center justify-content-between text-center">
+                            <div>
+                                <h3 class="fs-20">Address</h3>
+                                121 AI Blvd, San Francisco<br>
+                                BCA 94107
+                                <br><br>
+                                <a href="./privacy.html" class="text-link">Privacy Policy</a>
+                            </div>
+                            
+                            <div>
+                                <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
+                                <div class="social-icons mb-sm-30 mt-4">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="fs-20">Contact Us</h3>
+                                T. +1 123 456 789<br>
+                                M. contact@aivent.com
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - AIvent by Designesia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/7715841612" target="_blank" class="whatsapp-tab">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            jarallax(document.querySelectorAll('.jarallax'), {
+                speed: 0.5,
+                videoVolume: 0,
+                videoPlayOnlyVisible: true,
+                onScroll: function (calcs) {
+                    if (calcs.direction === 'down') {
+                        this.options.speed = 0.8;
+                        this.$item.querySelector('.jarallax-video').style.transform = 'scale(1.1)';
+                    } else {
+                        this.options.speed = -0.5;
+                        this.$item.querySelector('.jarallax-video').style.transform = 'scale(0.9)';
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- Javascript Files -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/countdown-custom.js"></script>
     <script src="js/custom-marquee.js"></script>
-
-</body>
-
-</html>
-<style>
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* Header */
-.top-nav {
-  background-color: #000;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.nav-links a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.cta-button .book-meeting {
-  background-color: #c17a44;
-  color: white;
-  padding: 10px 18px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-
-
-/* Request a Callback Tab */
-.callback-tab {
-  position: fixed;
-  top: 40%;
-  right: 0;
-  background-color: #101546;
-  color: white;
-  padding: 12px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-weight: bold;
-  z-index: 1000;
-}
-
-.callback-tab a {
-  color: white;
-  text-decoration: none;
-}
-
-/* WhatsApp Button */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  height: 60px;
-  width: 60px;
-  z-index: 1000;
-}
-
-.whatsapp-btn img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
-
-</style>
-
-
-
-
-<style>
-  :root {
-    /* Navy blue color palette */
-    --color-primary-dark: #0A2463;   /* Deep navy */
-    --color-primary-medium: #1E3D8B;
-    --color-primary-light: #3E5F8D;
-    --color-primary-pale: #7C9AC5;
-    
-    /* White and off-white colors */
-    --color-white: #FFFFFF;
-    --color-off-white: #F8FAFC;
-    --color-light-gray: #EFF2F7;
-    
-    /* Text colors */
-    --color-dark: #1A202C;
-    --color-dark-medium: #2D3748;
-}
-
-
-</style>
 </body>
 </html>

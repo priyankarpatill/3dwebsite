@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
+    <title>Crystal Wings</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
@@ -22,25 +22,7 @@
 <script src="https://unpkg.com/jarallax@2/dist/jarallax-video.min.js"></script>
 
 </head>
-<style>
 
-
-</style>
-<body class="dark-scheme">
-
-    <div id="wrapper">
-
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
-        <div class="scrollbar-v show-on-scroll"></div>
-
-        <!-- page preloader begin -->
-        <div id="de-loader"></div>
-        <!-- page preloader close -->
-
-
-    <!-- Add Font Awesome for icons -->
     
     <style>
         /* Mobile Menu Styles */
@@ -336,12 +318,43 @@
     margin: 0 !important;
   }
 }
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* If you had any fixed positioning styles before, remove them */
+.transparent {
+    /* Remove any position: fixed; if it was here */
+}
+
+/* Optional: Add styles for when the header is scrolled */
+.sticky-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 </style>
+<script>
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('.sticky-header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
 
 
 <body class="dark-scheme">
     <div id="wrapper">
-        <header class="transparent" style="background-color: black;">
+        <header class="transparent sticky-header" style="background-color: black;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -410,6 +423,39 @@
                 </div>
             </div>
         </header>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header.transparent');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+        </script>
+        <style>
+            header.transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the content below the header is not hidden */
+body {
+    padding-top: 100px; /* Adjust based on your header height */
+}
+        </style>
 
         <!-- Rest of your content -->
         
@@ -445,20 +491,8 @@
             });
         });
         </script>
-        <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('header');
-    const scrollThreshold = 100; // Change this value to adjust when the color appears
+        
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > scrollThreshold) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-});
-</script>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
@@ -527,6 +561,45 @@ document.addEventListener("DOMContentLoaded", function () {
       padding-top: 100vh; /* Push content down by viewport height */
     }
   </style>
+<style>
+    /* Sticky Header with Scroll Transition */
+header.transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent !important; /* Start transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    min-height: 100px;
+}
+
+header.scrolled {
+    background-color: black !important; /* Change to black when scrolled */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow when scrolled */
+}
+
+/* Menu item colors when transparent */
+header.transparent #mainmenu li a {
+    color: white !important; /* White text when header is transparent */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Optional: better readability */
+    transition: color 0.3s ease;
+}
+
+/* Menu item colors when scrolled */
+header.scrolled #mainmenu li a {
+    color: white !important; /* Change to your preferred color when scrolled */
+}
+
+/* Mobile menu button color */
+header.transparent .mobile-menu-btn i {
+    color: white !important;
+}
+
+header.scrolled .mobile-menu-btn i {
+    color: white !important; /* Or any color you prefer when scrolled */
+}
+</style>
 
 
         </section>
@@ -1139,19 +1212,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <span>Elon Musk</span>
                     </div> -->
                     <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f4f4f4, #e0eafc);
-      color: #333;
-      line-height: 1.6;
-      perspective: 1000px;
-    }
+    
 
     .testimonials-section {
       max-width: 1200px;
