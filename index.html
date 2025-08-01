@@ -757,7 +757,7 @@ header.scrolled .mobile-menu-btn i {
     </div>
   </div>
 
-  <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
+  <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-2 mt-n5">
     <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
       <span class="marquee-text">Luxury Fleet Selection</span>
       <span class="marquee-separator">/</span>
@@ -774,7 +774,30 @@ header.scrolled .mobile-menu-btn i {
     </div>
   </div>
 </section>
+<style>
+    .rot-2 {
+  transform: rotate(-1deg);
+  transform-origin: left center;
+}
+.rot-min-2 {
+  transform: rotate(-1deg);
+  transform-origin:  center;
+}
 
+
+.mt-n5 {
+  margin-top: -2.5rem !important; 
+}
+
+
+.section-dark {
+  position: relative;
+}
+.bg-color, .bg-color-2 {
+  display: flex;
+  justify-content: center;
+}
+</style>
 <style>
   @keyframes scroll {
     0% { transform: translateX(0); }
