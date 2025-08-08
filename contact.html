@@ -483,7 +483,7 @@
 </style>
   <!-- Request a Callback -->
   <div class="callback-tab">
-    <a href="#">Request a Callback</a>
+    <a href="tel:+11234567890">Request a Callback</a>
   </div>
 
 
@@ -800,7 +800,7 @@
         </header> -->
         
        <div class="contact-container">
-    <form class="contact-form">
+    <form class="contact-form" onsubmit="handleContactSubmit(event)">
         <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" placeholder="John Doe" required>
@@ -920,6 +920,33 @@
     <script src="js/designesia.js"></script>
     <script src="js/countdown-custom.js"></script>
     <script src="js/custom-marquee.js"></script>
+    
+    <script>
+        // Handle contact form submission
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const name = event.target.querySelector('#name').value;
+            const email = event.target.querySelector('#email').value;
+            const phone = event.target.querySelector('#phone').value;
+            const subject = event.target.querySelector('#subject').value;
+            const message = event.target.querySelector('#message').value;
+            
+            // Validate required fields
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            event.target.reset();
+        }
+    </script>
 
 </body>
 

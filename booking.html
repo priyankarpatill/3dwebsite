@@ -388,9 +388,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none;">
-                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
+                                        <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Crystal Wings Logo" style="width: 300px; height: 150px; max-width: none;">
+                                        <img class="logo-scroll" src="images/Crystal Wings Logo[1].png" alt="Crystal Wings Logo" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="Crystal Wings Logo" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -817,7 +817,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         <!-- Booking Forms -->
         <!-- ROUND TRIP -->
         <div class="form-panel active" id="round">
-            <form class="booking-form" action="./process_booking.php" method="post">
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)" method="post">
                 <input type="hidden" name="trip_type" value="round">
                 
                 <div class="airport-search-container">
@@ -846,7 +846,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         
         <!-- ONE-WAY -->
         <div class="form-panel" id="oneway">
-            <form class="booking-form" action="./process_booking.php" method="post">
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)" method="post">
                 <input type="hidden" name="trip_type" value="oneway">
                 
                   <div class="airport-search-container">
@@ -870,7 +870,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         
         <!-- MULTI TRIP -->
         <div class="form-panel" id="multi">
-            <form class="booking-form" action="./process_booking.php" method="post">
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)" method="post">
                 <input type="hidden" name="trip_type" value="multi">
                 
                 <div id="multi-trip-container">
@@ -1347,6 +1347,27 @@ document.querySelectorAll('.airport-search-input').forEach(input => {
                 segment.style.opacity = "1";
                 segment.style.transform = "translateY(0)";
             }, 10);
+        }
+
+        // Handle booking form submission
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const tripType = formData.get('trip_type');
+            
+            // Show success message
+            alert('Thank you for your booking request! We will contact you soon to confirm your flight details.');
+            
+            // Reset form
+            event.target.reset();
+            
+            // Set minimum dates again
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.min = today;
+            });
         }
 
         // Set minimum date for date inputs to today

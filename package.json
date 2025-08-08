@@ -1,0 +1,42 @@
+{
+  "name": "crystal-wings-website",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Crystal Wings - Premium Private Jet Charter Services",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^10.16.5",
+    "gsap": "^3.12.2",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "three": "^0.158.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/three": "^0.158.3",
+    "@vitejs/plugin-react": "^4.1.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "keywords": [
+    "aviation",
+    "private-jet",
+    "charter",
+    "luxury",
+    "travel"
+  ],
+  "author": "Crystal Wings",
+  "license": "MIT"
+}
