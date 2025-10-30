@@ -1,37 +1,2093 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crystal Wings - Premium Private Jet Charter Services</title>
-    <meta name="description" content="Experience unparalleled luxury with Crystal Wings premium private jet charter services. Global destinations, personalized attention, and unmatched efficiency." />
-    <meta name="keywords" content="private jet, charter, luxury travel, aviation, crystal wings" />
-    <meta name="author" content="Crystal Wings" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://crystalwings.com/" />
-    <meta property="og:title" content="Crystal Wings - Premium Private Jet Charter Services" />
-    <meta property="og:description" content="Experience unparalleled luxury with Crystal Wings premium private jet charter services." />
-    <meta property="og:image" content="/images/og-image.jpg" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://crystalwings.com/" />
-    <meta property="twitter:title" content="Crystal Wings - Premium Private Jet Charter Services" />
-    <meta property="twitter:description" content="Experience unparalleled luxury with Crystal Wings premium private jet charter services." />
-    <meta property="twitter:image" content="/images/og-image.jpg" />
+<head>
+    <title>Crystal Wings</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="AIvent" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+<link id="colors" href="css/colors/custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/jarallax@2/dist/jarallax.min.js"></script>
+<script src="https://unpkg.com/jarallax@2/dist/jarallax-video.min.js"></script>
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/images/Airplane View.mp4" as="video" type="video/mp4" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 100px !important;
+                width: 150px !important;
+            }
+        }
+        
+    </style>
+ <style>
+/* Logo styles for all screens */
+.logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-main {
+  height: 150px;
+  width: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Adjust header height and padding */
+  header.transparent {
+    min-height: 120px;
+    padding: 10px 15px; /* Added left/right padding */
+  }
+  
+  /* Make logo container flexible with padding */
+  #logo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px; /* Added left padding */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    margin-left: 0; /* Ensure no negative margin */
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Adjust menu button position */
+  .mobile-menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto; /* Push to the right */
+    padding-right: 15px; /* Add right padding */
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Reset header padding and alignment */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 0 !important; /* Remove side padding */
+  }
+  
+  /* Make logo container stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Logo image adjustments - stick to left edge */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 120px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start (left) */
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Push menu button to right */
+  .mobile-menu-btn {
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove row margins */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Header adjustments */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 15px !important; /* Added side padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container - stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Header layout - space between logo and menu */
+  .de-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Menu button - stick to right edge */
+  .mobile-menu-btn {
+    position: relative;
+    right: 0;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Adjust the menu icon alignment */
+  .mobile-menu-btn i {
+    margin-left: auto; /* Push icon to the right */
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure row takes full width */
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* If you had any fixed positioning styles before, remove them */
+.transparent {
+    /* Remove any position: fixed; if it was here */
+}
+
+/* Optional: Add styles for when the header is scrolled */
+.sticky-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<script>
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('.sticky-header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
+
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <header class="transparent sticky-header" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none; filter: brightness(0.7) contrast(1.2);" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+
+
+
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item active" href="./index.html" style="color: black;">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html" style="color: black;">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html" style="color: black;">Fleet</a></li>
+                                        <li><a class="menu-item" href="./investment.html" style="color: black;">Investment</a></li>
+                                        <li><a class="menu-item" href="./booking.html" style="color: black;">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html" style="color: black;">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                             <!-- <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
+                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                    </ul>
+                    <!-- <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a> -->
+                </div>
+            </div>
+        </header>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header.transparent');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+        </script>
+        <style>
+            header.transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the content below the header is not hidden */
+body {
+    padding-top: 100px; /* Adjust based on your header height */
+}
+        </style>
+
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+        
+    
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@1/dist/jarallax-video.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.5,
+        videoVolume: 0,
+        videoPlayOnlyVisible: true,
+        onScroll: function (calcs) {
+            // Stronger zoom effect based on scroll
+            if (calcs.direction === 'down') {
+                this.options.speed = 0.8;  // Stronger zoom in when scrolling down
+                this.$item.querySelector('.jarallax-video').style.transform = 'scale(1.1)';
+            } else {
+                this.options.speed = -0.5; // Stronger zoom out when scrolling up
+                this.$item.querySelector('.jarallax-video').style.transform = 'scale(0.9)';
+            }
+        }
+    });
+});
+</script>
+<style>
+/* Smooth transition for zoom effects */
+.jarallax-video {
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+}
+</style>
+<section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800 vh-100 fixed-top" 
+  data-jarallax
+  data-video-src="mp4:images/Airplane View.mp4"
+  data-speed="0.5">
+
+  <!-- Audio element -->
+  <audio id="bgAudio" loop>
+    <source src="images/instrumental-acoustic-guitar-music-360222.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Audio permission prompt (hidden by default) -->
+  <div id="audioPrompt" style="position: fixed; bottom: 70px; right: 20px; z-index: 1000; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; display: none;">
+    Click to enable sound 🔊
+  </div>
+
+  <style>
+    .jarallax > video {
+      filter: brightness(1.4) contrast(1.1);
+    }
+    #section-hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+    }
+    body {
+      padding-top: 100vh;
+    }
+    #bgAudio {
+      display: none;
+    }
+  </style>         
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById('bgAudio');
+      const audioPrompt = document.getElementById('audioPrompt');
+
+      // Strategy 1: Try unmuted autoplay (works in some cases)
+      audio.muted = false;
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          // Strategy 2: Try muted autoplay then unmute
+          audio.muted = true;
+          audio.play()
+            .then(() => {
+              // Show prompt to unmute
+              audioPrompt.style.display = 'block';
+              audioPrompt.onclick = () => {
+                audio.muted = false;
+                audioPrompt.style.display = 'none';
+              };
+            })
+            .catch(e => {
+              // Strategy 3: Wait for any user interaction
+              const enableAudio = () => {
+                audio.muted = false;
+                audio.play();
+                document.removeEventListener('click', enableAudio);
+                document.removeEventListener('scroll', enableAudio);
+                audioPrompt.style.display = 'none';
+              };
+              audioPrompt.style.display = 'block';
+              audioPrompt.onclick = enableAudio;
+              document.addEventListener('click', enableAudio);
+              document.addEventListener('scroll', enableAudio);
+            });
+        });
+      }
+    });
+  </script>
+</section>
+<style>
+    /* Sticky Header with Scroll Transition */
+header.transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent !important; /* Start transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    min-height: 100px;
+}
+
+header.scrolled {
+    background-color: black !important; /* Change to black when scrolled */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow when scrolled */
+}
+
+/* Menu item colors when transparent */
+header.transparent #mainmenu li a {
+    color: white !important; /* White text when header is transparent */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Optional: better readability */
+    transition: color 0.3s ease;
+}
+
+/* Menu item colors when scrolled */
+header.scrolled #mainmenu li a {
+    color: white !important; /* Change to your preferred color when scrolled */
+}
+
+/* Mobile menu button color */
+header.transparent .mobile-menu-btn i {
+    color: white !important;
+}
+
+header.scrolled .mobile-menu-btn i {
+    color: white !important; /* Or any color you prefer when scrolled */
+}
+</style>
+
+
+  
+        
+<section id="section-about" class="bg-dark section-dark text-light" style="background-color: #FFE6D5;">
+    <div class="container">
+        <div class="row gx-5 align-items-center justify-content-between">
+            <div class="col-lg-6">
+                <div class="me-lg-5 pe-lg-5 py-5 my-5">
+                    <p class="wow fadeInUp" data-wow-delay=".4s" style="color: black; font-size: 40px;">Elevating Your Travel Experience</p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.</p>
+
+                    <ul class="ul-check">
+                        <li class="wow fadeInUp" data-wow-delay=".8s">24/7 on-demand private jet charter services</li>
+                        <li class="wow fadeInUp" data-wow-delay=".9s">Global network of premium destinations</li>
+                        <li class="wow fadeInUp" data-wow-delay="1s">Curated fleet of luxury aircraft</li>
+                    </ul>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">A global leader in investment and business innovation, with a team of professionals bringing decades of experience in aviation finance, structured deals, aircraft operations. The approach is disciplined and data-driven, ensuring that every investment is backed by insight and expertise. </p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="color: black;">Air Ambulance, we understand the critical nature of international patient transfers, particularly from the Dubai to various locations across the globe. With our exceptional air ambulance services, we ensure safe, reliable, and seamless medical transport for patients requiring specialized care, even across vast distances.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="wow scaleIn" style="position: relative; width: 100%;">
+                    <!-- Circular/Oval Video Container -->
+                    <div class="video-mask" style="
+                        width: 100%;
+                        max-width: 500px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 0 auto;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                        background-color: #FFE6D5;
+                    ">
+                        <video class="w-100 h-100" autoplay muted loop playsinline style="
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        ">
+                            <source src="1992-153555258_small.mp4" type="video/mp4">
+                            <!-- Fallback image if video doesn't load -->
+                            <img src="fallback-image.jpg" alt="Private Jet Service" style="width:100%;height:100%;object-fit:cover;">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Circular/Oval Video Styling */
+    .video-mask {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    /* Ensure video fills the circular container */
+    .video-mask video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .video-mask {
+            max-width: 350px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #section-about .col-lg-6 {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        /* Stack columns vertically on mobile */
+        #section-about .row {
+            flex-direction: column;
+        }
+        
+        /* Adjust spacing for mobile */
+        .me-lg-5.pe-lg-5.py-5.my-5 {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .video-mask {
+            max-width: 280px;
+        }
+    }
+    
+    /* Remove default video controls */
+    video::-webkit-media-controls {
+        display: none !important;
+    }
+    
+    /* White background for section */
+    #section-about {
+        background-color: #FFE6D5 !important;
+    }
+    
+    /* Black text for content */
+    #section-about p,
+    #section-about li {
+        color: black !important;
+    }
+    
+    /* Fix list styling */
+    .ul-check {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .ul-check li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .ul-check li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #000;
+        font-weight: bold;
+    }
+</style>
+      <section class="section-dark p-0" aria-label="section" style="color: black;">
+  <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
+    <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
+      <span class="marquee-text">Luxury Fleet Selection</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Global Destinations</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Time Efficiency</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Personalized Service</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Invest in Aviation</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Air Ambulance</span>
+      <span class="marquee-separator">/</span>
+    </div>
+  </div>
+
+  <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-2 mt-n5">
+    <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
+      <span class="marquee-text">Luxury Fleet Selection</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Global Destinations</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Time Efficiency</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Personalized Service</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Invest in Aviation</span>
+      <span class="marquee-separator">/</span>
+      <span class="marquee-text">Air Ambulance</span>
+      <span class="marquee-separator">/</span>
+    </div>
+  </div>
+</section>
+<style>
+    .rot-2 {
+  transform: rotate(-1deg);
+  transform-origin: left center;
+}
+.rot-min-2 {
+  transform: rotate(1deg);
+  transform-origin:  center;
+}
+
+
+.mt-n5 {
+  margin-top: -2.5rem !important; 
+}
+
+
+.section-dark {
+  position: relative;
+}
+.bg-color, .bg-color-2 {
+  display: flex;
+  justify-content: center;
+}
+</style>
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<style>
+  /* Base styles for all devices */
+  .marquee-text {
+    font-size: 60px;
+    margin: 0 12px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .marquee-separator {
+    font-size: 60px;
+    margin: 0 12px;
+    opacity: 0.2;
+    display: inline-block;
+  }
+  
+  /* Mobile styles - will override desktop styles */
+  @media only screen and (max-width: 767px) {
+    .marquee-text {
+      font-size: 24px !important; /* Force smaller size on mobile */
+      margin: 0 8px !important;
+    }
+    
+    .marquee-separator {
+      font-size: 24px !important; /* Force smaller size on mobile */
+      margin: 0 8px !important;
+    }
+    
+    /* Adjust container padding */
+    .bg-color, 
+    .bg-color-2 {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+    
+    /* Make sure the animation classes don't interfere */
+    .de-marquee-list-1,
+    .de-marquee-list-2 {
+      animation: none !important;
+    }
+    
+    /* Ensure wow.js animations don't prevent our styles */
+    .wow {
+      animation-name: none !important;
+      visibility: visible !important;
+    }
+  }
+</style>
+
+
+<section id="section-why-attend" class="bg-dark section-dark text-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="subtitle wow fadeInUp mb-3" style="color: black;">Why Choose Us</div>
+                <p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 30px; color: black;">The Crystal Wings Advantage</p>
+                <p class="lead mb-0 wow fadeInUp" style="color: gray;">Experience unmatched luxury, flexibility, and personalized service with our premium private jet charter solutions.</p>
+            </div>
+        </div>
+
+        <div class="spacer-single"></div>
+
+        <div class="row g-4">
+              <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/group.webp" class="card-image" alt="Global Destinations">
+                        </div>
+                        <div class="card-content">
+                            <h4>Global Destinations</h4>
+                            <p>Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/Ben_Pipe_Photo_042523_AirX_063.webp" class="card-image" alt="Luxury Fleet">
+                        </div>
+                        <div class="card-content">
+                            <h4>Luxury Fleet Selection</h4>
+                            <p>Choose from our meticulously maintained fleet of premium aircraft tailored to your specific needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+          
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+                        <div class="card-image-container">
+                            <img src="images/time.jpg" class="card-image" alt="Time Efficiency">
+                        </div>
+                        <div class="card-content">
+                            <h4>Personalized Service</h4>
+                            <p>Experience bespoke travel with customized catering, ground transportation, and in-flight amenities tailored to your preferences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Card 4 -->
+           <!-- Second Row (Single Centered Card) -->
+<div class="row g-4 justify-content-center">  <!-- Added justify-content-center -->
+    <!-- Card 4 - Air Ambulance (Centered) -->
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card-wrapper">
+            <div class="feature-card-3d">
+                <div class="card-inner">
+                    <div class="card-image-container">
+                        <img src="images/WhatsApp Image 2025-07-23 at 17.04.14_575fc591.jpg" class="card-image" alt="Air Ambulance">
+                    </div>
+                    <div class="card-content">
+                        <h4>Air Ambulance</h4>
+                        <p>Our air ambulance service ensures rapid medical transportation with fully equipped aircraft and trained medical teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Card 5 -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+
+                        <div class="card-image-container">
+                            <img src="images/safety.webp" class="card-image" alt="Safety Excellence">
+                        </div>
+                        <div class="card-content">
+                            <h4>Safety Excellence</h4>
+                            <p>Fly with confidence knowing our aircraft meet the highest safety standards with experienced pilots and regular maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> -->
+
+            <!-- Card 6 -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <div class="feature-card-wrapper">
+                    <div class="feature-card-3d">
+                      <div class="card-inner">
+
+                        <div class="card-image-container">
+                            <img src="images/flexible.jpg" class="card-image" alt="Investment in Aviation">
+                        </div>
+                        <div class="card-content">
+                            <h4>Investment in Aviation</h4>
+                            <p>Exclusive access to private aviation opportunities that combine luxury, performance, and solid ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+<style>
+    /* Sophisticated 3D Card Styling */
+    .feature-card-wrapper {
+        height: 100%;
+        perspective: 1200px;
+        position: relative;
+    }
+    
+    .feature-card-3d {
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateY(0) rotateX(0) rotateY(0) scale(1);
+        animation: subtle-float 8s ease-in-out infinite;
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d {
+        transform: translateY(-12px) rotateX(3deg) rotateY(3deg) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(10, 36, 99, 0.25);
+    }
+    
+    .card-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.1);
+        transform: translateZ(40px);
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        position: relative;
+        backface-visibility: hidden;
+    }
+    
+    .feature-card-wrapper:hover .card-inner {
+        transform: translateZ(60px);
+    }
+    
+    .card-image-container {
+        height: 240px;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateZ(30px) scale(1.01);
+        will-change: transform;
+    }
+    
+    .feature-card-wrapper:hover .card-image {
+        transform: translateZ(50px) scale(1.03);
+    }
+    
+    .card-content {
+        padding: 28px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        transform: translateZ(30px);
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        background: white;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .feature-card-wrapper:hover .card-content {
+        transform: translateZ(50px);
+    }
+    
+    /* Sophisticated Floating Animation */
+    @keyframes subtle-float {
+        0%, 100% {
+            transform: translateY(0) rotateX(0.5deg) rotateY(0.5deg);
+        }
+        50% {
+            transform: translateY(-10px) rotateX(1deg) rotateY(1deg);
+        }
+    }
+    
+    /* Individual card animations with staggered delay */
+    .feature-card-wrapper:nth-child(1) .feature-card-3d {
+        animation-delay: 0s;
+    }
+    .feature-card-wrapper:nth-child(2) .feature-card-3d {
+        animation-delay: 0.15s;
+    }
+    .feature-card-wrapper:nth-child(3) .feature-card-3d {
+        animation-delay: 0.3s;
+    }
+    .feature-card-wrapper:nth-child(4) .feature-card-3d {
+        animation-delay: 0.45s;
+    }
+    .feature-card-wrapper:nth-child(5) .feature-card-3d {
+        animation-delay: 0.6s;
+    }
+    .feature-card-wrapper:nth-child(6) .feature-card-3d {
+        animation-delay: 0.75s;
+    }
+    
+    /* Elegant Hover Glow Effect */
+    .feature-card-3d::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        background: radial-gradient(circle at 50% 0%, rgba(0,206,209,0.08), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        z-index: 1;
+        transform: translateZ(20px);
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d::after {
+        opacity: 1;
+        transform: translateZ(40px);
+    }
+    
+    /* Subtle Edge Highlight */
+    .card-inner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.3);
+        pointer-events: none;
+        z-index: 3;
+        transform: translateZ(60px);
+    }
+    
+    /* Depth Shadow Effect */
+    .feature-card-3d::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 5%;
+        width: 90%;
+        height: 20px;
+        background: rgba(10,36,99,0.1);
+        filter: blur(12px);
+        transform: translateZ(-20px) rotateX(-85deg);
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity: 0.6;
+    }
+    
+    .feature-card-wrapper:hover .feature-card-3d::before {
+        opacity: 0.9;
+        transform: translateZ(-30px) rotateX(-85deg) scale(1.05);
+        filter: blur(16px);
+    }
+    
+    /* Typography Enhancements */
+    .card-content h4 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #0A2463;
+        letter-spacing: 0.5px;
+        transition: all 0.4s ease;
+    }
+    
+    .feature-card-wrapper:hover .card-content h4 {
+        color: #008B8B;
+    }
+    
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4A5568;
+        margin-bottom: 0;
+        transition: all 0.4s ease;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .card-image-container {
+            height: 220px;
+        }
+        .feature-card-3d {
+            animation: subtle-mobile-float 8s ease-in-out infinite;
+        }
+        @keyframes subtle-mobile-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .card-image-container {
+            height: 200px;
+        }
+        .card-content {
+            padding: 22px;
+        }
+        .feature-card-3d::before,
+        .feature-card-3d::after {
+            display: none;
+        }
+    }
+</style>
+        <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+            <img src="images/background/4.webp" class="jarallax-img" alt="">
+            <div class="gradient-edge-top"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+            <div class="container relative z-4">
+                <div class="row align-items-center g-5">
+                    <!-- <div class="col-md-4">
+                        <div class="relative w-100 d-inline-block pe-5">
+                            <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
+                                <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
+                            </div>
+                            <img src="images/ai.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <h3 class="fs-32 mb-4 wow fadeInUp">“Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization.”</h3>
+
+                        <span>Elon Musk</span>
+                    </div> -->
+                    <style>
+    
+
+    .testimonials-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .testimonials-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      color: #222;
+    }
+
+    .testimonial-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transform-style: preserve-3d;
+      transform: translateY(60px) scale(0.95);
+      opacity: 0;
+    }
+
+    .testimonial-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .testimonial-card:hover {
+      transform: rotateY(6deg) rotateX(6deg) scale(1.03);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .testimonial-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      color: #111;
+    }
+
+    .testimonial-role {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- <section class="testimonials-section"> -->
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img" alt="User" style="color: black;">
+      <div class="testimonial-name">Sophia</div>
+      <div class="testimonial-role">Marketing Manager</div>
+      <p class="testimonial-text" style="color: black;">"This product has changed the way our team works. Excellent support and smooth performance!"</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/35.jpg" class="testimonial-img" alt="User">
+      <div class="testimonial-name">Daniel</div>
+      <div class="testimonial-role">Startup Founder</div>
+      <p class="testimonial-text" style="color: black;">"Absolutely amazing! The UI is intuitive and the results are impressive."</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img" alt="User">
+      <div class="testimonial-name">Olivia</div>
+      <div class="testimonial-role">Freelancer</div>
+      <p class="testimonial-text" style="color: black;">"Highly recommend to anyone looking for professional solutions at great value."</p>
+    </div>
+  </div>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.testimonial-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+                </div>
+            </div>
+        </section>
+<section id="section-speakers" class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 text-center">
+                <!-- <h2 class="text-white mb-0" style="font-size: 30px;">Comprehensive Aviation Solutions</h2> -->
+                         <p class="wow fadeInUp" data-wow-delay=".2s" style="color: black; font-size: 30px;">Comprehensive Aviation Solutions</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card rounded-1 overflow-hidden border-0">
+                    <img src="images/air221.jpg" class="card-img w-100" alt="Air Ambulance">
+                    <div class="card-img-overlay d-flex align-items-end p-0">
+                        <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                            <span class="text-white">Air Ambulance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card rounded-1 overflow-hidden border-0">
+                    <img src="images/air management11.jpeg" class="card-img w-100" alt="Aircraft Management">
+                    <div class="card-img-overlay d-flex align-items-end p-0">
+                        <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                            <span class="text-white">Aircraft Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card rounded-1 overflow-hidden border-0">
+                    <img src="images/3.-Netjets.webp" class="card-img w-100" alt="Aircraft Leasing">
+                    <div class="card-img-overlay d-flex align-items-end p-0">
+                        <div class="w-100 text-center p-3" style="background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);">
+                            <span class="text-white">Aircraft Leasing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <style>
+    /* Add this to your CSS */
+    @media (max-width: 768px) {
+        #section-speakers {
+            background-color: #343a40;
+            padding: 30px 0;
+        }
+        #section-speakers .hover {
+            margin-bottom: 20px;
+        }
+        #section-speakers p {
+            font-size: 24px !important;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+        <!-- <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+            <img src="images/background/1.webp" class="jarallax-img" alt="">
+            <div class="gradient-edge-top"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-md-12 wow fadeInUp">
+                        <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
+                            <img src="images/logo-light/1.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/2.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/3.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/4.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/5.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/6.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/7.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/8.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/9.webp" class="w-100 px-4" alt="">
+                            <img src="images/logo-light/10.webp" class="w-100 px-4" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     -->
+
+      
+      
+<!-- 
+        <section  id="section-faq" class="bg-dark section-dark text-light" style="background-color: var(--color-primary-dark) !important;">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-5" style="background-color: var(--color-primary-dark) !important;">
+                        <div class="subtitle wow fadeInUp" data-wow-delay=".0s" style="color: black;">Everything You Need to Know</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" style="color: black;">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="col-lg-7" >
+                        <div class="accordion s2 wow fadeInUp">
+                            <div class="accordion-section">
+                                <div class="accordion-section-title" data-tab="#accordion-a1" >
+                                    What is the Crystal Wings?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a1" style="color: black;">
+                                    The Crystal Wings is a premier event gathering leading AI experts, thought leaders, and innovators. It features keynotes, workshops, panels, and networking opportunities focusing on the latest advancements in artificial intelligence.
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-a2">
+                                    When and where will the event be held?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a2">
+                                    The Crystal Wings will take place from **[Event Dates]** at **[Event Location]**. More details about the venue and directions will be provided closer to the event.
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-a3">
+                                    How can I register for the event?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a3">
+                                    You can register for the Crystal Wings through our official website. Simply choose your ticket type and fill out the registration form.
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-a4">
+                                    What ticket options are available?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a4">
+                                    We offer a range of ticket options, including Standard, VIP, Full Access Pass, Student, and Virtual tickets. You can find more details about each ticket type on our [Tickets Page](#).
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-a5">
+                                    Can I transfer my ticket to someone else?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a5">
+                                    Tickets are non-transferable. If you are unable to attend, please contact our support team for assistance.
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-a6">
+                                    Will there be virtual participation?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a6">
+                                    Yes! For those who can’t attend in person, we offer a **Virtual Ticket**. This provides access to live-streamed sessions, workshops, and networking opportunities online.
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="contact-section" id="contact">
+  <div class="contact-container">
+    <!-- Left Side: Contact Form -->
+    <div class="contact-form" data-aos="fade-right">
+      <h2>REQUEST A QUOTE</h2>
+      <p>Ready to elevate your travel experience? Contact us for a personalized quote.</p>
+      
+      <form class="form" action="#" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name*" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email*" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Journey Details*" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">SUBMIT REQUEST <span>✈️</span></button>
+      </form>
+    </div>
+
+    <!-- Right Side: Contact Info -->
+    <div class="contact-info" data-aos="fade-left">
+      <div class="info-card">
+        <h3>CONTACT US</h3>
+        <ul>
+          <li><span>📞</span> +1 (555) 123-4567</li>
+          <li><span>✉️</span> contact@crystalwings.com</li>
+          <li><span>📍</span> Global Headquarters: 123 Aviation Way, New York, NY</li>
+        </ul>
+      </div>
+      
+      <div class="hours-card">
+        <h3>OPERATIONAL HOURS</h3>
+        <ul>
+          <li>24/7 Charter Booking</li>
+          <li>Customer Support: 5AM–11PM GMT</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Contact Section Styling */
+  .contact-section {
+    padding: 80px 20px;
+    background: #0a0e17; /* Solid dark background */
+    color: #e0e0e0; /* Light gray text for readability */
+    position: relative;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .contact-form {
+    background: #1a1f2d; /* Darker card background */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #2a3a5a; /* Subtle border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+
+  .contact-form p {
+    margin-bottom: 30px;
+    color: #a0a0a0;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: #1e2435;
+    border: 1px solid #2a3a5a;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: #3a7bd5; /* Solid blue button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .submit-btn:hover {
+    background: #2c65b0;
+    transform: translateY(-2px);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-card, .hours-card {
+    background: #1a1f2d;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #2a3a5a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-card h3, .hours-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #2a3a5a;
+    padding-bottom: 10px;
+  }
+
+  .info-card ul, .hours-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-card li, .hours-card li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #c0c0c0;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form, .info-card, .hours-card {
+      padding: 25px;
+    }
+  }
+</style>
+
+        <!-- <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+            <img src="images/background/3.webp" class="jarallax-img" alt="">
+            <div class="gradient-edge-top"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+          <div class="container relative z-2">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Stay in the Loop</div>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Join the Future of Innovation</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">
+                      Making better things takes time. Drop us your email to stay in the know as we work to reduce our environmental impact. We'll share other exciting news and exclusive offers, too.
+                    </p>
+                </div>
+            </div>
+
+            <form class="row justify-content-center">
+              <div class="col-md-6 col-lg-4 mb-3 wow fadeInUp" data-wow-delay=".6s">
+                <input type="email" class="form-control form-control-lg text-center" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="col-auto mb-3 wow fadeInUp" data-wow-delay=".6s">
+                <button type="submit" class="btn bg-color text-light btn-lg px-4">SIGN UP</button>
+              </div>
+
+              <div class="col-12 text-center wow fadeInUp" data-wow-delay=".8s">
+                <div class="form-check d-flex justify-content-center mb-2">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="updatesCheck" checked>
+                  <label class="form-check-label" for="updatesCheck">
+                    Keep me updated on other news and exclusive offers
+                  </label>
+                </div>
+                <p class="small text-muted wow fadeInUp" data-wow-delay="1s">
+                  Note: You can opt-out at any time. See our <a href="#" class="text-decoration-underline">Privacy Policy</a> and <a href="#" class="text-decoration-underline">Terms</a>.
+                </p>
+              </div>
+            </form>
+          </div>
+        </section>
+
+    </div> -->
+
+    <!-- footer begin -->
+    <footer class="text-light section-dark">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            121 AI Blvd, San Francisco<br>
+                            BCA 94107
+<br><br>
+                             <a href="./privacy.html" class="text-link">Privacy Policy</a>
+                        </div>
+                        
+                        <div>
+                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
+                            <div class="social-icons mb-sm-30 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                            T. +1 123 456 789<br>
+                            M. contact@aivent.com
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright 2025 - AIvent by Designesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/7715841612" target="_blank" class="whatsapp-tab">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <style>
+   .whatsapp-tab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: float 2s ease-in-out infinite; /* Floating animation */
+}
+
+.whatsapp-tab img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Floating keyframe animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .whatsapp-tab {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-tab img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+    
+  </style>
+    <!-- footer end -->
+    <!--   <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>
+    </div> --> 
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/custom-marquee.js"></script>
+
+</body>
+
 </html>
+
+
+<style>
+  :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white:  #FFE6D5;
+    --color-off-white: #FFE6D5;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.section-dark {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Text colors */
+.text-light {
+    color: var(--color-dark) !important;
+}
+
+/* Buttons and accents */
+.btn-main, .bg-color, .id-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-line {
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary-dark) !important;
+    background: transparent !important;
+}
+
+.hover-bg-color:hover {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Header */
+/* header.transparent {
+    background-color: var(--color-primary-dark) !important;
+} */
+
+/* Header styles */
+header.transparent {
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: black !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid var(--color-light-gray) !important;
+    box-shadow: 0 4px 12px rgba(10, 36, 99, 0.1) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Links */
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Video background adjustments */
+.jarallax > video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.gradient-edge-top {
+    background: linear-gradient(to bottom, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.gradient-edge-bottom {
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.sw-overlay {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Marquee section */
+.bg-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.bg-color-2 {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+    color: var(--color-primary-dark) !important;
+}
+
+.mobile-menu a {
+    color: white !important;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary-pale) !important;
+}
+
+/* Special elements */
+.hover:hover {
+    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
+}
+</style>
+
+
+
+<style>
+    /* Add this to your CSS */
+body {
+  background-color: #FFE6D5 !important; /* Your desired background color */
+}
+
+/* Force all sections to use the correct background */
+section, 
+#section-about, 
+#section-why-attend, 
+#section-faq {
+  background-color: #FFE6D5 !important;
+}
+
+/* Make sure text is readable */
+section, 
+#section-about, 
+#section-why-attend, 
+#section-faq {
+  color: black !important;
+}
+
+
+
+/* Remove any transparent effects that might be interfering */
+header.transparent.scrolled {
+  background-color: black !important;
+}
+@media (max-width: 991px) {
+  /* Force all sections to use the correct background */
+  body, 
+  section, 
+  #section-about, 
+  #section-why-attend, 
+  #section-faq {
+    background-color: #FFE6D5 !important;
+  }
+  
+  /* Ensure text is black */
+  body, 
+  section, 
+  #section-about, 
+  #section-why-attend, 
+  #section-faq {
+    color: black !important;
+  }
+  
+  /* Header stays black */
+  header.transparent {
+    background-color: black !important;
+  }
+  
+  /* Fix any z-index issues */
+  header {
+    z-index: 1000;
+    position: relative;
+  }
+}
+#section-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Make sure content below the hero is visible */
+body {
+  padding-top: 100vh;
+}
+/* Override dark scheme colors */
+.dark-scheme {
+  background-color: #FFE6D5 !important;
+  color: black !important;
+}
+
+.dark-scheme section {
+  background-color: #FFE6D5 !important;
+  color: black !important;
+}
+</style>
