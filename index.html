@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -453,7 +452,7 @@ header.scrolled {
 
 /* Ensure the content below the header is not hidden */
 body {
-    padding-top: 100px; /* Adjust based on your header height */
+    padding-top: 0; /* Changed from 100px to 0 */
 }
         </style>
 
@@ -526,7 +525,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800 vh-100 fixed-top" 
   data-jarallax
   data-video-src="mp4:images/Airplane View.mp4"
-  data-speed="0.5">
+  data-speed="0.5"
+  style="margin-top: 0; padding-top: 0;">
 
   <!-- Audio element -->
   <audio id="bgAudio" loop>
@@ -549,6 +549,8 @@ document.addEventListener("DOMContentLoaded", function () {
       width: 100%;
       height: 100vh;
       z-index: -1;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
     }
     body {
       padding-top: 100vh;
@@ -1247,7 +1249,7 @@ header.scrolled .mobile-menu-btn i {
                     </div>
 
                     <div class="col-md-8">
-                        <h3 class="fs-32 mb-4 wow fadeInUp">“Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization.”</h3>
+                        <h3 class="fs-32 mb-4 wow fadeInUp">"Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization."</h3>
 
                         <span>Elon Musk</span>
                     </div> -->
@@ -1521,7 +1523,7 @@ header.scrolled .mobile-menu-btn i {
                                     Will there be virtual participation?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a6">
-                                    Yes! For those who can’t attend in person, we offer a **Virtual Ticket**. This provides access to live-streamed sessions, workshops, and networking opportunities online.
+                                    Yes! For those who can't attend in person, we offer a **Virtual Ticket**. This provides access to live-streamed sessions, workshops, and networking opportunities online.
                                 </div>
                             </div>
                         </div>                        
