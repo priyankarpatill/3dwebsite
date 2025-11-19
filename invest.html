@@ -1,0 +1,2929 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="AIvent" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+
+
+    <!-- Add Font Awesome for icons -->
+    
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            z-index: 10000;
+        }
+
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-container {
+            padding: 80px 20px 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .mobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            display: block;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #ccc;
+        }
+
+        /* Show mobile menu button only on mobile */
+        @media (max-width: 991px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            #mainmenu {
+                display: none !important;
+            }
+            
+            /* Adjust logo size for mobile */
+            .logo-main, 
+            .logo-scroll, 
+            .logo-mobile {
+                height: 100px !important;
+                width: 150px !important;
+            }
+        }
+        
+    </style>
+ <style>
+/* Logo styles for all screens */
+.logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-main {
+  height: 150px;
+  width: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Adjust header height and padding */
+  header.transparent {
+    min-height: 120px;
+    padding: 10px 15px; /* Added left/right padding */
+  }
+  
+  /* Make logo container flexible with padding */
+  #logo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px; /* Added left padding */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    margin-left: 0; /* Ensure no negative margin */
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Adjust menu button position */
+  .mobile-menu-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto; /* Push to the right */
+    padding-right: 15px; /* Add right padding */
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Reset header padding and alignment */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 0 !important; /* Remove side padding */
+  }
+  
+  /* Make logo container stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Logo image adjustments - stick to left edge */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 120px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    left: 0;
+  }
+  
+  /* Adjust header layout */
+  .de-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start (left) */
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Push menu button to right */
+  .mobile-menu-btn {
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove row margins */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+</style>
+<style>
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+  /* Header adjustments */
+  header.transparent {
+    min-height: 100px;
+    padding: 5px 15px !important; /* Added side padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container - stick to left edge */
+  #logo {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  /* Logo image adjustments */
+  .logo-main,
+  .logo-scroll,
+  .logo-mobile {
+    height: 100px !important;
+    width: 200px !important;
+    max-width: none !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Header layout - space between logo and menu */
+  .de-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Menu button - stick to right edge */
+  .mobile-menu-btn {
+    position: relative;
+    right: 0;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Adjust the menu icon alignment */
+  .mobile-menu-btn i {
+    margin-left: auto; /* Push icon to the right */
+  }
+  
+  /* Remove container padding */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure row takes full width */
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+</style>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <header class="transparent" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                      <img class="logo-main" src="images/Crystal Wings logo.png" alt="Logo" style="width: 300px; height: 150px; max-width: none;" />
+                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings logo.png" alt="" style="height: 150px; width: 250px; max-width: none;">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <!-- Mobile menu button -->
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars" style="color: white;"
+                                        ></i>
+                                    </div>
+                                    
+                                    <!-- Main desktop menu -->
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                                     <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                             <!-- <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu-overlay">
+                <div class="mobile-menu-container">
+                    <!-- Close button (X) -->
+                    <div class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    
+                    <ul class="mobile-menu">
+                        <li><a class="menu-item active" href="./index.html">Who we are</a></li>
+                        <li><a class="menu-item" href="./services.html">Services</a></li>
+                        <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
+                     <li><a class="menu-item" href="./investment.html">Investment</a></li>
+                        <li><a class="menu-item" href="./booking.html">Booking</a></li>
+                        <li><a class="menu-item" href="./contact.html">Contact</a></li>
+                    </ul>
+                    <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Tickets</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Rest of your content -->
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            // Open menu when hamburger is clicked
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close menu when X is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Enable scrolling
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        </script>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+        
+        :root {
+            --primary: #0a2463;
+            --secondary: #3e92cc;
+            --accent: #d8315b;
+            --light: #fffaff;
+            --dark: #1e1b18;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .blusky-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+             padding: 150px 5% 100px; /* Added top padding for header */
+        }
+        
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        
+        .content-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .text-content {
+            flex: 1;
+        }
+        
+        .logo {
+            width: 180px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(62, 146, 204, 0.5));
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--light), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            color: var(--light);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .jet-model {
+            flex: 1;
+            position: relative;
+            height: 500px;
+            perspective: 1000px;
+        }
+        
+        .jet-3d {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        .blusky-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.text-content {
+    max-width: 600px;
+    color: white;
+}
+
+.jet-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.jet-image {
+    max-height: 400px;
+    width: auto;
+    transform: translateX(50px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) translateX(50px); }
+    50% { transform: translateY(-20px) translateX(50px); }
+    100% { transform: translateY(0px) translateX(50px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .jet-image {
+        max-height: 300px;
+        transform: none;
+        margin-top: 40px;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+}
+        @media (max-width: 992px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            p {
+                max-width: 100%;
+            }
+            
+            .jet-model {
+                width: 100%;
+                height: 300px;
+                margin-top: 50px;
+            }
+            
+            .stats {
+                justify-content: center;
+            }
+        }
+        
+    </style>
+<style>
+.blusky-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px; /* Added padding to prevent header overlap */
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.delay-1 {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .blusky-section {
+        padding-top: 120px; /* Adjusted for mobile header */
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 40px;
+    }
+    
+    .text-content p {
+        font-size: 24px !important;
+        margin-top: 20px !important;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .blusky-section {
+        padding-top: 100px; /* Smaller padding for very small devices */
+    }
+    
+    .text-content p {
+        font-size: 20px !important;
+        margin-top: 10px !important;
+    }
+}
+</style>
+
+<body>
+   <section class="blusky-section">
+        <video class="bg-video" autoplay muted loop>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-background-2408-large.mp4" type="video/mp4">
+        </video>
+        
+        <div class="particles" id="particles"></div>
+        
+        <div class="content-container">
+            <div class="text-content">
+                <p class="fade-in" style="color: black; font-weight: bold; font-size: 34px;">WHERE LUXURY AND SMART INVESTING <span class="delay-1">ASCEND TOGETHER</span></p>
+                <p class="fade-in delay-2" style="color: #000;">We are a global leader in investment and business innovation, backed by an in-house team with decades of experience in aviation finance, structured deals, and aircraft operations—delivering a disciplined, data-driven approach to every investment.
+
+</p>
+                
+                <div class="divider fade-in delay-2"></div>
+                
+                <a href="./contact.html" class="cta-button fade-in delay-3">EXPLORE OPPORTUNITIES</a>
+                
+                <div class="stats fade-in delay-4">
+                    <div class="stat-item">
+                        <div class="stat-number" id="years-counter">25</div>
+                        <div class="stat-label">YEARS EXPERIENCE</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="aircraft-counter">180</div>
+                        <div class="stat-label">AIRCRAFT MANAGED</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="clients-counter">350</div>
+                        <div class="stat-label">GLOBAL CLIENTS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="jet-image-container fade-in delay-1">
+                <img src="./images/bc48f7b3b0527513a76330b50c979125.png" alt="Luxury Private Jet" class="jet-image">
+            </div>
+        </div>
+    </section>
+    <style>
+    /* Jet Image Container Styles */
+    .jet-image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        animation: fadeIn 1.5s ease-in forwards;
+        opacity: 0;
+        animation-delay: 0.5s;
+    }
+
+    .jet-image {
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        animation: float 6s ease-in-out infinite;
+        filter: drop-shadow(0 0 20px rgba(0, 161, 255, 0.5));
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 992px) {
+        .jet-image-container {
+            width: 100%;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .jet-image {
+            max-height: 350px; /* Larger size for mobile */
+            width: 100%;
+            max-width: 400px; /* Maximum width to prevent distortion */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .jet-image {
+            max-height: 300px; /* Slightly smaller for very small devices */
+            max-width: 350px;
+        }
+    }
+</style>
+    <style>
+/* Existing styles... */
+
+.jet-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.jet-image {
+    max-height: 400px;
+    width: auto;
+    transform: translateX(50px);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .jet-image {
+        max-height: 300px;
+        transform: none !important; /* Remove the translateX */
+        margin-top: 40px;
+        width: 100%; /* Make it responsive */
+        max-width: 300px; /* Limit maximum size */
+        height: auto;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+}
+
+@media (max-width: 576px) {
+    .jet-image {
+        max-height: 250px;
+        max-width: 250px;
+    }
+}
+</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script>
+        // Particle animation
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 10;
+                const opacity = Math.random() * 0.5 + 0.3;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                container.appendChild(particle);
+            }
+            
+            // Add CSS animation dynamically
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0% { transform: translateY(0) translateX(0); }
+                    50% { transform: translateY(-100px) translateX(20px); }
+                    100% { transform: translateY(0) translateX(0); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Counter animation
+        function animateCounters() {
+            const years = document.getElementById('years-counter');
+            const aircraft = document.getElementById('aircraft-counter');
+            const clients = document.getElementById('clients-counter');
+            
+            const targetYears = 25;
+            const targetAircraft = 180;
+            const targetClients = 350;
+            
+            const duration = 3000; // 3 seconds
+            const interval = 30; // ms
+            const steps = duration / interval;
+            
+            const yearsStep = targetYears / steps;
+            const aircraftStep = targetAircraft / steps;
+            const clientsStep = targetClients / steps;
+            
+            let currentYears = 0;
+            let currentAircraft = 0;
+            let currentClients = 0;
+            
+            const counterInterval = setInterval(() => {
+                currentYears += yearsStep;
+                currentAircraft += aircraftStep;
+                currentClients += clientsStep;
+                
+                years.textContent = Math.floor(currentYears);
+                aircraft.textContent = Math.floor(currentAircraft);
+                clients.textContent = Math.floor(currentClients);
+                
+                if (currentYears >= targetYears && 
+                    currentAircraft >= targetAircraft && 
+                    currentClients >= targetClients) {
+                    clearInterval(counterInterval);
+                    years.textContent = targetYears + '+';
+                    aircraft.textContent = targetAircraft + '+';
+                    clients.textContent = targetClients + '+';
+                }
+            }, interval);
+        }
+        
+        // 3D Jet Animation with Three.js
+        function init3DJet() {
+            const container = document.getElementById('jet-3d');
+            
+            // Scene setup
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x404040);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+            
+            // Create a simple jet model (in a real scenario, you would load a GLTF model)
+            const createJet = () => {
+                const group = new THREE.Group();
+                
+                // Fuselage
+                const fuselageGeometry = new THREE.CylinderGeometry(0.5, 0.2, 3, 8);
+                const fuselageMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0xffffff,
+                    metalness: 0.8,
+                    roughness: 0.2,
+                    envMapIntensity: 1
+                });
+                const fuselage = new THREE.Mesh(fuselageGeometry, fuselageMaterial);
+                fuselage.rotation.z = Math.PI / 2;
+                group.add(fuselage);
+                
+                // Wings
+                const wingGeometry = new THREE.BoxGeometry(2, 0.1, 0.5);
+                const wingMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0x3e92cc,
+                    metalness: 0.7,
+                    roughness: 0.3
+                });
+                const leftWing = new THREE.Mesh(wingGeometry, wingMaterial);
+                leftWing.position.set(-0.5, 0, 0);
+                group.add(leftWing);
+                
+                const rightWing = new THREE.Mesh(wingGeometry, wingMaterial);
+                rightWing.position.set(-0.5, 0, 0);
+                group.add(rightWing);
+                
+                // Tail
+                const tailGeometry = new THREE.BoxGeometry(0.5, 0.7, 0.1);
+                const tailMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0xd8315b,
+                    metalness: 0.5
+                });
+                const tail = new THREE.Mesh(tailGeometry, tailMaterial);
+                tail.position.set(1.2, 0.3, 0);
+                group.add(tail);
+                
+                return group;
+            };
+            
+            const jet = createJet();
+            scene.add(jet);
+            
+            camera.position.z = 5;
+            
+            // Animation loop
+            const animate = () => {
+                requestAnimationFrame(animate);
+                
+                jet.rotation.y += 0.005;
+                jet.rotation.x = Math.sin(Date.now() * 0.001) * 0.1;
+                
+                renderer.render(scene, camera);
+            };
+            
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            });
+        }
+        
+        // Initialize everything when the page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            animateCounters();
+            init3DJet();
+        });
+    </script>
+ <script>
+        // Animate counters on scroll
+        function animateCounters() {
+            const years = document.getElementById('years-counter');
+            const aircraft = document.getElementById('aircraft-counter');
+            const clients = document.getElementById('clients-counter');
+            
+            const targetYears = 25;
+            const targetAircraft = 180;
+            const targetClients = 350;
+            
+            const duration = 2000; // 2 seconds
+            const interval = 20; // ms
+            const steps = duration / interval;
+            
+            let currentYears = 0;
+            let currentAircraft = 0;
+            let currentClients = 0;
+            
+            const yearsIncrement = targetYears / steps;
+            const aircraftIncrement = targetAircraft / steps;
+            const clientsIncrement = targetClients / steps;
+            
+            const counterInterval = setInterval(() => {
+                currentYears += yearsIncrement;
+                currentAircraft += aircraftIncrement;
+                currentClients += clientsIncrement;
+                
+                years.textContent = Math.floor(currentYears);
+                aircraft.textContent = Math.floor(currentAircraft);
+                clients.textContent = Math.floor(currentClients);
+                
+                if (currentYears >= targetYears && 
+                    currentAircraft >= targetAircraft && 
+                    currentClients >= targetClients) {
+                    clearInterval(counterInterval);
+                }
+            }, interval);
+        }
+        
+        // Intersection Observer to trigger animations when scrolled into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    if (entry.target.classList.contains('stats')) {
+                        animateCounters();
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        // Observe all elements with the 'fade-in' class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Parallax effect for background
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            const bgImage = document.querySelector('.bg-image');
+            bgImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+
+    <section class="investment-model-section">
+    <div class="container">
+        <h2 class="section-title">OUR INVESTMENT MODEL</h2>
+        
+        <div class="investment-cards">
+            <!-- Card 1 -->
+            <div class="investment-card card-1">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">📅</div>
+                        <h3>Quarterly Payouts</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Receive returns every 3 months with our structured payout system</p>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="investment-card card-2">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Secured Annual Returns</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Guaranteed returns backed by contractual agreements</p>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="investment-card card-3">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">💰</div>
+                        <h3>Asset-Backed Investments</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Tangible aviation assets securing every investment</p>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="investment-card card-4">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-percent">
+                            <div class="percent-number">26%</div>
+                            <div class="percent-symbol">↑</div>
+                        </div>
+                        <h3>Assured Returns</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Premium returns up to 26% annually on select investments</p>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+                <div class="pulse-effect"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .investment-model-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #000000; /* Changed from white to pure black */
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 0 10px rgba(0, 161, 255, 0.5); /* Optional: Adds subtle glow to keep visibility */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00a1ff, transparent);
+    animation: titleUnderline 3s infinite;
+}
+
+@keyframes titleUnderline {
+    0% { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.investment-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.investment-card {
+    position: relative;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.investment-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.investment-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-back {
+    background: linear-gradient(135deg, rgba(0,161,255,0.2) 0%, rgba(0,100,200,0.3) 100%);
+    transform: rotateY(180deg);
+    border: 1px solid rgba(0,161,255,0.3);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.card-percent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.percent-number {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #fff, #00a1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+.percent-symbol {
+    font-size: 2rem;
+    margin-left: 5px;
+    color: #00ff88;
+    animation: floatUpDown 2s infinite alternate;
+}
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.card-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: radial-gradient(circle at center, rgba(0,161,255,0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+}
+
+.investment-card:hover .card-glow {
+    opacity: 1;
+}
+
+.card-1 .card-glow { background: radial-gradient(circle at center, rgba(100,200,255,0.3) 0%, transparent 70%); }
+.card-2 .card-glow { background: radial-gradient(circle at center, rgba(100,255,200,0.3) 0%, transparent 70%); }
+.card-3 .card-glow { background: radial-gradient(circle at center, rgba(255,200,100,0.3) 0%, transparent 70%); }
+.card-4 .card-glow { background: radial-gradient(circle at center, rgba(255,100,200,0.3) 0%, transparent 70%); }
+
+.card-4 {
+    animation: pulseShadow 3s infinite;
+}
+
+.pulse-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: radial-gradient(circle at center, rgba(255,100,200,0.2) 0%, transparent 70%);
+    opacity: 0;
+    z-index: -2;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: scale(1.1); opacity: 0; }
+}
+
+@keyframes pulseShadow {
+    0% { box-shadow: 0 0 0 0 rgba(255,100,200,0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255,100,200,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,100,200,0); }
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    100% { left: 150%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .investment-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .investment-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .investment-card {
+        height: 250px;
+    }
+}
+</style>
+<section class="secure-capital-section">
+    <div class="secure-container">
+        <h2 class="secure-title">HOW DO WE SECURE CAPITAL?</h2>
+        <p class="secure-subtitle">JOIN US</p>
+        
+        <div class="secure-steps">
+            <!-- Step 1 -->
+            <div class="secure-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-front">
+                        <div class="step-icon">⚖️</div>
+                        <h3>Legal Protection</h3>
+                        <p>Through binding agreements from Dubai Court</p>
+                    </div>
+                    <div class="step-back">
+                        <p>All investments are protected under Dubai's robust legal framework with enforceable contracts</p>
+                        <div class="step-glow"></div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="secure-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-front">
+                        <div class="step-icon">📑</div>
+                        <h3>Corporate Agreements</h3>
+                        <p>Comprehensive Investment Contracts</p>
+                    </div>
+                    <div class="step-back">
+                        <p>Detailed contracts outlining every aspect of the investment and protections</p>
+                        <div class="step-glow"></div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="secure-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-front">
+                        <div class="step-icon">🏦</div>
+                        <h3>Security Cheques</h3>
+                        <p>Financial guarantees for your investment</p>
+                    </div>
+                    <div class="step-back">
+                        <p>Bank-backed security instruments providing additional financial safeguards</p>
+                        <div class="step-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="legal-badge">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_Dubai.svg/1200px-Emblem_of_Dubai.svg.png" alt="Dubai Legal">
+            <span>Dubai Court Protected</span>
+        </div> -->
+    </div>
+    
+    <div class="floating-documents">
+        <div class="document doc1">📄</div>
+        <div class="document doc2">📑</div>
+        <div class="document doc3">📝</div>
+    </div>
+</section>
+<style>.secure-capital-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.secure-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.secure-title {
+    text-align: center;
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 0 15px rgba(0, 161, 255, 0.5);
+}
+
+.secure-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00a1ff, transparent);
+    animation: titleUnderline 3s infinite;
+}
+
+.secure-subtitle {
+    text-align: center;
+    color: #00a1ff;
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; text-shadow: 0 0 10px rgba(0, 161, 255, 0.7); }
+    100% { opacity: 0.8; }
+}
+
+.secure-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 80px 0;
+    perspective: 1000px;
+}
+
+.secure-step {
+    position: relative;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00a1ff, #0066cc);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 161, 255, 0.5);
+    z-index: 2;
+}
+
+.step-content {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.step-content:hover {
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+.step-front, .step-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s ease;
+}
+
+.step-front {
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 161, 255, 0.2);
+    transform: rotateX(0deg);
+}
+
+.step-content:hover .step-front {
+    transform: rotateX(180deg);
+}
+
+.step-back {
+    background: linear-gradient(135deg, rgba(0,161,255,0.15) 0%, rgba(0,100,200,0.25) 100%);
+    border: 1px solid rgba(0, 161, 255, 0.3);
+    transform: rotateX(180deg);
+}
+
+.step-content:hover .step-back {
+    transform: rotateX(0deg);
+}
+
+.step-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.step-front h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.step-front p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+}
+
+.step-back p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.step-connector {
+    position: absolute;
+    top: 25px;
+    right: -35%;
+    width: 35%;
+    height: 2px;
+    background: linear-gradient(90deg, #00a1ff, transparent);
+    z-index: 1;
+}
+
+.step-connector::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00a1ff;
+    box-shadow: 0 0 10px #00a1ff;
+}
+
+.step-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: radial-gradient(circle at center, rgba(0,161,255,0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+}
+
+.step-content:hover .step-glow {
+    opacity: 1;
+}
+
+.legal-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    animation: floatUpDown 3s infinite alternate;
+}
+
+.legal-badge img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 10px rgba(0,161,255,0.5));
+}
+
+.legal-badge span {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,161,255,0.5);
+}
+
+.floating-documents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.document {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+.doc1 {
+    top: 20%;
+    left: 10%;
+    animation: floatDoc1 15s infinite linear;
+}
+
+.doc2 {
+    top: 60%;
+    left: 80%;
+    animation: floatDoc2 12s infinite linear;
+}
+
+.doc3 {
+    top: 30%;
+    left: 70%;
+    animation: floatDoc3 18s infinite linear;
+}
+
+@keyframes floatDoc1 {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+@keyframes floatDoc2 {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateY(50px) rotate(-180deg) scale(1.2); }
+    100% { transform: translateY(0) rotate(-360deg) scale(1); }
+}
+
+@keyframes floatDoc3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(50px, -30px) rotate(120deg); }
+    66% { transform: translate(-30px, 40px) rotate(240deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .secure-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .secure-step {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .step-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .secure-title {
+        font-size: 2rem;
+    }
+    
+    .secure-step {
+        width: 95%;
+    }
+    
+    .step-content {
+        height: 250px;
+    }
+}</style>
+<section class="income-sources">
+    <div class="cosmic-bg"></div>
+    
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-word">SOURCE</span>
+            <span class="title-word">OF</span>
+            <span class="title-word">INCOME</span>
+        </h2>
+        
+        <div class="income-cards">
+            <!-- Card 1 -->
+            <div class="income-card">
+                <div class="card-3d-wrapper">
+                    <div class="card-front">
+                        <div class="holographic-effect"></div>
+                        <div class="card-content">
+                            <div class="card-icon">💲</div>
+                            <h3>Investment Returns</h3>
+                            <div class="card-underline"></div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Earnings derived from flying operations of jet fleet and charter services.</p>
+                        <div class="jet-animation">
+                            <div class="jet">✈️</div>
+                            <div class="flight-path"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-radial-glow"></div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="income-card">
+                <div class="card-3d-wrapper">
+                    <div class="card-front">
+                        <div class="holographic-effect"></div>
+                        <div class="card-content">
+                            <div class="card-icon">📈</div>
+                            <h3>Aircraft Utilisation</h3>
+                            <div class="card-underline"></div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Access to private jet services that can be monetised for personal, business and medical use.</p>
+                        <div class="utilization-meter">
+                            <div class="meter-fill" style="width: 85%"></div>
+                            <span>85% Utilization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-radial-glow"></div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="income-card">
+                <div class="card-3d-wrapper">
+                    <div class="card-front">
+                        <div class="holographic-effect"></div>
+                        <div class="card-content">
+                            <div class="card-icon">⚡</div>
+                            <h3>Hybrid Model</h3>
+                            <div class="card-underline"></div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Access to aviation services and high-yield returns driven by efficient fleet management and operational cost optimisations.</p>
+                        <div class="hybrid-bars">
+                            <div class="bar bar1"></div>
+                            <div class="bar bar2"></div>
+                            <div class="bar bar3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-radial-glow"></div>
+            </div>
+        </div>
+        
+        <!-- <div class="floating-coins">
+            <div class="coin">🪙</div>
+            <div class="coin">💰</div>
+            <div class="coin">💎</div>
+        </div> -->
+    </div>
+</section>
+<style>
+    .income-sources {
+    position: relative;
+    padding: 120px 0;
+    background: #0a0e17;
+    overflow: hidden;
+}
+
+.cosmic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 100, 255, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(255, 0, 200, 0.1) 0%, transparent 30%);
+    animation: cosmicPulse 15s infinite alternate;
+}
+
+@keyframes cosmicPulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.title-word {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(90deg, #00d4ff, #0066ff, #a200ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    position: relative;
+    animation: floatTitle 4s ease-in-out infinite;
+}
+
+.title-word:nth-child(1) { animation-delay: 0s; }
+.title-word:nth-child(2) { animation-delay: 0.2s; }
+.title-word:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes floatTitle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.income-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    perspective: 2000px;
+}
+
+.income-card {
+    position: relative;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.card-3d-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.income-card:hover .card-3d-wrapper {
+    transform: rotateY(180deg) translateZ(50px) scale(1.05);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+    background: rgba(15, 25, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(30px);
+}
+
+.holographic-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 200, 255, 0.05) 0%, 
+        rgba(100, 0, 255, 0.05) 50%, 
+        rgba(255, 0, 200, 0.05) 100%);
+    animation: hologramPulse 8s infinite;
+}
+
+@keyframes hologramPulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+.card-content {
+    text-align: center;
+    padding: 30px;
+    z-index: 2;
+}
+
+.card-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.card-content h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-underline {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #0066ff);
+    margin: 0 auto;
+    animation: underlineGrow 1.5s infinite alternate;
+}
+
+@keyframes underlineGrow {
+    0% { width: 60px; }
+    100% { width: 100px; }
+}
+
+.card-back {
+    background: linear-gradient(135deg, #1a2a40, #0d1726);
+    transform: rotateY(180deg) translateZ(30px);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-back p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.card-radial-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: radial-gradient(circle at center, 
+        rgba(0, 212, 255, 0.1) 0%, 
+        transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+}
+
+.income-card:hover .card-radial-glow {
+    opacity: 1;
+}
+
+/* Unique back card animations */
+.jet-animation {
+    position: relative;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.jet {
+    position: absolute;
+    font-size: 2rem;
+    left: 0;
+    animation: jetFly 4s linear infinite;
+}
+
+.flight-path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.5), transparent);
+}
+
+@keyframes jetFly {
+    0% { transform: translateX(-50px); }
+    100% { transform: translateX(350px); }
+}
+
+.utilization-meter {
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #0066ff);
+    border-radius: 10px;
+    animation: meterFill 2s ease-out forwards;
+    position: relative;
+}
+
+.meter-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    animation: meterShine 2s infinite;
+}
+
+@keyframes meterFill {
+    0% { width: 0; }
+}
+
+@keyframes meterShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.utilization-meter span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8rem;
+}
+
+.hybrid-bars {
+    display: flex;
+    height: 60px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bar {
+    flex: 1;
+    background: linear-gradient(to top, #00d4ff, #a200ff);
+    border-radius: 5px 5px 0 0;
+    animation: barGrow 1.5s ease-out forwards;
+}
+
+.bar1 { height: 0; animation-delay: 0.3s; }
+.bar2 { height: 0; animation-delay: 0.6s; }
+.bar3 { height: 0; animation-delay: 0.9s; }
+
+@keyframes barGrow {
+    100% { 
+        height: var(--target-height);
+        --target-height: calc(20px + (var(--i) * 15px));
+    }
+}
+
+.bar1 { --i: 1; }
+.bar2 { --i: 2; }
+.bar3 { --i: 3; }
+
+.floating-coins {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.coin {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px gold);
+    animation: floatCoin 10s infinite linear;
+}
+
+.coin:nth-child(1) {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.coin:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.coin:nth-child(3) {
+    top: 40%;
+    left: 65%;
+    animation-delay: 6s;
+}
+
+@keyframes floatCoin {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, -30px) rotate(90deg); }
+    50% { transform: translate(100px, 0) rotate(180deg); }
+    75% { transform: translate(50px, 30px) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .income-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .title-word {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-word {
+        font-size: 2rem;
+    }
+    
+    .income-card {
+        height: 350px;
+    }
+}
+</style>
+<section class="join-section">
+    <div class="holographic-bg"></div>
+    
+    <div class="join-container">
+        <h2 class="join-title">
+            <span class="title-char">J</span>
+            <span class="title-char">O</span>
+            <span class="title-char">I</span>
+            <span class="title-char">N</span>
+            <span class="title-space">&nbsp;</span>
+            <span class="title-char">U</span>
+            <span class="title-char">S</span>
+        </h2>
+        
+        <div class="floating-benefits">
+            <!-- Benefit 1 -->
+            <div class="benefit-card" style="--i:1">
+                <div class="card-3d">
+                    <div class="card-main">
+                        <div class="holographic-strip"></div>
+                        <h3>Pioneering Hybrid<br>Investment Opportunity</h3>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="card-reflection"></div>
+                </div>
+                <div class="particle-ring"></div>
+            </div>
+            
+            <!-- Benefit 2 -->
+            <div class="benefit-card" style="--i:2">
+                <div class="card-3d">
+                    <div class="card-main">
+                        <div class="holographic-strip"></div>
+                        <h3>Discounted Annual<br>Free Flight Hours</h3>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="card-reflection"></div>
+                </div>
+                <div class="particle-ring"></div>
+            </div>
+            
+            <!-- Benefit 3 -->
+            <div class="benefit-card" style="--i:3">
+                <div class="card-3d">
+                    <div class="card-main">
+                        <div class="holographic-strip"></div>
+                        <h3>Quarterly Payouts of<br>Secured Annual Returns</h3>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="card-reflection"></div>
+                </div>
+                <div class="particle-ring"></div>
+            </div>
+            
+            <!-- Benefit 4 -->
+            <div class="benefit-card" style="--i:4">
+                <div class="card-3d">
+                    <div class="card-main">
+                        <div class="holographic-strip"></div>
+                        <h3>Competitive Pricing On<br>Hourly Rates</h3>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="card-reflection"></div>
+                </div>
+                <div class="particle-ring"></div>
+            </div>
+        </div>
+        
+        <div class="cta-hologram">
+            <div class="hologram-content">
+                <p>Ready for Takeoff?</p>
+                <a href="./contact.html" class="hologram-button">INVEST NOW</a>
+            </div>
+            <div class="hologram-light"></div>
+        </div>
+    </div>
+    
+    <!-- <div class="floating-jets">
+        <div class="jet">✈️</div>
+        <div class="jet">✈️</div>
+    </div> -->
+</section>
+<style>
+    .join-section {
+    position: relative;
+    padding: 150px 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.holographic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(0, 200, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(255, 0, 200, 0.05) 0%, transparent 40%);
+    animation: bgPulse 12s infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.join-title {
+    text-align: center;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.title-char {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+    position: relative;
+    animation: charFloat 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.title-space {
+    width: 20px;
+}
+
+.title-char:nth-child(1) { animation-delay: 0s; }
+.title-char:nth-child(2) { animation-delay: 0.1s; }
+.title-char:nth-child(3) { animation-delay: 0.2s; }
+.title-char:nth-child(4) { animation-delay: 0.3s; }
+.title-char:nth-child(6) { animation-delay: 0.4s; }
+.title-char:nth-child(7) { animation-delay: 0.5s; }
+
+@keyframes charFloat {
+    0%, 100% { transform: translateY(0) rotateX(0deg); }
+    50% { transform: translateY(-20px) rotateX(20deg); }
+}
+
+.floating-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.benefit-card {
+    position: relative;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-3d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.benefit-card:hover .card-3d {
+    transform: rotateY(15deg) rotateX(10deg) translateZ(30px);
+}
+
+.card-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 30, 50, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 200, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    transform: translateZ(20px);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.holographic-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #00f2fe, #4facfe, transparent);
+    animation: stripMove 3s linear infinite;
+}
+
+@keyframes stripMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.card-main h3 {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(0, 200, 255, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 70% 60%, rgba(255, 0, 200, 0.1) 0%, transparent 30%);
+    animation: sparklePulse 4s infinite alternate;
+}
+
+.card-reflection {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    border-radius: 20px;
+    transform: translateZ(-10px);
+}
+
+.particle-ring {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    border: 2px dashed rgba(0, 200, 255, 0.3);
+    border-radius: 50%;
+    animation: rotateRing calc(15s * var(--i)) linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateRing {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.cta-hologram {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(0, 50, 80, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.2);
+    animation: hologramFloat 6s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.hologram-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hologram-content p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hologram-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 200, 255, 0.4);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hologram-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s;
+}
+
+.hologram-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 200, 255, 0.6);
+}
+
+.hologram-button:hover::before {
+    left: 100%;
+}
+
+.hologram-light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at center, rgba(0, 200, 255, 0.1) 0%, transparent 70%);
+    animation: lightPulse 4s infinite alternate;
+}
+
+@keyframes hologramFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes lightPulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.floating-jets {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.jet {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.7));
+    animation: jetFloat 15s linear infinite;
+}
+
+.jet:nth-child(1) {
+    top: 20%;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.jet:nth-child(2) {
+    top: 70%;
+    left: -50px;
+    animation-delay: 5s;
+}
+
+@keyframes jetFloat {
+    0% { transform: translateX(-100px) rotate(0deg); }
+    100% { transform: translateX(calc(100vw + 100px)) rotate(5deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .join-title {
+        margin-bottom: 60px;
+    }
+    
+    .title-char {
+        font-size: 3.5rem;
+    }
+    
+    .floating-benefits {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .join-section {
+        padding: 100px 0;
+    }
+    
+    .title-char {
+        font-size: 2.5rem;
+    }
+    
+    .benefit-card {
+        height: 250px;
+    }
+    
+    .card-main h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .floating-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .title-char {
+        font-size: 2rem;
+    }
+}
+</style>
+    <!-- footer begin -->
+    <footer class="text-light section-dark">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            121 AI Blvd, San Francisco<br>
+                            BCA 94107
+                            <br><br>
+                             <a href="./privacy.html" class="text-link">Privacy Policy</a>
+                        </div>
+                        <div>
+                            <img src="images/Crystal Wings logo.png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
+                            <div class="social-icons mb-sm-30 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                            T. +1 123 456 789<br>
+                            M. contact@aivent.com
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright 2025 - AIvent by Designesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+     <!-- <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/aivent-ai-event-conference-and-meetup-website-template/58402469" target="_blank">Buy on <img src="demo/envato.svg" alt=""></a>
+    </div> -->
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/custom-marquee.js"></script>
+
+</body>
+
+</html>
+<style>
+  
+
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+ :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+</style>
+<style>
+  body {
+    background-color: white !important;
+    color: #333 !important; /* Dark text for better readability on white */
+  }
+  
+  /* Override dark sections */
+  .blusky-section,
+  .investment-model-section,
+  .secure-capital-section,
+  .income-sources,
+  .join-section {
+    background-color: #FFE6D5 !important;
+    color: #333 !important;
+  }
+  
+  /* Update text colors for better contrast */
+  h1, h2, h3, h4, h5, h6,
+  .section-title,
+  .secure-title,
+  .join-title,
+  .title-char,
+  .title-word {
+    color: white;
+  }
+  
+  /* Update card backgrounds */
+  .card-front,
+  .card-back,
+  .step-front,
+  .step-back,
+  .card-main {
+    background-color:  var(--color-primary-dark) !important;
+    border-color: #dee2e6 !important;
+  }
+  
+  /* Update footer colors */
+  footer.text-light {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+  }
+  
+  .subfooter {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+  }
+</style>
+
+
+<style>
+  :root {
+    /* Navy blue color palette */
+    --color-primary-dark: #0A2463;   /* Deep navy */
+    --color-primary-medium: #1E3D8B;
+    --color-primary-light: #3E5F8D;
+    --color-primary-pale: #7C9AC5;
+    
+    /* White and off-white colors */
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAFC;
+    --color-light-gray: #EFF2F7;
+    
+    /* Text colors */
+    --color-dark: #1A202C;
+    --color-dark-medium: #2D3748;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.section-dark {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Text colors */
+.text-light {
+    color: var(--color-dark) !important;
+}
+
+/* Buttons and accents */
+.btn-main, .bg-color, .id-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-line {
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-primary-dark) !important;
+    background: transparent !important;
+}
+
+.hover-bg-color:hover {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Header */
+header.transparent {
+    background-color: var(--color-primary-dark) !important;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid var(--color-light-gray) !important;
+    box-shadow: 0 4px 12px rgba(10, 36, 99, 0.1) !important;
+    color: var(--color-dark) !important;
+}
+
+/* Footer */
+footer.text-light {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.subfooter {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Links */
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Video background adjustments */
+.jarallax > video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.gradient-edge-top {
+    background: linear-gradient(to bottom, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.gradient-edge-bottom {
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.4), transparent) !important;
+}
+
+.sw-overlay {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Marquee section */
+.bg-color {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+}
+
+.bg-color-2 {
+    background-color: var(--color-primary-medium) !important;
+    color: white !important;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+    color: var(--color-primary-dark) !important;
+}
+
+.mobile-menu a {
+    color: white !important;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary-pale) !important;
+}
+
+/* Special elements */
+.hover:hover {
+    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.15) !important;
+}
+</style>

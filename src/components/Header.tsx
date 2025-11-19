@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="relative">
               <img 
-                src="/images/Crystal Wings Logo[1].png" 
+                src="/images/Crystal Wings logo.png" 
                 alt="Crystal Wings Logo" 
                 className="h-16 sm:h-20 md:h-24 w-auto object-contain"
               />

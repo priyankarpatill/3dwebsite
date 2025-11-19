@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -362,9 +363,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                      <img class="logo-main" src="images/Crystal Wings Logo[1].png" alt="Logo" style="width: 300px; height: 150px; max-width: none; filter: brightness(0.7) contrast(1.2);" />
-                                        <img class="logo-scroll" src="images/logo.png" alt="" style="height: 150px; width: 250px;">
-                                        <img class="logo-mobile" src="images/Crystal Wings Logo[1].png" alt="" style="height: 150px; width: 250px; max-width: none;">
+                                      <img class="logo-main" src="images/Crystal Wings logo.png" alt="Logo" style="width: 300px; height: 150px; max-width: none; filter: brightness(0.7) contrast(1.2);" />
+                                        <img class="logo-scroll" src="images/Crystal Wings logo.png" alt="" style="height: 150px; width: 250px;">
+                                        <img class="logo-mobile" src="images/Crystal Wings logo.png" alt="" style="height: 150px; width: 250px; max-width: none;">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -414,7 +415,7 @@
                         <li><a class="menu-item active" href="./index.html">Who we are</a></li>
                         <li><a class="menu-item" href="./services.html">Services</a></li>
                         <li><a class="menu-item" href="./fleet.html">Fleet</a></li>
-                     <!-- <li><a class="menu-item" href="./investment.html">Investment</a></li> -->
+                     <li><a class="menu-item" href="./investment.html">Investment</a></li>
                         <li><a class="menu-item" href="./booking.html">Booking</a></li>
                         <li><a class="menu-item" href="./contact.html">Contact</a></li>
                     </ul>
@@ -452,7 +453,7 @@ header.scrolled {
 
 /* Ensure the content below the header is not hidden */
 body {
-    padding-top: 0; /* Changed from 100px to 0 */
+    padding-top: 100px; /* Adjust based on your header height */
 }
         </style>
 
@@ -522,16 +523,62 @@ document.addEventListener("DOMContentLoaded", function () {
     transform-origin: center center;
 }
 </style>
-<section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800 vh-100 fixed-top" 
-  data-jarallax
-  data-video-src="mp4:images/Airplane View.mp4"
-  data-speed="0.5"
-  style="margin-top: 0; padding-top: 0;">
+ <section id="section-hero">
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="images/Airplane View.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <style>
+      
+         
+        /* Video Section - No gap above */
+        #section-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        
+        /* Circular video mask */
+        .video-mask {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .video-mask video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 
   <!-- Audio element -->
-  <audio id="bgAudio" loop>
+  <!-- <audio id="bgAudio" loop>
     <source src="images/instrumental-acoustic-guitar-music-360222.mp3" type="audio/mpeg">
-  </audio>
+  </audio> -->
 
   <!-- Audio permission prompt (hidden by default) -->
   <div id="audioPrompt" style="position: fixed; bottom: 70px; right: 20px; z-index: 1000; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; display: none;">
@@ -549,8 +596,6 @@ document.addEventListener("DOMContentLoaded", function () {
       width: 100%;
       height: 100vh;
       z-index: -1;
-      margin-top: 0 !important;
-      padding-top: 0 !important;
     }
     body {
       padding-top: 100vh;
@@ -1249,7 +1294,7 @@ header.scrolled .mobile-menu-btn i {
                     </div>
 
                     <div class="col-md-8">
-                        <h3 class="fs-32 mb-4 wow fadeInUp">"Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization."</h3>
+                        <h3 class="fs-32 mb-4 wow fadeInUp">“Artificial intelligence is advancing rapidly, and while it offers immense opportunity, it also poses significant risks. If not properly regulated and aligned with human values, AI could become a fundamental threat to civilization.”</h3>
 
                         <span>Elon Musk</span>
                     </div> -->
@@ -1523,7 +1568,7 @@ header.scrolled .mobile-menu-btn i {
                                     Will there be virtual participation?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a6">
-                                    Yes! For those who can't attend in person, we offer a **Virtual Ticket**. This provides access to live-streamed sessions, workshops, and networking opportunities online.
+                                    Yes! For those who can’t attend in person, we offer a **Virtual Ticket**. This provides access to live-streamed sessions, workshops, and networking opportunities online.
                                 </div>
                             </div>
                         </div>                        
@@ -1757,7 +1802,7 @@ header.scrolled .mobile-menu-btn i {
                         </div>
                         
                         <div>
-                            <img src="images/Crystal Wings Logo[1].png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
+                            <img src="images/Crystal Wings logo.png" class="w-150px" alt="" style="height: 250px; width: 250px; max-width: none;"><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>

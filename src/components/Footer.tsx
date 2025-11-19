@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <img 
-                  src="/images/Crystal Wings Logo[1].png" 
+                  src="/images/Crystal Wings logo.png" 
                   alt="Crystal Wings Logo" 
                   className="h-10 w-auto object-contain"
                 />
